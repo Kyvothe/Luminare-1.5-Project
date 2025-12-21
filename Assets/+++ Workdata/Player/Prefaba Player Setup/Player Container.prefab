@@ -68,8 +68,8 @@ MonoBehaviour:
   playerActionState: 0
   bigJumpForce: 5
   hopsForce: 3
-  currentJumpForce: 0
-  canBigJump: 0
+  currentJumpForce: 2
+  canBigJump: 1
   groundBoxPos: {x: 0, y: -0.2}
   groundBoxSize: {x: 0.5, y: 0.2}
   groundLayer:

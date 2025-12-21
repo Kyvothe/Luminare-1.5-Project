@@ -22,8 +22,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerActionState playerActionState;
 
     [Header("Action Setup")] 
-    [SerializeField] private float bigJumpForce = 5f;
-    [SerializeField] private float hopsForce = 3f;
     [SerializeField] private float currentJumpForce;
 
     [SerializeField] private bool canBigJump;
@@ -48,6 +46,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 _moveInput;
 
     private float _currentSpeed;
+    
+    private float bigJumpForce = 5f;
+    private float hopsForce = 3f;
 
     private bool _isGrounded;
     private bool _canJump = true;
