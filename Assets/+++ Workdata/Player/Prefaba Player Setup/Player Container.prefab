@@ -11,10 +11,12 @@ GameObject:
   - component: {fileID: 5355565494521795860}
   - component: {fileID: 8310173378602249382}
   - component: {fileID: 4693872564928263743}
+  - component: {fileID: 5543817941368717872}
   - component: {fileID: 7775687740680261770}
   - component: {fileID: 6739547712547609262}
   - component: {fileID: 8368072830111665385}
   - component: {fileID: 5618081638641281862}
+  - component: {fileID: 8318024697424481452}
   m_Layer: 0
   m_Name: Player Container
   m_TagString: Player
@@ -66,8 +68,6 @@ MonoBehaviour:
   playerMovementState: 0
   playerDirectionState: 0
   playerActionState: 0
-  bigJumpForce: 5
-  hopsForce: 3
   currentJumpForce: 2
   canBigJump: 1
   groundBoxPos: {x: 0, y: -0.2}
@@ -75,6 +75,18 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &5543817941368717872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2462694230164415295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d09902e9226c7b4ea2ff3fa9a563973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &7775687740680261770
 Animator:
   serializedVersion: 7
@@ -216,3 +228,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &8318024697424481452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2462694230164415295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb298287d6f756943a238a4d3a88a828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemCount: 0
+  gotAllItems: 0

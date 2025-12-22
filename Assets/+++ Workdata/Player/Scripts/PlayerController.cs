@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rb;
     private Animator _animator;
     
+    private PlayerOneWay _playerOneWay;
+    
     private InputSystem_Actions _inputActions;
     private InputAction _moveAction;
     private InputAction _jumpAction;
@@ -47,7 +49,7 @@ public class PlayerController : MonoBehaviour
 
     private float _currentSpeed;
     
-    private float bigJumpForce = 5f;
+    private float bigJumpForce = 7f;
     private float hopsForce = 3f;
 
     private bool _isGrounded;
@@ -61,6 +63,8 @@ public class PlayerController : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        
+        _playerOneWay = GetComponent<PlayerOneWay>();
 
         _currentSpeed = 5f;
         
@@ -120,13 +124,18 @@ public class PlayerController : MonoBehaviour
        
        playerMovementState = (_moveInput.x == 0) ? PlayerMovementState.Idle : PlayerMovementState.Move;
 
-       if (_moveInput.x < 0) //facing left
+       if (_moveInput.y < 0) // S gedrückt
+       {
+           _playerOneWay.CheckForOneWayPlatform();
+       }
+       
+       if (_moveInput.x < 0) // facing left
        {
            transform.rotation = Quaternion.Euler(0, 180, 0);
            playerDirectionState = PlayerDirectionState.Left;
        }
        
-       else if (_moveInput.x > 0) //facing right
+       else if (_moveInput.x > 0) // facing right
        {
            transform.rotation = Quaternion.Euler(0, 0, 0);
            playerDirectionState = PlayerDirectionState.Right;
