@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     
     #region Inspector Variables
     
+    
     [Header("Player States")]
     [SerializeField] private PlayerMovementState playerMovementState;
     [SerializeField] private PlayerDirectionState playerDirectionState;
