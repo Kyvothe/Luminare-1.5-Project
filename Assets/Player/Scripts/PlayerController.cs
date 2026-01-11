@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
     private InputSystem_Actions _inputActions;
     private InputAction _moveAction;
     private InputAction _jumpAction;
+    private InputAction _attackAction;
     
     private Vector2 _moveInput;
 
@@ -77,6 +78,7 @@ public class PlayerController : MonoBehaviour
        _inputActions = new InputSystem_Actions();
        _moveAction = _inputActions.Player.Move;
        _jumpAction = _inputActions.Player.Jump;
+       _attackAction = _inputActions.Player.Attack;
     }
 
     private void OnEnable()
@@ -86,6 +88,8 @@ public class PlayerController : MonoBehaviour
         _moveAction.canceled += Move;
 
         _jumpAction.performed += Jump;
+        
+        _attackAction.performed += Attack;
     }
 
     private void FixedUpdate()
@@ -104,6 +108,9 @@ public class PlayerController : MonoBehaviour
         _moveAction.canceled -= Move;
 
         _jumpAction.performed -= Jump;
+        
+        _attackAction.performed -= Attack;
+
     }
     
     #endregion
@@ -155,6 +162,11 @@ public class PlayerController : MonoBehaviour
         _rb.AddForce(Vector2.up * currentJumpForce, ForceMode2D.Impulse);
         SetActionId(1);
         playerActionState = canBigJump ? PlayerActionState.Jump : PlayerActionState.Hops;
+    }
+
+    private void Attack(InputAction.CallbackContext ctx)
+    {
+        
     }
     
     #endregion
