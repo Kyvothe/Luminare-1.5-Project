@@ -166,7 +166,8 @@ public class PlayerController : MonoBehaviour
 
     private void Attack(InputAction.CallbackContext ctx)
     {
-        
+        Debug.Log("attack");
+        SetActionId(10);
     }
     
     #endregion
