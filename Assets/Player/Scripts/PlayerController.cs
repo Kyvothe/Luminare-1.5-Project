@@ -192,11 +192,31 @@ public class PlayerController : MonoBehaviour
         _animator.SetTrigger(Hash_ActionTrigger);
         _animator.SetInteger(Hash_ActionId, id);
     }
+
+    public void AnimationEnd(PlayerActionType playerActionType)
+    {
+        if (playerActionType == PlayerActionType.ActionAttack)
+        {
+            EndAttack();
+        }
+        
+        if (playerActionType == PlayerActionType.ActionJump)
+        {
+            EndJump();
+        }
+        
+    }
     
-    public void EndJump()
+    private void EndJump()
     {
         playerActionState = PlayerActionState.Default;
         _canJump = true;
+    }
+    
+    private void EndAttack()
+    {
+        playerActionState = PlayerActionState.Default;
+        _isAttacking = false;
     }
     
     #endregion

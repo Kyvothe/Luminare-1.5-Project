@@ -1,11 +1,16 @@
 using UnityEngine;
+using UnityEngine.Animations;
+
+public enum PlayerActionType {ActionJump, ActionAttack}
 
 public class AnimationEnd : StateMachineBehaviour
 {
+    public PlayerActionType playerActionType;
+    
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        //animator.gameObject.GetComponent<PlayerController>().AnimationActionStart(playerActionType);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -17,7 +22,7 @@ public class AnimationEnd : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.gameObject.GetComponent<PlayerController>().EndJump();
+        animator.gameObject.GetComponent<PlayerController>().AnimationEnd(playerActionType);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
