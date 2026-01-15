@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
 
     private bool _isGrounded;
     private bool _canJump = true;
+    private bool _isAttacking;
     
     #endregion
     
@@ -166,8 +167,14 @@ public class PlayerController : MonoBehaviour
 
     private void Attack(InputAction.CallbackContext ctx)
     {
-        Debug.Log("attack");
-        SetActionId(10);
+        if (!_isAttacking)
+        {   
+            Debug.Log("attack");
+            _isAttacking = true;
+            SetActionId(10);
+            playerActionState = PlayerActionState.Attack;
+        }
+     
     }
     
     #endregion
