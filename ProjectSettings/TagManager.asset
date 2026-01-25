@@ -43,5 +43,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: TrapLayer
+    uniqueID: 3147821139
+    locked: 0
+  - name: TrapForeground
+    uniqueID: 2648805147
+    locked: 0
   m_RenderingLayers:
   - Default
