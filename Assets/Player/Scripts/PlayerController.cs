@@ -25,7 +25,8 @@ public class PlayerController : MonoBehaviour
     [Header("Action Setup")] 
     [SerializeField] private float currentJumpForce;
 
-    [SerializeField] private bool canBigJump;
+    public  bool canBigJump;
+    public bool _canAttack;
 
     [Header("Ground Setup")] 
     [SerializeField] private Vector2 groundBoxPos;
@@ -167,6 +168,8 @@ public class PlayerController : MonoBehaviour
 
     private void Attack(InputAction.CallbackContext ctx)
     {
+       if (!_canAttack) return;
+        
         if (!_isAttacking)
         {   
             Debug.Log("attack");
