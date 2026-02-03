@@ -58,6 +58,8 @@ public class PlayerController : MonoBehaviour
     private bool _isGrounded;
     private bool _canJump = true;
     private bool _isAttacking;
+
+    private bool _paused;
     
     #endregion
     
@@ -71,8 +73,12 @@ public class PlayerController : MonoBehaviour
         _playerOneWay = GetComponent<PlayerOneWay>();
 
         _currentSpeed = 5f;
+
+        _paused = false;
         
         SetInputActions();
+
+        SetDirection();
     }
 
     private void SetInputActions()
@@ -130,7 +136,9 @@ public class PlayerController : MonoBehaviour
 
     private void Move(InputAction.CallbackContext ctx)
     {
-       _moveInput = ctx.ReadValue<Vector2>();
+        if (_paused) return;
+        
+        _moveInput = ctx.ReadValue<Vector2>();
        
        playerMovementState = (_moveInput.x == 0) ? PlayerMovementState.Idle : PlayerMovementState.Move;
 
@@ -154,6 +162,8 @@ public class PlayerController : MonoBehaviour
 
     private void Jump(InputAction.CallbackContext ctx)
     {
+        if (_paused) return;
+        
         if (!_isGrounded) return;
 
         if (!_canJump) return;
@@ -168,7 +178,9 @@ public class PlayerController : MonoBehaviour
 
     private void Attack(InputAction.CallbackContext ctx)
     {
-       if (!_canAttack) return;
+        if (_paused) return;
+        
+        if (!_canAttack) return;
         
         if (!_isAttacking)
         {   
@@ -178,6 +190,16 @@ public class PlayerController : MonoBehaviour
             playerActionState = PlayerActionState.Attack;
         }
      
+    }
+
+    private void SetDirection()
+    {
+        transform.rotation = playerDirectionState == PlayerDirectionState.Right? Quaternion.Euler(0, 0, 0): Quaternion.Euler(0, 0, 180);
+    }
+    
+    public void SetPaused(bool value)
+    {
+        _paused = value;
     }
     
     #endregion
