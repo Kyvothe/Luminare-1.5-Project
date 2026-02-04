@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using UnityEditor.Timeline;
 using UnityEditor.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
@@ -25,8 +26,13 @@ public class PlayerController : MonoBehaviour
     [Header("Action Setup")] 
     [SerializeField] private float currentJumpForce;
 
-    public  bool canBigJump;
-    public bool _canAttack;
+    [SerializeField] private  bool canBigJump;
+    [SerializeField] private bool canAttack;
+    [SerializeField] private bool canFly;
+
+    [SerializeField] private AnimationCurve curve;
+
+    [SerializeField] private float flightDuration;
 
     [Header("Ground Setup")] 
     [SerializeField] private Vector2 groundBoxPos;
@@ -52,8 +58,11 @@ public class PlayerController : MonoBehaviour
 
     private float _currentSpeed;
     
-    private float bigJumpForce = 7f;
-    private float hopsForce = 3f;
+    private float _bigJumpForce = 7f;
+    private float _hopsForce = 3f;
+    private float _flyForce = 9f;
+
+    private float _timeInAir;
 
     private bool _isGrounded;
     private bool _canJump = true;
@@ -96,6 +105,7 @@ public class PlayerController : MonoBehaviour
         _moveAction.canceled += Move;
 
         _jumpAction.performed += Jump;
+        _jumpAction.canceled += Jump;
         
         _attackAction.performed += Attack;
     }
@@ -116,6 +126,7 @@ public class PlayerController : MonoBehaviour
         _moveAction.canceled -= Move;
 
         _jumpAction.performed -= Jump;
+        _jumpAction.canceled -= Jump;
         
         _attackAction.performed -= Attack;
 
@@ -160,27 +171,49 @@ public class PlayerController : MonoBehaviour
        }
     }
 
-    private void Jump(InputAction.CallbackContext ctx)
+    private void Jump(InputAction.CallbackContext ctx)              // braucht wahrscheinlich context statt ctx; hold interactio ist noch eingestellt in inputmap
     {
         if (_paused) return;
         
         if (!_isGrounded) return;
 
         if (!_canJump) return;
-        
-        currentJumpForce = canBigJump ? bigJumpForce : hopsForce;
-        
-        _canJump = false;
-        _rb.AddForce(Vector2.up * currentJumpForce, ForceMode2D.Impulse);
-        SetActionId(1);
-        playerActionState = canBigJump ? PlayerActionState.Jump : PlayerActionState.Hops;
+
+        if (!canFly)
+        {
+            currentJumpForce = canBigJump ? _bigJumpForce : _hopsForce;
+            
+            _canJump = false;
+            _rb.AddForce(Vector2.up * currentJumpForce, ForceMode2D.Impulse);
+            SetActionId(1);
+            playerActionState = canBigJump ? PlayerActionState.Jump : PlayerActionState.Hops;
+        }
+        else
+        {
+            /*
+            _timeInAir += Time.deltaTime;
+            float t = Mathf.Clamp01(_timeInAir / flightDuration);
+
+            currentJumpForce = curve.Evaluate(t);
+
+            if (!context.canceled)
+            {
+                _rb.AddForce(Vector2.up * currentJumpForce, ForceMode2D.Impulse);
+            }
+            else
+            {
+                currentJumpForce = 0;
+                _rb.AddForce(Vector2.down * 2, ForceMode2D.Impulse);
+            }
+            */
+        }
     }
 
     private void Attack(InputAction.CallbackContext ctx)
     {
         if (_paused) return;
         
-        if (!_canAttack) return;
+        if (!canAttack) return;
         
         if (!_isAttacking)
         {   
@@ -189,12 +222,11 @@ public class PlayerController : MonoBehaviour
             SetActionId(10);
             playerActionState = PlayerActionState.Attack;
         }
-     
     }
 
     private void SetDirection()
     {
-        transform.rotation = playerDirectionState == PlayerDirectionState.Right? Quaternion.Euler(0, 0, 0): Quaternion.Euler(0, 0, 180);
+        transform.rotation = playerDirectionState == PlayerDirectionState.Right? Quaternion.Euler(0, 0, 0): Quaternion.Euler(0, 180, 0);
     }
     
     public void SetPaused(bool value)
