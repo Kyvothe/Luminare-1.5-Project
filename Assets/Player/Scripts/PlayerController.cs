@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
    
    public enum PlayerMovementState {Idle, Move}
    public enum PlayerDirectionState {Left, Right}
-   public enum PlayerActionState {Default, Attack, Hops, Jump, Peck, Flutter}
+   public enum PlayerActionState {Default, Attack, Hops, Jump, Peck, Fly}
     
     #region Inspector Variables
     
@@ -60,13 +60,16 @@ public class PlayerController : MonoBehaviour
     
     private float _bigJumpForce = 7f;
     private float _hopsForce = 3f;
-    private float _flyForce = 9f;
+    public float _flyForce = 9f;
 
-    private float _timeInAir;
+    public float _timeInAir;
+    
+    public int jumpTimer;
 
     private bool _isGrounded;
     private bool _canJump = true;
     private bool _isAttacking;
+    public bool _isFlying;
 
     private bool _paused;
     
@@ -89,7 +92,7 @@ public class PlayerController : MonoBehaviour
 
         SetDirection();
     }
-
+    
     private void SetInputActions()
     {
        _inputActions = new InputSystem_Actions();
@@ -106,6 +109,7 @@ public class PlayerController : MonoBehaviour
 
         _jumpAction.performed += Jump;
         _jumpAction.canceled += Jump;
+      //  _jumpAction.canceled += StopFly;
         
         _attackAction.performed += Attack;
     }
@@ -117,6 +121,8 @@ public class PlayerController : MonoBehaviour
         _rb.linearVelocityX = _moveInput.x * _currentSpeed;
         
         UpdateAnimator();
+        
+        // SetFly();
     }
     
     private void OnDisable()
@@ -127,6 +133,7 @@ public class PlayerController : MonoBehaviour
 
         _jumpAction.performed -= Jump;
         _jumpAction.canceled -= Jump;
+       // _jumpAction.canceled -= StopFly;
         
         _attackAction.performed -= Attack;
 
@@ -171,13 +178,13 @@ public class PlayerController : MonoBehaviour
        }
     }
 
-    private void Jump(InputAction.CallbackContext ctx)              // braucht wahrscheinlich context statt ctx; hold interactio ist noch eingestellt in inputmap
+    private void Jump(InputAction.CallbackContext ctx)              // hold interaction ist noch eingestellt in inputmap
     {
         if (_paused) return;
-        
-        if (!_isGrounded) return;
 
-        if (!_canJump) return;
+       if (!_canJump) return;
+       
+       if (!_isGrounded) return;
 
         if (!canFly)
         {
@@ -188,26 +195,84 @@ public class PlayerController : MonoBehaviour
             SetActionId(1);
             playerActionState = canBigJump ? PlayerActionState.Jump : PlayerActionState.Hops;
         }
-        else
+        
+        
+       // if (canFly)
         {
+            //if (jumpTimer <= 2)
+            {
+                //jumpTimer++;
+                
+              //  currentJumpForce = _bigJumpForce;
+            
+               // _canJump = false;
+             //   _rb.AddForce(Vector2.up * currentJumpForce, ForceMode2D.Impulse);
+                //SetActionId(1);
+                //playerActionState = PlayerActionState.Fly;
+            }
+            
+            
+            
+
             /*
-            _timeInAir += Time.deltaTime;
-            float t = Mathf.Clamp01(_timeInAir / flightDuration);
+             StartFly();
 
-            currentJumpForce = curve.Evaluate(t);
+             /*
+             _timeInAir += Time.deltaTime;
+             float t = Mathf.Clamp01(_timeInAir / flightDuration);
 
-            if (!context.canceled)
-            {
-                _rb.AddForce(Vector2.up * currentJumpForce, ForceMode2D.Impulse);
-            }
-            else
-            {
-                currentJumpForce = 0;
-                _rb.AddForce(Vector2.down * 2, ForceMode2D.Impulse);
-            }
-            */
+             currentJumpForce = curve.Evaluate(t);
+
+             if (!context.canceled)
+             {
+                 _rb.AddForce(Vector2.up * currentJumpForce, ForceMode2D.Impulse);
+             }
+             else
+             {
+                 currentJumpForce = 0;
+                 _rb.AddForce(Vector2.down * 2, ForceMode2D.Impulse);
+             }
+             */
         }
     }
+
+    /*
+    
+    private void SetFly()
+    {
+        if (!_isFlying) return;
+        
+        _timeInAir += Time.deltaTime;
+
+        if (_timeInAir >= flightDuration)
+        {
+            StopFly1();
+            _flyForce = 0;
+        }
+        
+            float t = _timeInAir / flightDuration;
+            float curveValue = curve.Evaluate(t);
+            
+            _rb.AddForce(Vector2.up * (curveValue * _flyForce), ForceMode2D.Impulse);
+    }
+
+    private void StartFly()
+    {
+        _timeInAir = 0;
+        _isFlying = true;
+    }
+    
+    private void StopFly(InputAction.CallbackContext ctx)
+    {
+        _isFlying = false;
+    }
+    
+    private void StopFly1()
+    {
+        _isFlying = false;
+    }
+    
+    */
 
     private void Attack(InputAction.CallbackContext ctx)
     {
