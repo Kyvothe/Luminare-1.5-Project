@@ -226,7 +226,45 @@ MonoBehaviour:
   playerDirectionState: 0
   playerActionState: 0
   currentJumpForce: 2
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.33632353
+      value: 14.645469
+      inSlope: 72.96201
+      outSlope: 72.96201
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.06642469
+    - serializedVersion: 3
+      time: 1
+      value: 25
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  flightDuration: 1
+  timeInAir: 0
+  coyoteTime: 0.2
   canBigJump: 1
+  _canAttack: 0
+  canFly: 0
   groundBoxPos: {x: 0, y: -0.2}
   groundBoxSize: {x: 0.5, y: 0.2}
   groundLayer:

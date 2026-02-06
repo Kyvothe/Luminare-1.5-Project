@@ -24,8 +24,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("Action Setup")] 
     [SerializeField] private float currentJumpForce;
-
-    public float flyForce;
     
     [SerializeField] private AnimationCurve curve;
 
@@ -66,6 +64,8 @@ public class PlayerController : MonoBehaviour
     
     private float bigJumpForce = 7f;
     private float hopsForce = 3f;
+    private float flyForce = 3f;
+
 
     private bool _isGrounded;
     private bool _canJump = true;
