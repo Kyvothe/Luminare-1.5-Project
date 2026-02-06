@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerInformation : MonoBehaviour
@@ -8,6 +9,11 @@ public class PlayerInformation : MonoBehaviour
    [SerializeField] private int _currentHealth;
 
    #endregion
+
+   private void Awake()
+   {
+       _currentHealth = _maxHealth;
+   }
 
    public void SetDamage(int damage)
    {
@@ -24,6 +30,10 @@ public class PlayerInformation : MonoBehaviour
        if ((_currentHealth + health) <= _maxHealth)
        {
            _currentHealth += health;
+       }
+       else
+       {
+           _currentHealth = _maxHealth;
        }
    }
 }

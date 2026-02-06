@@ -101,6 +101,8 @@ public class PlayerController : MonoBehaviour
         _rb.linearVelocityX = _moveInput.x * _currentSpeed;
         
         UpdateAnimator();
+
+        ReturnIsAttacking();
     }
     
     private void OnDisable()
@@ -178,6 +180,11 @@ public class PlayerController : MonoBehaviour
             playerActionState = PlayerActionState.Attack;
         }
      
+    }
+
+    public bool ReturnIsAttacking()
+    {
+        return _isAttacking;
     }
     
     #endregion
