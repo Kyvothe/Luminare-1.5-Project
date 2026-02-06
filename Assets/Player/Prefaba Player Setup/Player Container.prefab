@@ -227,6 +227,7 @@ MonoBehaviour:
   playerActionState: 0
   currentJumpForce: 2
   canBigJump: 1
+  _canAttack: 0
   groundBoxPos: {x: 0, y: -0.2}
   groundBoxSize: {x: 0.5, y: 0.2}
   groundLayer:
@@ -399,3 +400,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemCount: 0
   gotAllItems: 0
+  healitem: {fileID: 0}
