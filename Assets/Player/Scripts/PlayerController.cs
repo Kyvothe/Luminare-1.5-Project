@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
    
    public enum PlayerMovementState {Idle, Move}
    public enum PlayerDirectionState {Left, Right}
-   public enum PlayerActionState {Default, Attack, Hops, Jump, Peck, Flutter}
+   public enum PlayerActionState {Default, Attack, Hops, Jump, Peck, Fly}
     
     #region Inspector Variables
     
@@ -31,6 +31,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float flightDuration;
     [SerializeField] private float timeInAir;
+
+    public float coyoteTime;
+    private float _coyoteTimeCounter;
 
 
     public  bool canBigJump;
@@ -144,6 +147,13 @@ public class PlayerController : MonoBehaviour
         if (_isGrounded)
         {
             timeInAir = 0;
+            playerActionState = PlayerActionState.Default;
+
+            _coyoteTimeCounter = coyoteTime;
+        }
+        else
+        {
+            _coyoteTimeCounter -= Time.deltaTime;
         }
     }
     
@@ -177,7 +187,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jump(InputAction.CallbackContext ctx)
     {
-        if (!_isGrounded) return;
+        if (!(_coyoteTimeCounter > 0f)) return;
 
         if (!_canJump) return;
         
@@ -187,6 +197,8 @@ public class PlayerController : MonoBehaviour
         _rb.AddForce(Vector2.up * currentJumpForce, ForceMode2D.Impulse);
         SetActionId(1);
         playerActionState = canBigJump ? PlayerActionState.Jump : PlayerActionState.Hops;
+
+        _coyoteTimeCounter = 0f;
     }
 
 
@@ -211,12 +223,15 @@ public class PlayerController : MonoBehaviour
             _flyVelocity = new Vector2(_rb.linearVelocity.x, t * flyForce);
         
             _rb.linearVelocity = _flyVelocity;
+
+            playerActionState = PlayerActionState.Fly;
         }
     }
 
     private void StopFly(InputAction.CallbackContext ctx)
     {
         _isFlying  = false;
+        playerActionState = PlayerActionState.Default;
     }
     
     private void Attack(InputAction.CallbackContext ctx)

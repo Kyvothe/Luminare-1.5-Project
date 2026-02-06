@@ -44,7 +44,7 @@ public class SquirrelBehaviour : MonoBehaviour
     {
         GameObject newprojectile = Instantiate(newProjectile);
         newprojectile.transform.position = gameObject.transform.position;
-        
+            
         _animator.SetTrigger(Hash_ActionTrigger);
         _animator.SetInteger(Hash_ActionId, 10);
     }
@@ -53,5 +53,5 @@ public class SquirrelBehaviour : MonoBehaviour
     {
         _dropsStuff = value;
     }
-
+  
 }
