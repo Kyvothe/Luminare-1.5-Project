@@ -118,6 +118,8 @@ public class PlayerController : MonoBehaviour
         _rb.linearVelocityX = _moveInput.x * _currentSpeed;
         
         UpdateAnimator();
+
+        ReturnIsAttacking();
         
         ExecuteFlying();
     }
@@ -246,6 +248,11 @@ public class PlayerController : MonoBehaviour
             playerActionState = PlayerActionState.Attack;
         }
      
+    }
+    
+    public bool ReturnIsAttacking()
+    {
+        return _isAttacking;
     }
     
     #endregion
