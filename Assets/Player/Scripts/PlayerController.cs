@@ -75,6 +75,8 @@ public class PlayerController : MonoBehaviour
     private bool _canJump = true;
     private bool _isAttacking;
     private bool _isFlying;
+
+    private bool _paused = false;
     
     private Vector2 _flyVelocity;
     
@@ -174,7 +176,7 @@ public class PlayerController : MonoBehaviour
        
        playerMovementState = (_moveInput.x == 0) ? PlayerMovementState.Idle : PlayerMovementState.Move;
 
-       if (_moveInput.y < 0) // S gedrückt
+       if (_moveInput.y < 0) // S gedrÃ¼ckt
        {
            _playerOneWay.CheckForOneWayPlatform();
        }
@@ -271,6 +273,11 @@ public class PlayerController : MonoBehaviour
     public bool ReturnIsAttacking()
     {
         return _isAttacking;
+    }
+
+    public void SetPaused(bool value)
+    {
+        _paused = value;
     }
     
     #endregion
