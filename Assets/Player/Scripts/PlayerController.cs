@@ -52,8 +52,8 @@ public class PlayerController : MonoBehaviour
 
     private float _currentSpeed;
     
-    private float bigJumpForce = 7f;
-    private float hopsForce = 3f;
+    private float bigJumpForce = 10f;
+    private float hopsForce = 5f;
 
     private bool _isGrounded;
     private bool _canJump = true;
