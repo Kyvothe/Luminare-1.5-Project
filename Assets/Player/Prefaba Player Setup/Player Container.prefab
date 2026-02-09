@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 8458117023163855491}
   - component: {fileID: 2105403762185471993}
   m_Layer: 0
-  m_Name: Player Container Fly Double
+  m_Name: Player Container
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
