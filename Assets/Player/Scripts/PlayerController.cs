@@ -1,6 +1,5 @@
 using UnityEngine;
 using System;
-using UnityEditor.Timeline;
 using UnityEditor.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
@@ -13,7 +12,7 @@ public class PlayerController : MonoBehaviour
    
    public enum PlayerMovementState {Idle, Move}
    public enum PlayerDirectionState {Left, Right}
-   public enum PlayerActionState {Default, Attack, Hops, Jump, Peck, Fly}
+   public enum PlayerActionState {Default, Attack, Hops, Jump, DoubleJump, Fly}
     
     #region Inspector Variables
     
@@ -25,14 +24,23 @@ public class PlayerController : MonoBehaviour
 
     [Header("Action Setup")] 
     [SerializeField] private float currentJumpForce;
-
-    [SerializeField] private  bool canBigJump;
-    [SerializeField] private bool canAttack;
-    [SerializeField] private bool canFly;
-
+    
     [SerializeField] private AnimationCurve curve;
 
     [SerializeField] private float flightDuration;
+    [SerializeField] private float timeInAir;
+
+    public float coyoteTime;
+    private float _coyoteTimeCounter;
+
+    public int jumpCounter = 0;
+
+
+    public  bool canBigJump;
+    public  bool canDoubleJump;
+    public bool _canAttack;
+    public bool canFly;
+    public bool _canDouble;
 
     [Header("Ground Setup")] 
     [SerializeField] private Vector2 groundBoxPos;
@@ -58,20 +66,19 @@ public class PlayerController : MonoBehaviour
 
     private float _currentSpeed;
     
-    private float _bigJumpForce = 7f;
-    private float _hopsForce = 3f;
-    public float _flyForce = 9f;
+    private float bigJumpForce = 7f;
+    private float hopsForce = 3f;
+    private float flyForce = 3f;
 
-    public float _timeInAir;
-    
-    public int jumpTimer;
 
     private bool _isGrounded;
     private bool _canJump = true;
     private bool _isAttacking;
-    public bool _isFlying;
+    private bool _isFlying;
 
-    private bool _paused;
+    private bool _paused = false;
+    
+    private Vector2 _flyVelocity;
     
     #endregion
     
@@ -85,14 +92,10 @@ public class PlayerController : MonoBehaviour
         _playerOneWay = GetComponent<PlayerOneWay>();
 
         _currentSpeed = 5f;
-
-        _paused = false;
         
         SetInputActions();
-
-        SetDirection();
     }
-    
+
     private void SetInputActions()
     {
        _inputActions = new InputSystem_Actions();
@@ -107,9 +110,10 @@ public class PlayerController : MonoBehaviour
         _moveAction.performed += Move;
         _moveAction.canceled += Move;
 
-        _jumpAction.performed += Jump;
-        _jumpAction.canceled += Jump;
-      //  _jumpAction.canceled += StopFly;
+        _jumpAction.started += Jump;
+        _jumpAction.performed += StartFly;
+        _jumpAction.performed += CheckForDoubleJump;
+        _jumpAction.canceled += StopFly;
         
         _attackAction.performed += Attack;
     }
@@ -121,8 +125,10 @@ public class PlayerController : MonoBehaviour
         _rb.linearVelocityX = _moveInput.x * _currentSpeed;
         
         UpdateAnimator();
+
+        ReturnIsAttacking();
         
-        // SetFly();
+        ExecuteFlying();
     }
     
     private void OnDisable()
@@ -131,9 +137,9 @@ public class PlayerController : MonoBehaviour
         _moveAction.performed -= Move;
         _moveAction.canceled -= Move;
 
-        _jumpAction.performed -= Jump;
         _jumpAction.canceled -= Jump;
-       // _jumpAction.canceled -= StopFly;
+        _jumpAction.canceled -= StopFly;
+
         
         _attackAction.performed -= Attack;
 
@@ -146,6 +152,18 @@ public class PlayerController : MonoBehaviour
     private void CheckIsGrounded()
     {
         _isGrounded = Physics2D.OverlapBox((Vector2)transform.position + groundBoxPos, groundBoxSize, 0, groundLayer);
+
+        if (_isGrounded)
+        {
+            timeInAir = 0;
+            playerActionState = PlayerActionState.Default;
+
+            _coyoteTimeCounter = coyoteTime;
+        }
+        else
+        {
+            _coyoteTimeCounter -= Time.deltaTime;
+        }
     }
     
     #endregion
@@ -154,13 +172,11 @@ public class PlayerController : MonoBehaviour
 
     private void Move(InputAction.CallbackContext ctx)
     {
-        if (_paused) return;
-        
-        _moveInput = ctx.ReadValue<Vector2>();
+       _moveInput = ctx.ReadValue<Vector2>();
        
        playerMovementState = (_moveInput.x == 0) ? PlayerMovementState.Idle : PlayerMovementState.Move;
 
-       if (_moveInput.y < 0) // S gedrückt
+       if (_moveInput.y < 0) // S gedrÃ¼ckt
        {
            _playerOneWay.CheckForOneWayPlatform();
        }
@@ -178,107 +194,71 @@ public class PlayerController : MonoBehaviour
        }
     }
 
-    private void Jump(InputAction.CallbackContext ctx)              // hold interaction ist noch eingestellt in inputmap
+    private void Jump(InputAction.CallbackContext ctx)
     {
-        if (_paused) return;
+        if (!(_coyoteTimeCounter > 0f)) return;
 
-       if (!_canJump) return;
-       
-       if (!_isGrounded) return;
-
-        if (!canFly)
+        if (!_canJump) return;
+        
+        currentJumpForce = canBigJump ? bigJumpForce : hopsForce;
+        
+        _canJump = false;
+        _rb.AddForce(Vector2.up * currentJumpForce, ForceMode2D.Impulse);
+        SetActionId(1);
+        playerActionState = canBigJump ? PlayerActionState.Jump : PlayerActionState.Hops;  
+        
+        _coyoteTimeCounter = 0f;
+    }
+    
+    private void CheckForDoubleJump(InputAction.CallbackContext ctx)
+    {
+        if (canDoubleJump && !_canJump && _canDouble)
         {
-            currentJumpForce = canBigJump ? _bigJumpForce : _hopsForce;
-            
+            Debug.Log("Double jump");
             _canJump = false;
-            _rb.AddForce(Vector2.up * currentJumpForce, ForceMode2D.Impulse);
+            _canDouble = false;
+            _rb.AddForce(Vector2.up * bigJumpForce, ForceMode2D.Impulse);
             SetActionId(1);
-            playerActionState = canBigJump ? PlayerActionState.Jump : PlayerActionState.Hops;
-        }
-        
-        
-       // if (canFly)
-        {
-            //if (jumpTimer <= 2)
-            {
-                //jumpTimer++;
-                
-              //  currentJumpForce = _bigJumpForce;
-            
-               // _canJump = false;
-             //   _rb.AddForce(Vector2.up * currentJumpForce, ForceMode2D.Impulse);
-                //SetActionId(1);
-                //playerActionState = PlayerActionState.Fly;
-            }
-            
-            
-            
-
-            /*
-             StartFly();
-
-             /*
-             _timeInAir += Time.deltaTime;
-             float t = Mathf.Clamp01(_timeInAir / flightDuration);
-
-             currentJumpForce = curve.Evaluate(t);
-
-             if (!context.canceled)
-             {
-                 _rb.AddForce(Vector2.up * currentJumpForce, ForceMode2D.Impulse);
-             }
-             else
-             {
-                 currentJumpForce = 0;
-                 _rb.AddForce(Vector2.down * 2, ForceMode2D.Impulse);
-             }
-             */
+            playerActionState = PlayerActionState.DoubleJump;
         }
     }
-
-    /*
     
-    private void SetFly()
+    private void StartFly(InputAction.CallbackContext ctx)
     {
+        if (canFly)
+        {
+            //_rb.AddForce(Vector2.up * flyForce, ForceMode2D.Impulse);
+            _isFlying = true; 
+        }
+    }
+    
+    private void ExecuteFlying()
+    {   
         if (!_isFlying) return;
         
-        _timeInAir += Time.deltaTime;
+        timeInAir += Time.deltaTime;
 
-        if (_timeInAir >= flightDuration)
+        if (timeInAir <= flightDuration)
         {
-            StopFly1();
-            _flyForce = 0;
-        }
+            float t = Mathf.Clamp01(timeInAir / flightDuration);
+
+            _flyVelocity = new Vector2(_rb.linearVelocity.x, t * flyForce);
         
-            float t = _timeInAir / flightDuration;
-            float curveValue = curve.Evaluate(t);
-            
-            _rb.AddForce(Vector2.up * (curveValue * _flyForce), ForceMode2D.Impulse);
+            _rb.linearVelocity = _flyVelocity;
+
+            playerActionState = PlayerActionState.Fly;
+        }
     }
 
-    private void StartFly()
-    {
-        _timeInAir = 0;
-        _isFlying = true;
-    }
-    
     private void StopFly(InputAction.CallbackContext ctx)
     {
-        _isFlying = false;
+        _isFlying  = false; 
+        playerActionState = PlayerActionState.Default;
     }
     
-    private void StopFly1()
-    {
-        _isFlying = false;
-    }
-    
-    */
-
     private void Attack(InputAction.CallbackContext ctx)
     {
-        if (_paused) return;
-        
-        if (!canAttack) return;
+       if (!_canAttack) return;
         
         if (!_isAttacking)
         {   
@@ -287,13 +267,14 @@ public class PlayerController : MonoBehaviour
             SetActionId(10);
             playerActionState = PlayerActionState.Attack;
         }
-    }
-
-    private void SetDirection()
-    {
-        transform.rotation = playerDirectionState == PlayerDirectionState.Right? Quaternion.Euler(0, 0, 0): Quaternion.Euler(0, 180, 0);
+     
     }
     
+    public bool ReturnIsAttacking()
+    {
+        return _isAttacking;
+    }
+
     public void SetPaused(bool value)
     {
         _paused = value;
@@ -324,7 +305,7 @@ public class PlayerController : MonoBehaviour
         
         if (playerActionType == PlayerActionType.ActionJump)
         {
-            EndJump();
+           EndJump();
         }
         
     }
@@ -333,6 +314,7 @@ public class PlayerController : MonoBehaviour
     {
         playerActionState = PlayerActionState.Default;
         _canJump = true;
+        _canDouble = true;
     }
     
     private void EndAttack()
