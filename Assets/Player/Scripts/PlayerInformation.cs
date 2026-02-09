@@ -3,48 +3,48 @@ using UnityEngine;
 
 public class PlayerInformation : MonoBehaviour
 {
-   #region Inspector Variables
+    #region Inspector Variables
 
-   [SerializeField] private int _maxHealth;
-   [SerializeField] private int _currentHealth;
+    private int _maxHealth = 40;
+    [SerializeField] private int _currentHealth;
 
-   #endregion
+    #endregion
 
-   private void Awake()
-   {
-       _currentHealth = _maxHealth;
-   }
+    private void Awake()
+    {
+        _currentHealth = _maxHealth;
+    }
 
-   private void FixedUpdate()
-   {
-       ReturnHealth();
-   }
+    private void FixedUpdate()
+    {
+        ReturnHealth();
+    }
 
 
-   public void SetDamage(int damage)
-   {
-      _currentHealth -= damage;
+    public void SetDamage(int damage)
+    {
+        _currentHealth -= damage;
 
-      if (_currentHealth < 1)
-      {
-        // dead stuff 
-      }
-   }
+        if (_currentHealth < 5)
+        {
+            // dead stuff 
+        }
+    }
 
-   public void SetHealth(int health)
-   {
-       if ((_currentHealth + health) <= _maxHealth)
-       {
-           _currentHealth += health;
-       }
-       else
-       {
-           _currentHealth = _maxHealth;
-       }
-   }
+    public void SetHealth(int health)
+    {
+        if ((_currentHealth + health) <= _maxHealth)
+        {
+            _currentHealth += health;
+        }
+        else
+        {
+            _currentHealth = _maxHealth;
+        }
+    }
    
-   private int ReturnHealth()
-   {
-       return _currentHealth;
-   }
+    public int ReturnHealth()
+    {
+        return _currentHealth;
+    }
 }
