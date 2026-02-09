@@ -1,0 +1,390 @@
+fileFormatVersion: 2
+guid: 9da4e969dcb4b4a4f8e41d61bd9cfef3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1671161204873667501
+    second: Igel_Animation_New_0
+  - first:
+      213: 3510847575048016780
+    second: Igel_Animation_New_1
+  - first:
+      213: -5921574445740008460
+    second: Igel_Animation_New_2
+  - first:
+      213: -5143008762608419044
+    second: Igel_Animation_New_3
+  - first:
+      213: -6401345792911454709
+    second: Igel_Animation_New_4
+  - first:
+      213: 1104471873583799881
+    second: Igel_Animation_New_5
+  - first:
+      213: -8423014475875964772
+    second: Igel_Animation_New_6
+  - first:
+      213: -6667685771707070239
+    second: Igel_Animation_New_7
+  - first:
+      213: 2001398947876814543
+    second: Igel_Animation_New_8
+  - first:
+      213: 2663000970227749209
+    second: Igel_Animation_New_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Igel_Animation_New_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 16
+        width: 36
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35c57150db7dec8e0800000000000000
+      internalID: -1671161204873667501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igel_Animation_New_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 16
+        width: 36
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c83574ba44909b030800000000000000
+      internalID: 3510847575048016780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igel_Animation_New_2
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 16
+        width: 36
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fbd2aa5a6752dda0800000000000000
+      internalID: -5921574445740008460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igel_Animation_New_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 16
+        width: 36
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1ff00c77cc50a8b0800000000000000
+      internalID: -5143008762608419044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igel_Animation_New_4
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 16
+        width: 41
+        height: 27
+      alignment: 9
+      pivot: {x: 0.4390244, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0e4219cae9d927a0800000000000000
+      internalID: -6401345792911454709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igel_Animation_New_5
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 16
+        width: 41
+        height: 27
+      alignment: 9
+      pivot: {x: 0.4390244, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94e5f59315fd35f00800000000000000
+      internalID: 1104471873583799881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igel_Animation_New_6
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 16
+        width: 41
+        height: 28
+      alignment: 9
+      pivot: {x: 0.4390244, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c98a07316f07b1b80800000000000000
+      internalID: -8423014475875964772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igel_Animation_New_7
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 16
+        width: 38
+        height: 26
+      alignment: 9
+      pivot: {x: 0.47368422, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e849771e1f9773a0800000000000000
+      internalID: -6667685771707070239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igel_Animation_New_8
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 16
+        width: 38
+        height: 24
+      alignment: 9
+      pivot: {x: 0.47368422, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fceb90e3db566cb10800000000000000
+      internalID: 2001398947876814543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igel_Animation_New_9
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 16
+        width: 38
+        height: 23
+      alignment: 9
+      pivot: {x: 0.47368422, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95112f2f541e4f420800000000000000
+      internalID: 2663000970227749209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e73e4857a1021a940aa9ee0e7115bff9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Igel_Animation_New_0: -1671161204873667501
+      Igel_Animation_New_1: 3510847575048016780
+      Igel_Animation_New_2: -5921574445740008460
+      Igel_Animation_New_3: -5143008762608419044
+      Igel_Animation_New_4: -6401345792911454709
+      Igel_Animation_New_5: 1104471873583799881
+      Igel_Animation_New_6: -8423014475875964772
+      Igel_Animation_New_7: -6667685771707070239
+      Igel_Animation_New_8: 2001398947876814543
+      Igel_Animation_New_9: 2663000970227749209
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
