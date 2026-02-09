@@ -5,7 +5,7 @@ public class PlayerInformation : MonoBehaviour
 {
     #region Inspector Variables
 
-    [SerializeField] private int _maxHealth;
+    private int _maxHealth = 40;
     [SerializeField] private int _currentHealth;
 
     #endregion
@@ -25,7 +25,7 @@ public class PlayerInformation : MonoBehaviour
     {
         _currentHealth -= damage;
 
-        if (_currentHealth < 1)
+        if (_currentHealth < 5)
         {
             // dead stuff 
         }
@@ -43,7 +43,7 @@ public class PlayerInformation : MonoBehaviour
         }
     }
    
-    private int ReturnHealth()
+    public int ReturnHealth()
     {
         return _currentHealth;
     }
