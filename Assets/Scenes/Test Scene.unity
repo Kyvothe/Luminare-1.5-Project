@@ -638,6 +638,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b09a999921dda114c89d2b3f0de81268, type: 3}
+--- !u!1 &1228841536 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8269161703913586673, guid: b09a999921dda114c89d2b3f0de81268, type: 3}
+  m_PrefabInstance: {fileID: 1228841535}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1428928362
 GameObject:
   m_ObjectHideFlags: 0
@@ -3181,6 +3186,7 @@ GameObject:
   - component: {fileID: 1894520711705277278}
   - component: {fileID: 184513064787881580}
   - component: {fileID: 6800153791992942027}
+  - component: {fileID: 7461887902724266048}
   m_Layer: 0
   m_Name: MenuManagerInGame
   m_TagString: Untagged
@@ -3188,6 +3194,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7461887902724266048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7461887902724266047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ecb01ec213c32d4eb07c2cd38ed658b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1228841536}
+  heartList:
+  - {fileID: 1428928362}
+  - {fileID: 1805710649}
+  - {fileID: 824180082}
+  - {fileID: 1786833622}
+  - {fileID: 639832797}
+  - {fileID: 360313731}
+  - {fileID: 1471258298}
+  - {fileID: 1744139100}
 --- !u!1 &7533350616607036624
 GameObject:
   m_ObjectHideFlags: 0
