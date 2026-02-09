@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
    
    public enum PlayerMovementState {Idle, Move}
    public enum PlayerDirectionState {Left, Right}
-   public enum PlayerActionState {Default, Attack, Hops, Jump, Peck, Flutter}
+   public enum PlayerActionState {Default, Attack, Hops, Jump, DoubleJump, Fly}
     
     #region Inspector Variables
     
@@ -24,9 +24,23 @@ public class PlayerController : MonoBehaviour
 
     [Header("Action Setup")] 
     [SerializeField] private float currentJumpForce;
+    
+    [SerializeField] private AnimationCurve curve;
+
+    [SerializeField] private float flightDuration;
+    [SerializeField] private float timeInAir;
+
+    public float coyoteTime;
+    private float _coyoteTimeCounter;
+
+    public int jumpCounter = 0;
+
 
     public  bool canBigJump;
+    public  bool canDoubleJump;
     public bool _canAttack;
+    public bool canFly;
+    public bool _canDouble;
 
     [Header("Ground Setup")] 
     [SerializeField] private Vector2 groundBoxPos;
@@ -54,10 +68,17 @@ public class PlayerController : MonoBehaviour
     
     private float bigJumpForce = 7f;
     private float hopsForce = 3f;
+    private float flyForce = 3f;
+
 
     private bool _isGrounded;
     private bool _canJump = true;
     private bool _isAttacking;
+    private bool _isFlying;
+
+    private bool _paused = false;
+    
+    private Vector2 _flyVelocity;
     
     #endregion
     
@@ -89,7 +110,10 @@ public class PlayerController : MonoBehaviour
         _moveAction.performed += Move;
         _moveAction.canceled += Move;
 
-        _jumpAction.performed += Jump;
+        _jumpAction.started += Jump;
+        _jumpAction.performed += StartFly;
+        _jumpAction.performed += CheckForDoubleJump;
+        _jumpAction.canceled += StopFly;
         
         _attackAction.performed += Attack;
     }
@@ -103,6 +127,8 @@ public class PlayerController : MonoBehaviour
         UpdateAnimator();
 
         ReturnIsAttacking();
+        
+        ExecuteFlying();
     }
     
     private void OnDisable()
@@ -111,7 +137,9 @@ public class PlayerController : MonoBehaviour
         _moveAction.performed -= Move;
         _moveAction.canceled -= Move;
 
-        _jumpAction.performed -= Jump;
+        _jumpAction.canceled -= Jump;
+        _jumpAction.canceled -= StopFly;
+
         
         _attackAction.performed -= Attack;
 
@@ -124,6 +152,18 @@ public class PlayerController : MonoBehaviour
     private void CheckIsGrounded()
     {
         _isGrounded = Physics2D.OverlapBox((Vector2)transform.position + groundBoxPos, groundBoxSize, 0, groundLayer);
+
+        if (_isGrounded)
+        {
+            timeInAir = 0;
+            playerActionState = PlayerActionState.Default;
+
+            _coyoteTimeCounter = coyoteTime;
+        }
+        else
+        {
+            _coyoteTimeCounter -= Time.deltaTime;
+        }
     }
     
     #endregion
@@ -136,7 +176,7 @@ public class PlayerController : MonoBehaviour
        
        playerMovementState = (_moveInput.x == 0) ? PlayerMovementState.Idle : PlayerMovementState.Move;
 
-       if (_moveInput.y < 0) // S gedrückt
+       if (_moveInput.y < 0) // S gedrÃ¼ckt
        {
            _playerOneWay.CheckForOneWayPlatform();
        }
@@ -156,7 +196,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jump(InputAction.CallbackContext ctx)
     {
-        if (!_isGrounded) return;
+        if (!(_coyoteTimeCounter > 0f)) return;
 
         if (!_canJump) return;
         
@@ -165,9 +205,57 @@ public class PlayerController : MonoBehaviour
         _canJump = false;
         _rb.AddForce(Vector2.up * currentJumpForce, ForceMode2D.Impulse);
         SetActionId(1);
-        playerActionState = canBigJump ? PlayerActionState.Jump : PlayerActionState.Hops;
+        playerActionState = canBigJump ? PlayerActionState.Jump : PlayerActionState.Hops;  
+        
+        _coyoteTimeCounter = 0f;
+    }
+    
+    private void CheckForDoubleJump(InputAction.CallbackContext ctx)
+    {
+        if (canDoubleJump && !_canJump && _canDouble)
+        {
+            Debug.Log("Double jump");
+            _canJump = false;
+            _canDouble = false;
+            _rb.AddForce(Vector2.up * bigJumpForce, ForceMode2D.Impulse);
+            SetActionId(1);
+            playerActionState = PlayerActionState.DoubleJump;
+        }
+    }
+    
+    private void StartFly(InputAction.CallbackContext ctx)
+    {
+        if (canFly)
+        {
+            //_rb.AddForce(Vector2.up * flyForce, ForceMode2D.Impulse);
+            _isFlying = true; 
+        }
+    }
+    
+    private void ExecuteFlying()
+    {   
+        if (!_isFlying) return;
+        
+        timeInAir += Time.deltaTime;
+
+        if (timeInAir <= flightDuration)
+        {
+            float t = Mathf.Clamp01(timeInAir / flightDuration);
+
+            _flyVelocity = new Vector2(_rb.linearVelocity.x, t * flyForce);
+        
+            _rb.linearVelocity = _flyVelocity;
+
+            playerActionState = PlayerActionState.Fly;
+        }
     }
 
+    private void StopFly(InputAction.CallbackContext ctx)
+    {
+        _isFlying  = false; 
+        playerActionState = PlayerActionState.Default;
+    }
+    
     private void Attack(InputAction.CallbackContext ctx)
     {
        if (!_canAttack) return;
@@ -181,10 +269,15 @@ public class PlayerController : MonoBehaviour
         }
      
     }
-
+    
     public bool ReturnIsAttacking()
     {
         return _isAttacking;
+    }
+
+    public void SetPaused(bool value)
+    {
+        _paused = value;
     }
     
     #endregion
@@ -212,7 +305,7 @@ public class PlayerController : MonoBehaviour
         
         if (playerActionType == PlayerActionType.ActionJump)
         {
-            EndJump();
+           EndJump();
         }
         
     }
@@ -221,6 +314,7 @@ public class PlayerController : MonoBehaviour
     {
         playerActionState = PlayerActionState.Default;
         _canJump = true;
+        _canDouble = true;
     }
     
     private void EndAttack()
