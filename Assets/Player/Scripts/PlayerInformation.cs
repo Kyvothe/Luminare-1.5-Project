@@ -15,6 +15,12 @@ public class PlayerInformation : MonoBehaviour
        _currentHealth = _maxHealth;
    }
 
+   private void FixedUpdate()
+   {
+       ReturnHealth();
+   }
+
+
    public void SetDamage(int damage)
    {
       _currentHealth -= damage;
@@ -35,5 +41,10 @@ public class PlayerInformation : MonoBehaviour
        {
            _currentHealth = _maxHealth;
        }
+   }
+   
+   private int ReturnHealth()
+   {
+       return _currentHealth;
    }
 }
