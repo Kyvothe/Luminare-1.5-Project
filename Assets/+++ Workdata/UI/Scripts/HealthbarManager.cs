@@ -28,6 +28,5 @@ public class HealthbarManager : MonoBehaviour
         {
             heartList[i].SetActive(true);
         }
-        
     }
 }
