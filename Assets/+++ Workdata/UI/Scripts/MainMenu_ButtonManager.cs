@@ -6,11 +6,6 @@ public class MainMenu_ButtonManager : MonoBehaviour
     public SceneLoader sceneLoader;
     
     // Gibt alles and MainMenu_UIManager weiter
-    
-    public void Button_OpenLoadMenu()
-    {
-        uiManager.OpenLoadMenu();
-    }
 
     public void Button_OpenMainMenu()
     {

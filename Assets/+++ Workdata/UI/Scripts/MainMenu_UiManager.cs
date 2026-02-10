@@ -5,7 +5,6 @@ public class MainMenu_UiManager : MonoBehaviour
 {
     public GameObject mainMenuContainer;
     public GameObject optionsMenuContainer;
-    public GameObject loadMenuContainer;
     public GameObject creditsMenuContainer;
 
     private GameObject _currentMenu;
@@ -15,14 +14,6 @@ public class MainMenu_UiManager : MonoBehaviour
     private void Awake()
     {
         _currentMenu = mainMenuContainer;
-    }
-
-    public void OpenLoadMenu()
-    {
-        _currentMenu.SetActive(false);
-        loadMenuContainer.SetActive(true);
-        
-        _currentMenu = loadMenuContainer;
     }
 
     public void OpenOptionsMenu()
