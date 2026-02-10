@@ -208,7 +208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 939903429c5ee9a43a87f46fd63c4773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 10
   _currentHealth: 0
 --- !u!114 &5162658125109409055
 MonoBehaviour:
@@ -225,8 +224,40 @@ MonoBehaviour:
   playerMovementState: 0
   playerDirectionState: 0
   playerActionState: 0
-  currentJumpForce: 2
+  currentJumpForce: 5
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 12
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  flightDuration: 0
+  timeInAir: 0
+  coyoteTime: 0.2
+  jumpCounter: 0
   canBigJump: 1
+  canDoubleJump: 0
+  _canAttack: 0
+  canFly: 0
+  _canDouble: 0
   groundBoxPos: {x: 0, y: -0.2}
   groundBoxSize: {x: 0.5, y: 0.2}
   groundLayer:
@@ -399,3 +430,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemCount: 0
   gotAllItems: 0
+  healitem: {fileID: 0}

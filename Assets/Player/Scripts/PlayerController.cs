@@ -66,8 +66,8 @@ public class PlayerController : MonoBehaviour
 
     private float _currentSpeed;
     
-    private float bigJumpForce = 7f;
-    private float hopsForce = 3f;
+    private float bigJumpForce = 10f;
+    private float hopsForce = 5f;
     private float flyForce = 3f;
 
 
@@ -176,7 +176,7 @@ public class PlayerController : MonoBehaviour
        
        playerMovementState = (_moveInput.x == 0) ? PlayerMovementState.Idle : PlayerMovementState.Move;
 
-       if (_moveInput.y < 0) // S gedrÃ¼ckt
+       if (_moveInput.y < 0) // S gedrueckt
        {
            _playerOneWay.CheckForOneWayPlatform();
        }
