@@ -18,9 +18,16 @@ public class SpikesRise : MonoBehaviour
             transform.position = new Vector2(transform.position.x, transform.position.y + 0.3f);
             //gameObject.GetComponent<BoxCollider2D>().enabled = true;
             
-            _animator.SetBool("Angry", true);
-            
-            Debug.Log("Hello");
+            _animator.SetInteger("ActionId", 1);
+        }
+    }
+    
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            _animator.SetBool("Awake", true);
+            _animator.SetInteger("ActionId", 0);
         }
     }
     
@@ -31,10 +38,8 @@ public class SpikesRise : MonoBehaviour
             transform.position = new Vector2(transform.position.x, transform.position.y - 0.3f);
             //gameObject.GetComponent<BoxCollider2D>().enabled = false;
             
-            _animator.SetBool("Angry", false);
+            _animator.SetBool("Awake", false);
 
         }
-        
-        
     }
 }

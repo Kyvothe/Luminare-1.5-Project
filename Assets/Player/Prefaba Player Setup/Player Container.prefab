@@ -208,7 +208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 939903429c5ee9a43a87f46fd63c4773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 10
   _currentHealth: 0
 --- !u!114 &5162658125109409055
 MonoBehaviour:
@@ -227,6 +226,7 @@ MonoBehaviour:
   playerActionState: 0
   currentJumpForce: 2
   canBigJump: 1
+  _canAttack: 0
   groundBoxPos: {x: 0, y: -0.2}
   groundBoxSize: {x: 0.5, y: 0.2}
   groundLayer:
