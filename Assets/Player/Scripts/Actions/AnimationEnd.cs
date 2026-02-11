@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Animations;
 
-public enum PlayerActionType {ActionJump, ActionAttack}
+public enum PlayerActionType {ActionJump, ActionAttack, ActionFly}
 
 public class AnimationEnd : StateMachineBehaviour
 {

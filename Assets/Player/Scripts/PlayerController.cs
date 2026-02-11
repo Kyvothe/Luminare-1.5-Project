@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
     public bool _canAttack;
     public bool canFly;
     public bool _canDouble;
+    private bool _hasLanded = true;
 
     [Header("Ground Setup")] 
     [SerializeField] private Vector2 groundBoxPos;
@@ -64,15 +65,15 @@ public class PlayerController : MonoBehaviour
     
     private Vector2 _moveInput;
 
-    private float _currentSpeed;
+    private float _currentSpeed = 3f;
     
-    private float bigJumpForce = 10f;
+    private float bigJumpForce = 7f;
     private float hopsForce = 5f;
-    private float flyForce = 3f;
+    public float flyForce = 3f;
 
 
     private bool _isGrounded;
-    private bool _canJump = true;
+    public bool _canJump = true;
     private bool _isAttacking;
     private bool _isFlying;
 
@@ -90,8 +91,6 @@ public class PlayerController : MonoBehaviour
         _animator = GetComponent<Animator>();
         
         _playerOneWay = GetComponent<PlayerOneWay>();
-
-        _currentSpeed = 5f;
         
         SetInputActions();
     }
@@ -159,6 +158,8 @@ public class PlayerController : MonoBehaviour
             playerActionState = PlayerActionState.Default;
 
             _coyoteTimeCounter = coyoteTime;
+            
+            _hasLanded = true;
         }
         else
         {
@@ -197,6 +198,7 @@ public class PlayerController : MonoBehaviour
     private void Jump(InputAction.CallbackContext ctx)
     {
         if (!(_coyoteTimeCounter > 0f)) return;
+        Debug.Log("Jump");
 
         if (!_canJump) return;
         
@@ -227,8 +229,11 @@ public class PlayerController : MonoBehaviour
     {
         if (canFly)
         {
-            //_rb.AddForce(Vector2.up * flyForce, ForceMode2D.Impulse);
-            _isFlying = true; 
+            if (_hasLanded)
+            {
+                //_rb.AddForce(Vector2.up * flyForce, ForceMode2D.Impulse);
+                _isFlying = true;    
+            }
         }
     }
     
@@ -240,6 +245,11 @@ public class PlayerController : MonoBehaviour
 
         if (timeInAir <= flightDuration)
         {
+            SetActionId(20);
+
+            _canJump = false;
+            _hasLanded = false;
+            
             float t = Mathf.Clamp01(timeInAir / flightDuration);
 
             _flyVelocity = new Vector2(_rb.linearVelocity.x, t * flyForce);
@@ -307,7 +317,6 @@ public class PlayerController : MonoBehaviour
         {
            EndJump();
         }
-        
     }
     
     private void EndJump()
@@ -321,6 +330,7 @@ public class PlayerController : MonoBehaviour
     {
         playerActionState = PlayerActionState.Default;
         _isAttacking = false;
+        _canJump = true;
     }
     
     #endregion
