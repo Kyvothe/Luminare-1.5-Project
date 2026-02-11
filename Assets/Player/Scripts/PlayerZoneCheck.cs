@@ -5,8 +5,8 @@ public class PlayerZoneCheck : MonoBehaviour
 {
     [SerializeField] private int itemCount = 0;
     public bool gotAllItems = false;
-    
-    public HealItem healitem;
+
+    public GameObject _healItem;
 
     private PlayerInformation _playerInformation;
     private PlayerController _playerController;
@@ -33,7 +33,7 @@ public class PlayerZoneCheck : MonoBehaviour
             if (other.GetComponent<HealItem>())
             {
                 other.gameObject.SetActive(false);
-                _playerInformation.SetHealth(healitem.ReturnHealthAmount());
+                _playerInformation.SetHealth(_healItem.GetComponent<HealItem>().ReturnHealthAmount());
             }
             else
             {
