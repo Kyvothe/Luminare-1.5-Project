@@ -176,7 +176,7 @@ public class PlayerController : MonoBehaviour
        
        playerMovementState = (_moveInput.x == 0) ? PlayerMovementState.Idle : PlayerMovementState.Move;
 
-       if (_moveInput.y < 0) // S gedrÃ¼ckt
+       if (_moveInput.y < 0) // S gedrueckt
        {
            _playerOneWay.CheckForOneWayPlatform();
        }
