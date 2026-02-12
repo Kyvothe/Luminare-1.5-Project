@@ -11,22 +11,29 @@ public class PlayerInformation : MonoBehaviour
     private int _maxHealth = 40;
     [SerializeField] private int _currentHealth;
 
+    public GameObject MenuManagerInGame;
+
     #endregion
     
     private Animator _animator;
+
+    private bool _playerDead = false;
+
+    private OpenDialogueInGame _openDialogueInGame;
 
     private void Awake()
     {
         _currentHealth = _maxHealth;
         
         _animator = GetComponent<Animator>();
+
+        _openDialogueInGame = MenuManagerInGame.GetComponent<OpenDialogueInGame>();
     }
 
     private void FixedUpdate()
     {
         ReturnHealth();
     }
-
 
     public void SetDamage(int damage)
     {
@@ -36,10 +43,8 @@ public class PlayerInformation : MonoBehaviour
 
         if (_currentHealth < 5)
         {
-            // dead stuff 
-            SetActionId(40);
-            gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-           // player noch movable!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            SetActionId(40); 
+            _playerDead = true;
         }
     }
 
@@ -58,6 +63,13 @@ public class PlayerInformation : MonoBehaviour
     public int ReturnHealth()
     {
         return _currentHealth;
+    }
+
+    private void GameOver()                                                                                             // Aufgerufen ueber AnimationsEvent am Ende der death Animation
+    {
+        if (!_playerDead) return;
+        
+        _openDialogueInGame.OpenGameOverScreen();
     }
 
     private void SetActionId(int id)

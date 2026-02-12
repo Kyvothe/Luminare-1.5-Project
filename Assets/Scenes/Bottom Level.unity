@@ -202,6 +202,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3692064147782553254, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
+      propertyPath: MenuManagerInGame
+      value: 
+      objectReference: {fileID: 1733200395}
     - target: {fileID: 7825972168922382389, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.63
@@ -28418,7 +28422,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: Botttom Level
+          m_StringArgument: Bottom Level
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &917595220
