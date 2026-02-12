@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
     private bool _isGrounded;
     public bool _canJump = true;
     private bool _isAttacking;
-    private bool _isFlying;
+    public bool _isFlying;
 
     private bool _paused = false;
     
@@ -258,12 +258,18 @@ public class PlayerController : MonoBehaviour
 
             playerActionState = PlayerActionState.Fly;
         }
+        else
+        {
+            _isFlying = false;
+            _canJump = true;
+        }
     }
 
     private void StopFly(InputAction.CallbackContext ctx)
     {
         _isFlying  = false; 
         playerActionState = PlayerActionState.Default;
+        _canJump = true;
     }
     
     private void Attack(InputAction.CallbackContext ctx)
