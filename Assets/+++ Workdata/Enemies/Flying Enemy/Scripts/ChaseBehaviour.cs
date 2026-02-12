@@ -18,7 +18,7 @@ public class ChaseBehaviour : MonoBehaviour
       if (other.CompareTag("Player"))
       {
             Enemy.chase = false;
-            GetComponent<FlyingEnemy>().ReturnToStart();
+            gameObject.GetComponent<FlyingEnemy>().ReturnToStart();
       }
    }
 }
