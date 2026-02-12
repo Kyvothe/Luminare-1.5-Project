@@ -139,13 +139,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flying Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3032925725776325781, guid: f00bd2c56c3c43b40be55cf42ebbce4c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4254252903468054333, guid: f00bd2c56c3c43b40be55cf42ebbce4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.88
+      value: -7.1
       objectReference: {fileID: 0}
     - target: {fileID: 4254252903468054333, guid: f00bd2c56c3c43b40be55cf42ebbce4c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.03
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4254252903468054333, guid: f00bd2c56c3c43b40be55cf42ebbce4c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -178,6 +182,22 @@ PrefabInstance:
     - target: {fileID: 4254252903468054333, guid: f00bd2c56c3c43b40be55cf42ebbce4c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6415444761231271202, guid: f00bd2c56c3c43b40be55cf42ebbce4c, type: 3}
+      propertyPath: m_Radius
+      value: 1.0120502
+      objectReference: {fileID: 0}
+    - target: {fileID: 6415444761231271202, guid: f00bd2c56c3c43b40be55cf42ebbce4c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6415444761231271202, guid: f00bd2c56c3c43b40be55cf42ebbce4c, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.33633566
+      objectReference: {fileID: 0}
+    - target: {fileID: 6415444761231271202, guid: f00bd2c56c3c43b40be55cf42ebbce4c, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.075325966
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

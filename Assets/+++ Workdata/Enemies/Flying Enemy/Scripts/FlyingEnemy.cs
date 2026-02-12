@@ -10,6 +10,8 @@ public class FlyingEnemy : MonoBehaviour
     public Transform controlPos;
     public bool startReached = false;
     public bool controlReached = true;
+    public Animator anim;
+    public bool InAttackRange;
     
     private void Start()
     {
@@ -43,11 +45,6 @@ public class FlyingEnemy : MonoBehaviour
         {
             goToControl();
         }
-
-       //else
-       //{
-         //  ReturnToStart();
-       //} 
        
        if(chase == false)
            Rotate();
@@ -71,7 +68,17 @@ public class FlyingEnemy : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, controlPos.position, speed * Time.deltaTime);
     }
+
+    private void AttackStart()
+    {
+        InAttackRange = true;
+        AnimationSetBool(10, true);
+    }
     
+    private void AnimationSetBool(int id, bool value)
+    {
+        anim.SetBool(id, value);
+    }
     
     private void Rotate()
     {
