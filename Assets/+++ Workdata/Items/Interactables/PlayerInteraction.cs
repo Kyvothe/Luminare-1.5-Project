@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerInteraction : MonoBehaviour
 {
     public List<Interactable> currentInteractables;
-    public GameObject interactionIndicator;
     
     private PlayerController playerController;
     
@@ -25,15 +24,13 @@ public class PlayerInteraction : MonoBehaviour
     {
         _playerIsAttacking = gameObject.GetComponent<PlayerController>().ReturnIsAttacking();                           // Extra Zuweisung als Absicherung
         
-        if (_playerIsAttacking) return;                                                                                 // Nur wenn Player nicht attakce,d weil sonst AttackCollider vom Player Items in der Schwer-Range selected
+        if (_playerIsAttacking) return;                                                                                 // Nur wenn Player nicht attacked weil sonst AttackCollider vom Player Items selected
         
         if (other.GetComponent<Interactable>())                                                                         // Abfrage, ob es ein Interactable ist
         {
             currentInteractables.Add(other.GetComponent<Interactable>());                                           // Item wird Liste hinzugefügt
             //other.GetComponent<Interactable>().onSelect?.Invoke();
             currentInteractables[^1].onSelect?.Invoke();                                                                // Zuletzt hingefügtes Items wird markiert
-            
-            interactionIndicator.SetActive(true);                                                                       // Läpchen über Player geht und zeigt Möglichleit zum Interagieren an
         }
     }
 
@@ -45,11 +42,6 @@ public class PlayerInteraction : MonoBehaviour
         {
             currentInteractables.Remove(other.GetComponent<Interactable>());                                        // Item wird aus Liste entfernt
             other.GetComponent<Interactable>().onDeselect?.Invoke();                                                    // Item nicht mehr markiert
-        }
-
-        if (currentInteractables.Count < 1)                                                                             // Lämpchen aus wenn keine Items in Liste, also kein Interactable in der Nähe
-        {
-            interactionIndicator.SetActive(false);
         }
     }
 

@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour
     private InputAction _moveAction;
     private InputAction _jumpAction;
     private InputAction _attackAction;
+    private InputAction _interactAction;
     
     private Vector2 _moveInput;
 
@@ -101,6 +102,7 @@ public class PlayerController : MonoBehaviour
        _moveAction = _inputActions.Player.Move;
        _jumpAction = _inputActions.Player.Jump;
        _attackAction = _inputActions.Player.Attack;
+       _interactAction = _inputActions.Player.Interact;
     }
 
     private void OnEnable()
@@ -115,6 +117,8 @@ public class PlayerController : MonoBehaviour
         _jumpAction.canceled += StopFly;
         
         _attackAction.performed += Attack;
+        
+        _interactAction.performed += Interact;
     }
 
     private void FixedUpdate()
@@ -141,7 +145,8 @@ public class PlayerController : MonoBehaviour
 
         
         _attackAction.performed -= Attack;
-
+        
+        _interactAction.performed -= Interact;
     }
     
     #endregion
@@ -283,7 +288,13 @@ public class PlayerController : MonoBehaviour
             SetActionId(10);
             playerActionState = PlayerActionState.Attack;
         }
-     
+    }
+
+    private void Interact(InputAction.CallbackContext ctx)
+    {
+        if (_isAttacking) return;
+        
+        gameObject.GetComponent<PlayerInteraction>().TryInteract();
     }
     
     public bool ReturnIsAttacking()
@@ -294,6 +305,30 @@ public class PlayerController : MonoBehaviour
     public void SetPaused(bool value)
     {
         _paused = value;
+    }
+    
+    #endregion
+
+    #region Upgrade Toggles
+    
+    public void SetCanBigJump(bool value)
+    {
+        canBigJump = value;
+    }
+    
+    public void SetCanDoubleJump(bool value)
+    {
+        canDoubleJump = value;
+    }
+    
+    public void SetCanAttack(bool value)
+    {
+        _canAttack = value;
+    }
+    
+    public void SetCanFly(bool value)
+    {
+        canFly = value;
     }
     
     #endregion
