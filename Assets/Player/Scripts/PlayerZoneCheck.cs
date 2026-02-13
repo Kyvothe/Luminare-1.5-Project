@@ -22,6 +22,8 @@ public class PlayerZoneCheck : MonoBehaviour
     private void FixedUpdate()
     {
         _isAttacking = _playerController.ReturnIsAttacking();
+
+        ReturnItemCount();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -46,5 +48,10 @@ public class PlayerZoneCheck : MonoBehaviour
                 } 
             }
         }
+    }
+
+    public int ReturnItemCount()
+    {
+        return itemCount;
     }
 }
