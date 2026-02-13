@@ -7,7 +7,7 @@ public class ProjectileBehaviour : MonoBehaviour
     
     private Animator _animator;
     private bool _isGrounded;
-    private bool _notDestroyed;
+    private bool _notDestroyed = true;
     
     [Header("Ground Setup")] 
     [SerializeField] private Vector2 groundBoxPos;
@@ -27,13 +27,15 @@ public class ProjectileBehaviour : MonoBehaviour
         {
             _animator.SetTrigger(Hash_ActionTrigger);
             _animator.SetInteger(Hash_ActionId, 1);
-            _notDestroyed = false;
+            _notDestroyed = true;
         }
     }
     
     private void DestroyProjectile()                            // aufgerufen über Animations Event am Ende von Eichel_shatter
     {
+        Debug.Log("meh");
         Destroy(gameObject);
+        _notDestroyed = false;
     }
     
     private void CheckIsGrounded()
