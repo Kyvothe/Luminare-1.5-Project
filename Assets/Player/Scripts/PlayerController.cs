@@ -60,12 +60,15 @@ public class PlayerController : MonoBehaviour
     
     private InputSystem_Actions _inputActions;
     private InputAction _moveAction;
+    private InputAction _sprintAction;
     private InputAction _jumpAction;
     private InputAction _attackAction;
     
     private Vector2 _moveInput;
 
-    private float _currentSpeed = 3f;
+    private float _currentSpeed;
+    private float _walkingSpeed = 3f;
+    private float _sprintingSpeed = 4f;
     
     private float bigJumpForce = 7f;
     private float hopsForce = 5f;
@@ -93,12 +96,15 @@ public class PlayerController : MonoBehaviour
         _playerOneWay = GetComponent<PlayerOneWay>();
         
         SetInputActions();
+
+        _currentSpeed = _walkingSpeed;
     }
 
     private void SetInputActions()
     {
        _inputActions = new InputSystem_Actions();
        _moveAction = _inputActions.Player.Move;
+       _sprintAction = _inputActions.Player.Sprint;
        _jumpAction = _inputActions.Player.Jump;
        _attackAction = _inputActions.Player.Attack;
     }
@@ -108,7 +114,10 @@ public class PlayerController : MonoBehaviour
         _inputActions.Enable();
         _moveAction.performed += Move;
         _moveAction.canceled += Move;
-
+        
+        _sprintAction.performed += Sprint;
+        _sprintAction.canceled += Sprint;
+        
         _jumpAction.started += Jump;
         _jumpAction.performed += StartFly;
         _jumpAction.performed += CheckForDoubleJump;
@@ -135,6 +144,9 @@ public class PlayerController : MonoBehaviour
         _inputActions.Disable();
         _moveAction.performed -= Move;
         _moveAction.canceled -= Move;
+        
+        _sprintAction.performed -= Sprint;
+        _sprintAction.canceled -= Sprint;
 
         _jumpAction.canceled -= Jump;
         _jumpAction.canceled -= StopFly;
@@ -193,6 +205,19 @@ public class PlayerController : MonoBehaviour
            transform.rotation = Quaternion.Euler(0, 0, 0);
            playerDirectionState = PlayerDirectionState.Right;
        }
+    }
+
+    private void Sprint(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            _currentSpeed = _sprintingSpeed;
+        }
+
+        if (!ctx.performed)
+        {
+            _currentSpeed = _walkingSpeed;
+        }
     }
 
     private void Jump(InputAction.CallbackContext ctx)
