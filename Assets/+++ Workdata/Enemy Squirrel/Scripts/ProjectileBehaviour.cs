@@ -31,7 +31,7 @@ public class ProjectileBehaviour : MonoBehaviour
         }
     }
     
-    private void DestroyProjectile()                            // aufgerufen über Animations Event am Ende von Eichel_shatter
+    public void DestroyProjectile()                            // aufgerufen über Animations Event am Ende von Eichel_shatter
     {
         Debug.Log("meh");
         Destroy(gameObject);
