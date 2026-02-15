@@ -6,7 +6,7 @@ public class enemyRatAnimation : MonoBehaviour
 
 {
     
-    public static readonly int Hash_MovementValue = Animator.StringToHash("MovementValue");
+   // public static readonly int Hash_MovementValue = Animator.StringToHash("MovementValue");
     public static readonly int Hash_ActionTrigger = Animator.StringToHash("ActionTrigger");
     public static readonly int Hash_ActionId = Animator.StringToHash("ActionId");
 
@@ -31,7 +31,7 @@ public class enemyRatAnimation : MonoBehaviour
 
     public void SetMovementValue(float value)
     {
-        _animator.SetFloat(Hash_MovementValue, value);
+      //  _animator.SetFloat(Hash_MovementValue, value);
     }
     
     private void AnimationSetActionId(int id)
