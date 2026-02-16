@@ -69,7 +69,9 @@ public class PlayerInformation : MonoBehaviour
     {
         if (!_playerDead) return;
         
-        _openDialogueInGame.OpenGameOverScreen();
+        Debug.Log("Dead");
+        
+        MenuManagerInGame.GetComponent<OpenDialogueInGame>().OpenGameOverScreen();
     }
 
     private void SetActionId(int id)

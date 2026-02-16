@@ -38,9 +38,9 @@ public class PlayerController : MonoBehaviour
 
     public  bool canBigJump;
     public  bool canDoubleJump;
+    public bool doubleJump = true;
     public bool _canAttack;
     public bool canFly;
-    public bool _canDouble;
     private bool _hasLanded = true;
 
     [Header("Ground Setup")] 
@@ -120,7 +120,6 @@ public class PlayerController : MonoBehaviour
         
         _jumpAction.started += Jump;
         _jumpAction.performed += StartFly;
-        _jumpAction.performed += CheckForDoubleJump;
         _jumpAction.canceled += StopFly;
         
         _attackAction.performed += Attack;
@@ -148,7 +147,7 @@ public class PlayerController : MonoBehaviour
         _sprintAction.performed -= Sprint;
         _sprintAction.canceled -= Sprint;
 
-        _jumpAction.canceled -= Jump;
+        _jumpAction.started -= Jump;
         _jumpAction.canceled -= StopFly;
 
         
@@ -172,10 +171,13 @@ public class PlayerController : MonoBehaviour
             _coyoteTimeCounter = coyoteTime;
             
             _hasLanded = true;
+
+            doubleJump = true;
         }
         else
         {
             _coyoteTimeCounter -= Time.deltaTime;
+            _canJump = false;
         }
     }
     
@@ -222,9 +224,13 @@ public class PlayerController : MonoBehaviour
 
     private void Jump(InputAction.CallbackContext ctx)
     {
+        if (canDoubleJump)
+        {
+            DoubleJump();
+            return;
+        }
+        
         if (!(_coyoteTimeCounter > 0f)) return;
-        Debug.Log("Jump");
-
         if (!_canJump) return;
         
         currentJumpForce = canBigJump ? bigJumpForce : hopsForce;
@@ -236,19 +242,25 @@ public class PlayerController : MonoBehaviour
         
         _coyoteTimeCounter = 0f;
     }
-    
-    private void CheckForDoubleJump(InputAction.CallbackContext ctx)
+
+    private void DoubleJump()
     {
-        if (canDoubleJump && !_canJump && _canDouble)
-        {
-            Debug.Log("Double jump");
-            _canJump = false;
-            _canDouble = false;
-            _rb.AddForce(Vector2.up * bigJumpForce, ForceMode2D.Impulse);
-            SetActionId(1);
-            playerActionState = PlayerActionState.DoubleJump;
-        }
+        if (!canDoubleJump) return;
+        if (!doubleJump) return;
+        
+        _rb.linearVelocity = Vector2.zero;
+        _rb.angularVelocity = 0f;
+        
+        _rb.AddForce(Vector2.up * bigJumpForce, ForceMode2D.Impulse);
+        SetActionId(1);
+        playerActionState = PlayerActionState.DoubleJump; 
+        
+        _coyoteTimeCounter = 0f; 
+        
+        doubleJump = false;
     }
+
+    
     
     private void StartFly(InputAction.CallbackContext ctx)
     {
@@ -353,8 +365,7 @@ public class PlayerController : MonoBehaviour
     private void EndJump()
     {
         playerActionState = PlayerActionState.Default;
-        _canJump = true;
-        _canDouble = true;
+        _canJump = true; 
     }
     
     private void EndAttack()
