@@ -157,7 +157,7 @@ MonoBehaviour:
   wallCheckDistance: 0.3
   groundAndWallMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
 --- !u!114 &2062441072064899790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,7 +274,7 @@ Transform:
   m_GameObject: {fileID: 640966672659908122}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.86, y: 0.273, z: 0}
+  m_LocalPosition: {x: -1.296, y: 0.765, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 8745490698287549525}
   - component: {fileID: 65690904165992397}
   - component: {fileID: 8634742825659561298}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: BodyContactDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -347,8 +347,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.06448157, y: 0.41815853}
-  m_Size: {x: 2.2177808, y: 0.9139192}
+  m_Offset: {x: -0.2591716, y: 0.32879347}
+  m_Size: {x: 1.8284159, y: 0.73519284}
   m_Direction: 1
 --- !u!114 &8634742825659561298
 MonoBehaviour:

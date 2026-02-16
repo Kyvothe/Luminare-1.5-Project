@@ -29,6 +29,8 @@ public class SpikesRise : MonoBehaviour
             //gameObject.GetComponent<BoxCollider2D>().enabled = true;
             
             _animator.SetInteger("ActionId", 1);
+            _animator.SetTrigger("ActionTrigger");
+            
             _walkedOut = false;
         }
     }

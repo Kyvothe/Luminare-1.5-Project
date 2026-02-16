@@ -11,12 +11,12 @@ public class ContactDamage : MonoBehaviour
   {
    other.GetComponent<PlayerInformation>().SetDamage(contactDamage);
   }
-  
+  /*
   if (other.CompareTag("Enemy"))
   {
    Debug.Log("Hello there");
    other.GetComponent<enemyRatPatrolMovement>().BumpChangeDirection();
-  }
+  }*/
   
  }
 }

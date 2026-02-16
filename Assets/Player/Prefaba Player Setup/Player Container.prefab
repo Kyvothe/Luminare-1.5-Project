@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3705317676674698896}
   - component: {fileID: 1975148949047001219}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlaceholderAttackSignal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7215681207946805515}
   - component: {fileID: 429581718687187035}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AttackCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 3613762052705174618}
   - component: {fileID: 8458117023163855491}
   - component: {fileID: 2105403762185471993}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player Container
   m_TagString: Player
   m_Icon: {fileID: 0}
