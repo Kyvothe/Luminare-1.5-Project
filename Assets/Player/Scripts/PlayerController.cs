@@ -377,6 +377,30 @@ public class PlayerController : MonoBehaviour
     
     #endregion
     
+    #region Upgrade Toggles
+    
+    public void SetCanBigJump(bool value)
+    {
+        canBigJump = value;
+    }
+    
+    public void SetCanDoubleJump(bool value)
+    {
+        canDoubleJump = value;
+    }
+    
+    public void SetCanAttack(bool value)
+    {
+        _canAttack = value;
+    }
+    
+    public void SetCanFly(bool value)
+    {
+        canFly = value;
+    }
+    
+    #endregion
+    
     #region Gizmos
 
     private void OnDrawGizmos()
