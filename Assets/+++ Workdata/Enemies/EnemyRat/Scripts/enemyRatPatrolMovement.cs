@@ -57,6 +57,7 @@ public class enemyRatPatrolMovement : MonoBehaviour
         if (enemyMovementState == EnemyMovementState.ChangeDirection)
         {
             ChangeDirection();
+            Debug.Log("IM CHANGING");
             return;
         }
         
@@ -149,7 +150,7 @@ public class enemyRatPatrolMovement : MonoBehaviour
         {
             _lastDirectionChangeTime = Time.time;
             _facingDirection *= -1;
-            transform.rotation = Quaternion.Euler(0, _facingDirection == 1 ? 0 : 180, 0);
+            transform.rotation = Quaternion.Euler(0, _facingDirection == 1 ? 180 : 0, 0);
             enemyMovementState = EnemyMovementState.Idle;
         }
         else
@@ -160,7 +161,13 @@ public class enemyRatPatrolMovement : MonoBehaviour
     
     public void SetDirection()
     {
-        transform.rotation = Quaternion.Euler(0, _facingDirection == 1? 0 : 180, 0);
+        transform.rotation = Quaternion.Euler(0, _facingDirection == 1? 180 : 0, 0);
+    }
+
+    public void BumpChangeDirection()
+    {
+        enemyMovementState = EnemyMovementState.ChangeDirection;
+
     }
     
     #endregion
