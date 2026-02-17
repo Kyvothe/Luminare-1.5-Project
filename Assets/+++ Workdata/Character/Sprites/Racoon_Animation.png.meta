@@ -1,37 +1,43 @@
 fileFormatVersion: 2
-guid: 6b88d5799c612ff458e3f12f0471ae2c
+guid: 341de648ed58f5046b020774fea55c2a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3880579050266048771
-    second: Ralph_Animation_0
+      213: 285479871321584830
+    second: Racoon_Animation_0
   - first:
-      213: 4704367465135067846
-    second: Ralph_Animation_1
+      213: 807324624016733338
+    second: Racoon_Animation_1
   - first:
-      213: -7103326461674134767
-    second: Ralph_Animation_2
+      213: -1469345199204316807
+    second: Racoon_Animation_2
   - first:
-      213: -7835478847095323172
-    second: Ralph_Animation_3
+      213: 3213192821913768959
+    second: Racoon_Animation_3
   - first:
-      213: 4709332975562209894
-    second: Ralph_Animation_4
+      213: -7133502456354586422
+    second: Racoon_Animation_4
   - first:
-      213: 215990168954398293
-    second: Ralph_Animation_5
+      213: 2125659429130541319
+    second: Racoon_Animation_5
   - first:
-      213: -589512917283839206
-    second: Ralph_Animation_6
+      213: -6971149984129926594
+    second: Racoon_Animation_6
   - first:
-      213: 9178368705376698085
-    second: Ralph_Animation_7
+      213: -9112958821356244243
+    second: Racoon_Animation_7
   - first:
-      213: 1968192860308260936
-    second: Ralph_Animation_8
+      213: -1695702764948327290
+    second: Racoon_Animation_8
   - first:
-      213: -6422016695867930262
-    second: Ralph_Animation_9
+      213: 115479031128278042
+    second: Racoon_Animation_9
+  - first:
+      213: -1960576382069525072
+    second: Racoon_Animation_10
+  - first:
+      213: 9135502274135387354
+    second: Racoon_Animation_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -140,7 +146,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ralph_Animation_0
+      name: Racoon_Animation_0
       rect:
         serializedVersion: 2
         x: 0
@@ -148,21 +154,21 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 9
-      pivot: {x: 0.4999999, y: 0.07840741}
+      pivot: {x: 0.5034462, y: 0.162277}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df6c11af9e9652ac0800000000000000
-      internalID: -3880579050266048771
+      spriteID: eb4b5a03e6a36f300800000000000000
+      internalID: 285479871321584830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralph_Animation_1
+      name: Racoon_Animation_1
       rect:
         serializedVersion: 2
         x: 64
@@ -170,21 +176,21 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 9
-      pivot: {x: 0.4999999, y: 0.07840741}
+      pivot: {x: 0.5034462, y: 0.162277}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c2d744e845494140800000000000000
-      internalID: 4704367465135067846
+      spriteID: a9471f8d771343b00800000000000000
+      internalID: 807324624016733338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralph_Animation_2
+      name: Racoon_Animation_2
       rect:
         serializedVersion: 2
         x: 128
@@ -192,21 +198,21 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 9
-      pivot: {x: 0.4999999, y: 0.07840741}
+      pivot: {x: 0.5034462, y: 0.162277}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 113e748d73aeb6d90800000000000000
-      internalID: -7103326461674134767
+      spriteID: 97940058356db9be0800000000000000
+      internalID: -1469345199204316807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralph_Animation_3
+      name: Racoon_Animation_3
       rect:
         serializedVersion: 2
         x: 192
@@ -214,21 +220,21 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 9
-      pivot: {x: 0.4999999, y: 0.07840741}
+      pivot: {x: 0.5034462, y: 0.162277}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cd5cbc1b089c24390800000000000000
-      internalID: -7835478847095323172
+      spriteID: ff35109e8dd879c20800000000000000
+      internalID: 3213192821913768959
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralph_Animation_4
+      name: Racoon_Animation_4
       rect:
         serializedVersion: 2
         x: 256
@@ -236,21 +242,21 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 9
-      pivot: {x: 0.4999999, y: 0.07840741}
+      pivot: {x: 0.5034462, y: 0.162277}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 66a3b61e369ea5140800000000000000
-      internalID: 4709332975562209894
+      spriteID: ac0cb949f45b00d90800000000000000
+      internalID: -7133502456354586422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralph_Animation_5
+      name: Racoon_Animation_5
       rect:
         serializedVersion: 2
         x: 320
@@ -258,21 +264,21 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 9
-      pivot: {x: 0.4999999, y: 0.07840741}
+      pivot: {x: 0.5034462, y: 0.162277}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 556e08f0ae95ff200800000000000000
-      internalID: 215990168954398293
+      spriteID: 70919c21dfbdf7d10800000000000000
+      internalID: 2125659429130541319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralph_Animation_6
+      name: Racoon_Animation_6
       rect:
         serializedVersion: 2
         x: 384
@@ -280,21 +286,21 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 9
-      pivot: {x: 0.4999999, y: 0.07840741}
+      pivot: {x: 0.5034462, y: 0.162277}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a13eac60021a1d7f0800000000000000
-      internalID: -589512917283839206
+      spriteID: e3a37ff2600814f90800000000000000
+      internalID: -6971149984129926594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralph_Animation_7
+      name: Racoon_Animation_7
       rect:
         serializedVersion: 2
         x: 448
@@ -302,21 +308,21 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 9
-      pivot: {x: 0.4999999, y: 0.07840741}
+      pivot: {x: 0.5034462, y: 0.162277}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5ee3a8d55bd106f70800000000000000
-      internalID: 9178368705376698085
+      spriteID: de27c480c34488180800000000000000
+      internalID: -9112958821356244243
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralph_Animation_8
+      name: Racoon_Animation_8
       rect:
         serializedVersion: 2
         x: 512
@@ -324,21 +330,21 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 9
-      pivot: {x: 0.4999999, y: 0.07840741}
+      pivot: {x: 0.5034462, y: 0.162277}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84842208afc605b10800000000000000
-      internalID: 1968192860308260936
+      spriteID: 6847b9ac157a778e0800000000000000
+      internalID: -1695702764948327290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralph_Animation_9
+      name: Racoon_Animation_9
       rect:
         serializedVersion: 2
         x: 576
@@ -346,15 +352,59 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 9
-      pivot: {x: 0.4999999, y: 0.07840741}
+      pivot: {x: 0.5034462, y: 0.162277}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a690a2527d960e6a0800000000000000
-      internalID: -6422016695867930262
+      spriteID: a14486521934a9100800000000000000
+      internalID: 115479031128278042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Racoon_Animation_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5034462, y: 0.162277}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b5b9b70b22aac4e0800000000000000
+      internalID: -1960576382069525072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Racoon_Animation_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5034462, y: 0.162277}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adcec969ae2d7ce70800000000000000
+      internalID: 9135502274135387354
       vertices: []
       indices: 
       edges: []
@@ -363,7 +413,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c6304183dac670a4dbfcec1baa0dd382
+    spriteID: 5b993e0143a5a6e4299dbd0ea2361a55
     internalID: 0
     vertices: []
     indices: 
@@ -373,16 +423,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ralph_Animation_0: -3880579050266048771
-      Ralph_Animation_1: 4704367465135067846
-      Ralph_Animation_2: -7103326461674134767
-      Ralph_Animation_3: -7835478847095323172
-      Ralph_Animation_4: 4709332975562209894
-      Ralph_Animation_5: 215990168954398293
-      Ralph_Animation_6: -589512917283839206
-      Ralph_Animation_7: 9178368705376698085
-      Ralph_Animation_8: 1968192860308260936
-      Ralph_Animation_9: -6422016695867930262
+      Racoon_Animation_0: 285479871321584830
+      Racoon_Animation_1: 807324624016733338
+      Racoon_Animation_10: -1960576382069525072
+      Racoon_Animation_11: 9135502274135387354
+      Racoon_Animation_2: -1469345199204316807
+      Racoon_Animation_3: 3213192821913768959
+      Racoon_Animation_4: -7133502456354586422
+      Racoon_Animation_5: 2125659429130541319
+      Racoon_Animation_6: -6971149984129926594
+      Racoon_Animation_7: -9112958821356244243
+      Racoon_Animation_8: -1695702764948327290
+      Racoon_Animation_9: 115479031128278042
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

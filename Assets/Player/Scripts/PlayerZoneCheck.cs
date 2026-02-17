@@ -5,6 +5,7 @@ public class PlayerZoneCheck : MonoBehaviour
 {
     [SerializeField] private int itemCount = 0;
     public bool gotAllItems = false;
+    public bool gotSunGlasses = false;
 
     public GameObject _healItem;
 
@@ -48,10 +49,21 @@ public class PlayerZoneCheck : MonoBehaviour
                 } 
             }
         }
+
+        if (other.CompareTag("SunGlasses"))
+        {
+            other.gameObject.SetActive(false);
+            gotSunGlasses = true;
+        }
     }
 
     public bool ReturnGotItems()
     {
         return gotAllItems;
+    }
+
+    public bool ReturnSunGlasses()
+    {
+        return gotSunGlasses;
     }
 }
