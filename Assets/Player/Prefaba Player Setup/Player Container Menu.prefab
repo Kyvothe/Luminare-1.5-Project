@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentHealth: 0
+  MenuManagerInGame: {fileID: 0}
 --- !u!114 &5162658125109409055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,9 +168,9 @@ MonoBehaviour:
   jumpCounter: 0
   canBigJump: 1
   canDoubleJump: 0
+  doubleJump: 1
   _canAttack: 0
   canFly: 0
-  _canDouble: 0
   groundBoxPos: {x: 0, y: -0.2}
   groundBoxSize: {x: 0.5, y: 0.2}
   groundLayer:
@@ -345,4 +346,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemCount: 0
   gotAllItems: 0
+  gotSunGlasses: 0
   _healItem: {fileID: 0}

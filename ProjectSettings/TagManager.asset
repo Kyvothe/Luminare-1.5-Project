@@ -3,9 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: 
+  tags:
   - PickupItem
   - Enemy
+  - Paw
+  - SunGlasses
   layers:
   - Default
   - TransparentFX

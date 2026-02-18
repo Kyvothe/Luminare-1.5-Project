@@ -395,6 +395,11 @@ public class PlayerController : MonoBehaviour
         {
            EndJump();
         }
+
+        if (playerActionType == PlayerActionType.ActionHurt)
+        {
+            _isAttacking = false;
+        }
     }
     
     private void EndJump()
