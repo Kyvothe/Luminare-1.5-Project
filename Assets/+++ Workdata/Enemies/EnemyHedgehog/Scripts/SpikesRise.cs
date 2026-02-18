@@ -23,10 +23,10 @@ public class SpikesRise : MonoBehaviour
 
     private void Update()
     {
-        /*if (_walkedOut)
+        if (_walkedOut)
         {
             _animator.SetBool("Awake", false);
-        }*/
+        }
     }
     
     
