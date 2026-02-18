@@ -20,5 +20,7 @@ public class PawInformation : MonoBehaviour
         {
             cat.GetComponent<CatInformation>().PawDied();
         }
+        
+        gameObject.GetComponent<SpriteColorChanger>().ColorObject();
     }
 }

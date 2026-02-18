@@ -2179,6 +2179,7 @@ GameObject:
   - component: {fileID: 928185280}
   - component: {fileID: 928185282}
   - component: {fileID: 928185283}
+  - component: {fileID: 928185284}
   m_Layer: 0
   m_Name: Paw Right
   m_TagString: Paw
@@ -2352,6 +2353,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.15, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &928185284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928185277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed71905f82b646246b86379394f542c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorSprite: {r: 0.754717, g: 0.2242791, b: 0.2242791, a: 1}
+  colorTime: 0
 --- !u!1 &1001585582
 GameObject:
   m_ObjectHideFlags: 0
@@ -18436,6 +18451,7 @@ GameObject:
   - component: {fileID: 1775897337}
   - component: {fileID: 1775897336}
   - component: {fileID: 1775897339}
+  - component: {fileID: 1775897340}
   m_Layer: 0
   m_Name: Paw Left
   m_TagString: Paw
@@ -18609,6 +18625,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.15, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &1775897340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775897333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed71905f82b646246b86379394f542c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorSprite: {r: 0.75686276, g: 0.22745098, b: 0.22745098, a: 0}
+  colorTime: 0
 --- !u!1 &1795948452
 GameObject:
   m_ObjectHideFlags: 0
