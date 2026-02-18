@@ -50,6 +50,8 @@ public class RacoonInteract : MonoBehaviour
             _anim.SetInteger(Hash_ActionId, 0);
 
             _isTalking = false;
+            
+            StopCoroutine(RandomSpecial());
         }
     }
 
@@ -60,13 +62,13 @@ public class RacoonInteract : MonoBehaviour
 
         _isTalking = true;
 
-        StartCoroutine(RandomDiva());
+        StartCoroutine(RandomSpecial());
         
         Debug.Log("Fix Wing"); // Dialog einbauen belohnung
         player.GetComponent<PlayerController>().SetCanFly(true);
     }
 
-    private IEnumerator RandomDiva()
+    private IEnumerator RandomSpecial()
     {
         while (_isTalking)
         {

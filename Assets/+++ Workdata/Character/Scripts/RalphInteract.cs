@@ -54,6 +54,8 @@ public class RalphInteract : MonoBehaviour
             _anim.SetInteger(Hash_ActionId, 0);
 
             _isTalking = false;
+            
+            StopCoroutine(RandomSpecial());
         }
     }
 
@@ -64,7 +66,7 @@ public class RalphInteract : MonoBehaviour
 
         _isTalking = true;
 
-        StartCoroutine(RandomDiva());
+        StartCoroutine(RandomSpecial());
 
         if (_gotSunGlasses)
         {
@@ -77,7 +79,7 @@ public class RalphInteract : MonoBehaviour
         }
     }
 
-    private IEnumerator RandomDiva()
+    private IEnumerator RandomSpecial()
     {
         while (_isTalking)
         {

@@ -20,6 +20,7 @@ public class RatGangIndividual : MonoBehaviour
 
     private void Awake()
     {
+        _anim =  GetComponent<Animator>();
         _ratGangInteract = Ratgang.GetComponent<RatGangInteract>();
     }
 
@@ -53,6 +54,8 @@ public class RatGangIndividual : MonoBehaviour
             _anim.SetInteger(Hash_ActionId, 0);
 
             _isTalking = false;
+            
+            StopCoroutine(RandomSpecial());
         }
     }
 
@@ -61,7 +64,7 @@ public class RatGangIndividual : MonoBehaviour
         while (_isTalking)
         {
             yield return new WaitForSeconds(2f);
-            _random = UnityEngine.Random.Range(1,3);
+            _random = UnityEngine.Random.Range(1,4);
         }
     }
 }
