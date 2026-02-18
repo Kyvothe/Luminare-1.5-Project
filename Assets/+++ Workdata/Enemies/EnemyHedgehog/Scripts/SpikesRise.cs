@@ -17,6 +17,7 @@ public class SpikesRise : MonoBehaviour
         if (_walkedOut)
         {
             _animator.SetBool("Awake", false);
+            _animator.SetInteger("ActionId", 0);
         }
     }
     
