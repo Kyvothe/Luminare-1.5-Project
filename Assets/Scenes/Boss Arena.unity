@@ -555,14 +555,14 @@ PrefabInstance:
     - target: {fileID: 3692064147782553254, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: MenuManagerInGame
       value: 
-      objectReference: {fileID: 367430}
+      objectReference: {fileID: 356017400}
     - target: {fileID: 7825972168922382389, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.06
+      value: -0.24
       objectReference: {fileID: 0}
     - target: {fileID: 7825972168922382389, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.84
+      value: -4.03
       objectReference: {fileID: 0}
     - target: {fileID: 7825972168922382389, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2270,7 +2270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  damage: 40
+  damage: 10
 --- !u!114 &928185281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2366,7 +2366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorSprite: {r: 0.754717, g: 0.2242791, b: 0.2242791, a: 1}
-  colorTime: 0
+  colorTime: 0.5
 --- !u!1 &1001585582
 GameObject:
   m_ObjectHideFlags: 0
@@ -18564,7 +18564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  damage: 40
+  damage: 10
 --- !u!114 &1775897338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18637,8 +18637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed71905f82b646246b86379394f542c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorSprite: {r: 0.75686276, g: 0.22745098, b: 0.22745098, a: 0}
-  colorTime: 0
+  colorSprite: {r: 0.75686276, g: 0.22745098, b: 0.22745098, a: 1}
+  colorTime: 0.5
 --- !u!1 &1795948452
 GameObject:
   m_ObjectHideFlags: 0
