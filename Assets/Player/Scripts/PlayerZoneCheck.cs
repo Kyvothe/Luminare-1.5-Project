@@ -5,6 +5,7 @@ public class PlayerZoneCheck : MonoBehaviour
 {
     [SerializeField] private int itemCount = 0;
     public bool gotAllItems = false;
+    public bool gotSunGlasses = false;
 
     public GameObject _healItem;
 
@@ -23,7 +24,7 @@ public class PlayerZoneCheck : MonoBehaviour
     {
         _isAttacking = _playerController.ReturnIsAttacking();
 
-        ReturnItemCount();
+        ReturnGotItems();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -48,10 +49,21 @@ public class PlayerZoneCheck : MonoBehaviour
                 } 
             }
         }
+
+        if (other.CompareTag("SunGlasses"))
+        {
+            other.gameObject.SetActive(false);
+            gotSunGlasses = true;
+        }
     }
 
-    public int ReturnItemCount()
+    public bool ReturnGotItems()
     {
-        return itemCount;
+        return gotAllItems;
+    }
+
+    public bool ReturnSunGlasses()
+    {
+        return gotSunGlasses;
     }
 }
