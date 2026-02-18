@@ -66,4 +66,9 @@ public class PlayerZoneCheck : MonoBehaviour
     {
         return gotSunGlasses;
     }
+
+    public int ReturnItemCount()
+    {
+        return itemCount;
+    }
 }
