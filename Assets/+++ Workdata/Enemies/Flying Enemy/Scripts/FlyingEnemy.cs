@@ -12,6 +12,8 @@ public class FlyingEnemy : MonoBehaviour
     public bool controlReached = true;
     public Animator anim;
     public bool InAttackRange;
+
+    public GameObject triggerObject;
     
     private void Start()
     {
