@@ -9,7 +9,12 @@ public class PawBehaviour : MonoBehaviour
 
     public int id;
 
+    public bool isLeft;
+
     public int damage;
+
+    public GameObject decoPawLeft;
+    public GameObject decoPawRight;
 
     private void Awake()
     {
@@ -30,6 +35,12 @@ public class PawBehaviour : MonoBehaviour
         
             _anim.SetInteger("ActionId", id);
             _anim.SetTrigger("ActionTrigger");
+
+
+            if (id == 1 || id == 2)
+            {
+                (isLeft? decoPawLeft : decoPawRight).SetActive(false);
+            }
         }
     }
     
@@ -44,5 +55,10 @@ public class PawBehaviour : MonoBehaviour
         {
             other.GetComponent<SpawnHealItem>().DropItem();
         }
+    }
+
+    public void MakePawVisible()
+    {
+        (isLeft? decoPawLeft : decoPawRight).SetActive(true);
     }
 }

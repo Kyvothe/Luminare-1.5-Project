@@ -3,8 +3,13 @@ using UnityEngine;
 
 public class CatInformation : MonoBehaviour
 {
-    private int _pawsAlive;
+    public static readonly int Hash_ActionTrigger = Animator.StringToHash("ActionTrigger");
+    public static readonly int Hash_ActionId = Animator.StringToHash("ActionId");
+    
+    public int _pawsAlive;
     private bool _catDied;
+
+    private Animator _animator;
 
     private void Awake()
     {
@@ -14,6 +19,13 @@ public class CatInformation : MonoBehaviour
     public void PawDied()
     {
         _pawsAlive--;
+    }
+
+    public void TakesDamage()
+    {
+        Debug.Log("Hurt");
+        _animator.SetTrigger(Hash_ActionTrigger);
+        _animator.SetInteger(Hash_ActionId, 10);
     }
 
     private void FixedUpdate()
