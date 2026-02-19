@@ -10,6 +10,7 @@ public class enemyRatInformation : MonoBehaviour
     public float _currentLifePoints;
 
     public GameObject enemyDrop;
+    public GameObject player;
     
     private bool _isDead;
 
@@ -57,6 +58,15 @@ public class enemyRatInformation : MonoBehaviour
             gameObject.GetComponentInChildren<ContactDamage>().SetIsDead();
             
             _position = transform.position;
+
+            if (player.GetComponent<PlayerController>().ReturnDirection())
+            {
+                _position.x = transform.position.x - 1.5f;
+            }
+            else
+            {
+                _position.x = transform.position.x + 1.5f;
+            }
         }
         
        // _colorSpriteSetter.ColorObject();                                                                               // feuert nicht!!!!!!!!!!
@@ -69,9 +79,10 @@ public class enemyRatInformation : MonoBehaviour
 
     public void Spawn()
     {
-        _random = Random.Range(0, 2);
+        _random = Random.Range(0, 100);
+        Debug.Log(_random);
 
-        if (_random == 0)
+        if (_random < 75)
         {
             Instantiate(enemyDrop, _position, Quaternion.identity);
         }

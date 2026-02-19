@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7215681207946805515}
   - component: {fileID: 429581718687187035}
+  - component: {fileID: 5636871068656106830}
   m_Layer: 0
   m_Name: AttackCollider
   m_TagString: Untagged
@@ -45,7 +46,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -68,6 +69,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &5636871068656106830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8223406015916570542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ddd7304f2e62e14fb708b2cc7e27eab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8269161703913586673
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,7 +98,8 @@ GameObject:
   - component: {fileID: 3613762052705174618}
   - component: {fileID: 8458117023163855491}
   - component: {fileID: 2105403762185471993}
-  m_Layer: 0
+  - component: {fileID: 37199861369031413}
+  m_Layer: 3
   m_Name: Player Container Menu
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -169,7 +183,7 @@ MonoBehaviour:
   canBigJump: 1
   canDoubleJump: 0
   doubleJump: 1
-  _canAttack: 0
+  _canAttack: 1
   canFly: 0
   groundBoxPos: {x: 0, y: -0.2}
   groundBoxSize: {x: 0.5, y: 0.2}
@@ -348,3 +362,16 @@ MonoBehaviour:
   gotAllItems: 0
   gotSunGlasses: 0
   _healItem: {fileID: 0}
+--- !u!114 &37199861369031413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8269161703913586673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e8e2421ef2a3a0429d1ad903bdfc57f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentInteractables: []

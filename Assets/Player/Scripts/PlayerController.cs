@@ -339,6 +339,18 @@ public class PlayerController : MonoBehaviour
         return _isAttacking;
     }
 
+    public bool ReturnDirection()
+    {
+        if (playerDirectionState == PlayerDirectionState.Left)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public void SetPaused(bool value)
     {
         _paused = value;

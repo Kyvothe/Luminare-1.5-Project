@@ -10,6 +10,7 @@ public class enemyInformation : MonoBehaviour
     public float _currentLifePoints;
 
     public GameObject enemyDrop;
+    public GameObject player;
     
     private Animator _animator;
     
@@ -68,6 +69,15 @@ public class enemyInformation : MonoBehaviour
             
             _position = transform.position;
             
+            if (player.GetComponent<PlayerController>().ReturnDirection())
+            {
+                _position.x = transform.position.x - 1.5f;
+            }
+            else
+            {
+                _position.x = transform.position.x + 1.5f;
+            }
+            
         }
     }
 
@@ -78,9 +88,9 @@ public class enemyInformation : MonoBehaviour
 
     public void Spawn()
     {
-        _random = Random.Range(0, 2);
+        _random = Random.Range(0, 100);
 
-        if (_random == 0)
+        if (_random < 75)
         { 
             Instantiate(enemyDrop, _position, Quaternion.identity);
         }
