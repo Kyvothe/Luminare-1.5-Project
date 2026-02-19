@@ -39,5 +39,10 @@ public class PawBehaviour : MonoBehaviour
         {
             other.GetComponent<PlayerInformation>().SetDamage(damage);
         }
+        
+        if (other.CompareTag("SpawnPoint"))
+        {
+            other.GetComponent<SpawnHealItem>().DropItem();
+        }
     }
 }
