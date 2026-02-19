@@ -2210,6 +2210,11 @@ MonoBehaviour:
   - {fileID: 1108706557}
   - {fileID: 640617940}
   - {fileID: 1044390947}
+  Button1: {fileID: 1920849696}
+  Button2: {fileID: 836879424}
+  Button3: {fileID: 1258694225}
+  Button4: {fileID: 1368794818}
+  Button5: {fileID: 918440200}
 --- !u!114 &1995925121
 MonoBehaviour:
   m_ObjectHideFlags: 0
