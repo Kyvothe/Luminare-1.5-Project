@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
+using UnityEngine.EventSystems;
 
 public class PreStory_UIManager : MonoBehaviour
 {
@@ -12,6 +15,14 @@ public class PreStory_UIManager : MonoBehaviour
     {
         _currentMenu = frames[0];
         _count = 0;
+    }
+    
+    private void Update()
+    {
+        if (Keyboard.current.anyKey.wasPressedThisFrame && EventSystem.current.currentSelectedGameObject == null)
+        { 
+            EventSystem.current.SetSelectedGameObject(_currentMenu.GetComponent<DefaultButtonSetter>().ReturnButton());
+        }
     }
 
    public void Continue()

@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
+using UnityEngine.EventSystems;
 
 public class OpenDialogueInGame : MonoBehaviour
 {
@@ -13,9 +14,12 @@ public class OpenDialogueInGame : MonoBehaviour
     public GameObject EndOfGameMenu;
     
     public GameObject Player;
+    
+    private GameObject _currentMenu;
 
     private bool _isPaused = false;
     private bool _noOtherMenuActive = true;
+    private bool _anyMenuActive = false;
 
     private void Awake()
     {
@@ -35,6 +39,16 @@ public class OpenDialogueInGame : MonoBehaviour
         _pauseAction.performed -= Pause;
     }
     
+    private void Update()
+    {
+        if (_anyMenuActive == false) return;
+        
+        if (Keyboard.current.anyKey.wasPressedThisFrame && EventSystem.current.currentSelectedGameObject == null)
+        { 
+            EventSystem.current.SetSelectedGameObject(_currentMenu.GetComponent<DefaultButtonSetter>().ReturnButton());
+        }
+    }
+    
     private void Pause(InputAction.CallbackContext ctx)                                                                 // PauseMenu       
     {
         if (!_isPaused && _noOtherMenuActive)                                                                           // Erster Druck auf Escape --> Oeffnen; es darf kein anderes Menu offen sein
@@ -43,12 +57,20 @@ public class OpenDialogueInGame : MonoBehaviour
             Time.timeScale = 0;                                                                                         // Spiel gefreezed
             _isPaused = true;
             Player.GetComponent<PlayerController>().SetPaused(true);
+            
+            _anyMenuActive = true;
+            _currentMenu = pauseMenu;
+            
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(pauseMenu.GetComponent<DefaultButtonSetter>().ReturnButton());
         }
        else if (_isPaused && _noOtherMenuActive)                                                                        // Zweiter Druck auf Escape --> Schließen; es darf kein anderes Menu offen sein
         {
             pauseMenu.SetActive(false); 
             Time.timeScale = 1;                                                                                         // Spiel läuft wieder
             _isPaused = false;
+            _anyMenuActive = false;
+            _currentMenu = null;
             Player.GetComponent<PlayerController>().SetPaused(false);
         } 
     }
@@ -58,6 +80,8 @@ public class OpenDialogueInGame : MonoBehaviour
         pauseMenu.SetActive(false); 
         Time.timeScale = 1; 
         _isPaused = false;
+        _anyMenuActive = false;
+        _currentMenu = null;
         Player.GetComponent<PlayerController>().SetPaused(false);
     }
     
@@ -67,6 +91,11 @@ public class OpenDialogueInGame : MonoBehaviour
         Time.timeScale = 0; 
         _isPaused = true;
         _noOtherMenuActive = false;
+        _anyMenuActive = true;
+        _currentMenu = GameOverScreen;
+        
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(GameOverScreen.GetComponent<DefaultButtonSetter>().ReturnButton());
     }
 
     public void OpenEndOfGameMenu()                                                                                     // Aufgerufen wenn Finish Zone erreicht über PlayerZoneCheck
@@ -75,5 +104,10 @@ public class OpenDialogueInGame : MonoBehaviour
         _noOtherMenuActive = false;
         Time.timeScale = 0; 
         Player.GetComponent<PlayerController>().SetPaused(true);
+        _currentMenu = EndOfGameMenu;
+        _anyMenuActive = true;
+        
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(GameOverScreen.GetComponent<DefaultButtonSetter>().ReturnButton());
     }
 }

@@ -475,7 +475,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_PressedSprite: {fileID: 2605760917414899119, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -674,7 +674,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_PressedSprite: {fileID: 2605760917414899119, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -979,7 +979,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_PressedSprite: {fileID: 2605760917414899119, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1253,7 +1253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 336985473}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &581052093
@@ -1703,7 +1703,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_PressedSprite: {fileID: -2574449355943416012, guid: b59541b0ee3cde1498dfcbcd5dce7126, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -2380,7 +2380,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_PressedSprite: {fileID: 2605760917414899119, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 2605760917414899119, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -2740,6 +2740,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1102157425}
+  - component: {fileID: 1102157426}
   m_Layer: 5
   m_Name: MainMenu Container
   m_TagString: Untagged
@@ -2768,6 +2769,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1102157426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102157424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b480d252628ed64d9521222db1e2b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultButton: {fileID: 336985473}
 --- !u!1 &1246883643
 GameObject:
   m_ObjectHideFlags: 0
@@ -2903,6 +2917,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1385242134}
+  - component: {fileID: 1385242135}
   m_Layer: 5
   m_Name: Credits Container
   m_TagString: Untagged
@@ -2937,6 +2952,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1385242135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385242133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b480d252628ed64d9521222db1e2b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultButton: {fileID: 1677735485}
 --- !u!1 &1432036116
 GameObject:
   m_ObjectHideFlags: 0
@@ -3057,6 +3085,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1548998910}
+  - component: {fileID: 1548998911}
   m_Layer: 5
   m_Name: Options Container
   m_TagString: Untagged
@@ -3088,6 +3117,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1548998911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548998909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b480d252628ed64d9521222db1e2b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultButton: {fileID: 984149565}
 --- !u!1 &1554871844
 GameObject:
   m_ObjectHideFlags: 0
@@ -3233,7 +3275,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_PressedSprite: {fileID: 2605760917414899119, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal

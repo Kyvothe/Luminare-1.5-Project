@@ -128,6 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5254470}
+  - component: {fileID: 5254471}
   m_Layer: 5
   m_Name: Second Frame
   m_TagString: Untagged
@@ -156,6 +157,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5254471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5254469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b480d252628ed64d9521222db1e2b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultButton: {fileID: 836879424}
 --- !u!1 &105703008
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 640617941}
+  - component: {fileID: 640617942}
   m_Layer: 5
   m_Name: Fourth Frame
   m_TagString: Untagged
@@ -541,6 +556,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &640617942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640617940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b480d252628ed64d9521222db1e2b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultButton: {fileID: 1368794818}
 --- !u!1 &836879424
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +639,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_PressedSprite: {fileID: 2605760917414899119, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -744,7 +772,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_PressedSprite: {fileID: 2605760917414899119, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -816,6 +844,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1044390948}
+  - component: {fileID: 1044390949}
   m_Layer: 5
   m_Name: Fifth Frame
   m_TagString: Untagged
@@ -844,6 +873,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1044390949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044390947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b480d252628ed64d9521222db1e2b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultButton: {fileID: 918440200}
 --- !u!1 &1057906768
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,6 +895,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1057906769}
+  - component: {fileID: 1057906770}
   m_Layer: 5
   m_Name: First Frame
   m_TagString: Untagged
@@ -881,6 +924,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1057906770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057906768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b480d252628ed64d9521222db1e2b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultButton: {fileID: 1920849696}
 --- !u!1 &1086173044
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,6 +1021,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1108706558}
+  - component: {fileID: 1108706559}
   m_Layer: 5
   m_Name: Third Frame
   m_TagString: Untagged
@@ -993,6 +1050,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1108706559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108706557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b480d252628ed64d9521222db1e2b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultButton: {fileID: 1258694225}
 --- !u!1 &1172070605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,7 +1423,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_PressedSprite: {fileID: 2605760917414899119, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1622,7 +1692,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_PressedSprite: {fileID: 2605760917414899119, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -2041,7 +2111,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_PressedSprite: {fileID: 2605760917414899119, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -3539213133688071624, guid: b0c9cbcb615eecd4097677cdef6105c0, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal

@@ -1,12 +1,14 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class MainMenu_UiManager : MonoBehaviour
 {
     public GameObject mainMenuContainer;
     public GameObject optionsMenuContainer;
     public GameObject creditsMenuContainer;
-
+    
     private GameObject _currentMenu;
     
     // Methoden werden über entsprechende Methoden von MainMenu_ButtpManager aufgerufen
@@ -16,12 +18,23 @@ public class MainMenu_UiManager : MonoBehaviour
         _currentMenu = mainMenuContainer;
     }
 
+    private void Update()
+    {
+        if (Keyboard.current.anyKey.wasPressedThisFrame && EventSystem.current.currentSelectedGameObject == null)
+        { 
+            EventSystem.current.SetSelectedGameObject(_currentMenu.GetComponent<DefaultButtonSetter>().ReturnButton());
+        }
+    }
+
     public void OpenOptionsMenu()
     {
         _currentMenu.SetActive(false);
         optionsMenuContainer.SetActive(true);
         
         _currentMenu = optionsMenuContainer;
+        
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(_currentMenu.GetComponent<DefaultButtonSetter>().ReturnButton());
     }
     
     public void OpenCreditsMenu()
@@ -30,6 +43,9 @@ public class MainMenu_UiManager : MonoBehaviour
         creditsMenuContainer.SetActive(true);
         
         _currentMenu = creditsMenuContainer;
+        
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(_currentMenu.GetComponent<DefaultButtonSetter>().ReturnButton());
     }
 
     public void OpenMainMenu()
@@ -38,6 +54,9 @@ public class MainMenu_UiManager : MonoBehaviour
         mainMenuContainer.SetActive(true);
         
         _currentMenu = mainMenuContainer;
+        
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(_currentMenu.GetComponent<DefaultButtonSetter>().ReturnButton());
     }
 
     public void QuitGame()
