@@ -17,7 +17,7 @@ public class HealthbarManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _health = _playerInformation.ReturnHealth();
+        _health = PlayerPrefs.GetInt("Health");
         
         for (int i = 0; i < 8; i++)
         {

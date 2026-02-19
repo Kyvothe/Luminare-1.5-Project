@@ -19,11 +19,21 @@ public class PlayerInformation : MonoBehaviour
 
     private bool _playerDead = false;
 
+    public bool isFirstLevel;
+
     private OpenDialogueInGame _openDialogueInGame;
 
     private void Awake()
     {
-        _currentHealth = _maxHealth;
+        if (isFirstLevel)
+        {
+            _currentHealth = _maxHealth;
+            PlayerPrefs.SetInt("Health", _currentHealth);
+        }
+        else
+        {
+            _currentHealth = PlayerPrefs.GetInt("Health");
+        }
         
         _animator = GetComponent<Animator>();
 
@@ -46,6 +56,8 @@ public class PlayerInformation : MonoBehaviour
             SetActionId(40); 
             _playerDead = true;
         }
+        
+        PlayerPrefs.SetInt("Health", _currentHealth);
     }
 
     public void SetHealth(int health)
@@ -58,6 +70,8 @@ public class PlayerInformation : MonoBehaviour
         {
             _currentHealth = _maxHealth;
         }
+        
+        PlayerPrefs.SetInt("Health", _currentHealth);
     }
    
     public int ReturnHealth()

@@ -1270,6 +1270,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3692064147782553254, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
+      propertyPath: isFirstLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3692064147782553254, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: MenuManagerInGame
       value: 
       objectReference: {fileID: 1733200395}
