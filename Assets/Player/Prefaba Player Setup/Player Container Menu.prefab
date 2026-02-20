@@ -85,6 +85,7 @@ GameObject:
   - component: {fileID: 3613762052705174618}
   - component: {fileID: 8458117023163855491}
   - component: {fileID: 2105403762185471993}
+  - component: {fileID: 3444956896553525770}
   m_Layer: 0
   m_Name: Player Container Menu
   m_TagString: Player
@@ -121,6 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentHealth: 0
+  MenuManagerInGame: {fileID: 0}
 --- !u!114 &5162658125109409055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,9 +169,9 @@ MonoBehaviour:
   jumpCounter: 0
   canBigJump: 1
   canDoubleJump: 0
+  doubleJump: 1
   _canAttack: 0
   canFly: 0
-  _canDouble: 0
   groundBoxPos: {x: 0, y: -0.2}
   groundBoxSize: {x: 0.5, y: 0.2}
   groundLayer:
@@ -346,3 +348,16 @@ MonoBehaviour:
   itemCount: 0
   gotAllItems: 0
   _healItem: {fileID: 0}
+--- !u!114 &3444956896553525770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8269161703913586673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee1ebe51a4308b428705f0514585c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footStepsFX: {fileID: 8300000, guid: 9255a0624c4cc2e4d9f367c23e6d63f9, type: 3}
