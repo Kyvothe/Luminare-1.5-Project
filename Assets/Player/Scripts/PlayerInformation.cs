@@ -12,6 +12,9 @@ public class PlayerInformation : MonoBehaviour
     [SerializeField] private int _currentHealth;
 
     public GameObject MenuManagerInGame;
+    
+    public GameObject extraHeart1;
+    public GameObject extraHeart2;
 
     #endregion
     
@@ -72,6 +75,15 @@ public class PlayerInformation : MonoBehaviour
         Debug.Log("Dead");
         
         MenuManagerInGame.GetComponent<OpenDialogueInGame>().OpenGameOverScreen();
+    }
+
+    public void UpgradeHealth()
+    {
+        _maxHealth = 50;
+        _currentHealth = _maxHealth;
+        
+        extraHeart1.SetActive(true);
+        extraHeart2.SetActive(true);
     }
 
     private void SetActionId(int id)

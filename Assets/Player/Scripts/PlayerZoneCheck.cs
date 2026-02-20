@@ -48,6 +48,12 @@ public class PlayerZoneCheck : MonoBehaviour
                 } 
             }
         }
+
+        if (other.CompareTag("HealthUpgrade"))
+        {
+            _playerInformation.UpgradeHealth();
+            other.gameObject.SetActive(false);
+        }
     }
 
     public int ReturnItemCount()

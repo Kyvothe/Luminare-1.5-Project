@@ -8,7 +8,7 @@ public class HealthbarManager : MonoBehaviour
     private PlayerInformation _playerInformation;
     public int _health;
 
-    public GameObject[] heartList = new GameObject[8];
+    public GameObject[] heartList = new GameObject[10];
 
     private void Awake()
     {
@@ -19,7 +19,7 @@ public class HealthbarManager : MonoBehaviour
     {
         _health = _playerInformation.ReturnHealth();
         
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 10; i++)
         {
             heartList[i].SetActive(false);
         }

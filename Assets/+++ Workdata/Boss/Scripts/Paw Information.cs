@@ -23,10 +23,11 @@ public class PawInformation : MonoBehaviour
 
         if (_health < 1)
         {
+            Debug.Log("Paw Death");
             _catInformation.PawDied();
             Destroy(gameObject);
         }
         
-        //gameObject.GetComponent<SpriteColorChanger>().ColorObject();
+        gameObject.GetComponent<SpriteColorChanger>().ColorObject();
     }
 }
