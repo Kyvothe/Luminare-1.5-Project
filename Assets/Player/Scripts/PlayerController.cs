@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
     public float flyForce = 3f;
 
 
-    private bool _isGrounded;
+    public bool _isGrounded;
     public bool _canJump = true;
     private bool _isAttacking;
     public bool _isFlying;
