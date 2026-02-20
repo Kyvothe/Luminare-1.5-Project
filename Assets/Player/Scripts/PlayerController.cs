@@ -81,6 +81,9 @@ public class PlayerController : MonoBehaviour
     private bool _isAttacking;
     public bool _isFlying;
 
+    public bool sock;
+    public string _currentTrigger;
+
     private bool _paused = false;
     
     private Vector2 _flyVelocity;
@@ -99,6 +102,8 @@ public class PlayerController : MonoBehaviour
         SetInputActions();
 
         _currentSpeed = _walkingSpeed;
+
+        _currentTrigger = "ActionTrigger";
     }
 
     private void SetInputActions()
@@ -140,6 +145,11 @@ public class PlayerController : MonoBehaviour
         ReturnIsAttacking();
         
         ExecuteFlying();
+
+        if (sock)
+        {
+            _currentTrigger = "ActionTriggerSock";
+        }
     }
     
     private void OnDisable()
@@ -379,6 +389,11 @@ public class PlayerController : MonoBehaviour
     {
         canFly = value;
     }
+
+    public void SetSock(bool value)
+    {
+        sock = true;
+    }
     
     #endregion
     
@@ -392,7 +407,7 @@ public class PlayerController : MonoBehaviour
 
     private void SetActionId(int id)
     {
-        _animator.SetTrigger(Hash_ActionTrigger);
+        _animator.SetTrigger(_currentTrigger);
         _animator.SetInteger(Hash_ActionId, id);
     }
 
