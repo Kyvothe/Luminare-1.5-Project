@@ -14,11 +14,20 @@ public class SpikesRise : MonoBehaviour
 
     private bool _walkedOut = false;
 
+    public int _random;
+
+    public GameObject BuffIgel;
+
+    private Vector2 _spawnPosition;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
         _awake = false;
         PlayAudio(Snore);
+
+        _spawnPosition.x = gameObject.transform.position.x;
+        _spawnPosition.y = gameObject.transform.position.y + 0.2f;
     }
 
     private void Update()
@@ -35,16 +44,24 @@ public class SpikesRise : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            transform.position = new Vector2(transform.position.x, transform.position.y + 0.3f);
-            //gameObject.GetComponent<BoxCollider2D>().enabled = true;
-            
-            _animator.SetInteger("ActionId", 1);
-            _animator.SetTrigger("ActionTrigger");
-            
-            _walkedOut = false;
-            _awake = true;
-            
-            PlayAudio(Angy);
+            _random = Random.Range(0, 100);
+
+            if (_random > 95)
+            {
+                Instantiate(BuffIgel, _spawnPosition, Quaternion.identity);
+                Destroy(gameObject); 
+            }
+            else
+            {
+                transform.position = new Vector2(transform.position.x, transform.position.y + 0.3f);
+                //gameObject.GetComponent<BoxCollider2D>().enabled = true;
+
+                _animator.SetInteger("ActionId", 1);
+                _animator.SetTrigger("ActionTrigger");
+
+                _walkedOut = false;
+                PlayAudio(Angy);
+            }
         }
     }
     
