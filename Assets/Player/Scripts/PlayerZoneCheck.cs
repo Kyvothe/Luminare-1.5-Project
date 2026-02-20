@@ -7,8 +7,6 @@ public class PlayerZoneCheck : MonoBehaviour
     public bool gotAllItems = false;
     public bool gotSunGlasses = false;
 
-    public GameObject _healItem;
-
     private PlayerInformation _playerInformation;
     private PlayerController _playerController;
 

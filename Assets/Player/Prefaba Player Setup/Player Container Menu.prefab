@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7215681207946805515}
   - component: {fileID: 429581718687187035}
   - component: {fileID: 5636871068656106830}
+  - component: {fileID: 2284620764138865494}
   m_Layer: 0
   m_Name: AttackCollider
   m_TagString: Untagged
@@ -81,6 +82,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddd7304f2e62e14fb708b2cc7e27eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2284620764138865494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8223406015916570542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ddd7304f2e62e14fb708b2cc7e27eab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8269161703913586673
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,6 +149,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentHealth: 0
   MenuManagerInGame: {fileID: 0}
+  extraHeart1: {fileID: 0}
+  extraHeart2: {fileID: 0}
+  isFirstLevel: 0
 --- !u!114 &5162658125109409055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,6 +207,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   flyForce: 30
+  _isGrounded: 0
   _canJump: 1
   _isFlying: 0
 --- !u!114 &7944675498100664021
