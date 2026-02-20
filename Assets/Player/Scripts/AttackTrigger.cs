@@ -7,7 +7,7 @@ public class AttackTrigger : MonoBehaviour
     {
         if (other.CompareTag("Paw"))
         { 
-            // other.GetComponent<PawInformation>().SetDamage(5);
+            other.GetComponent<PawInformation>().SetDamage(5);
         }
 
         if (other.CompareTag("Enemy"))

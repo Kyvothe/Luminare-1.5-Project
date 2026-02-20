@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Paw
   - SunGlasses
+  - SpawnPoint
+  - HealthUpgrade
   layers:
   - Default
   - TransparentFX
@@ -17,6 +19,7 @@ TagManager:
   - UI
   - Ground
   - Enemy
+  - Player
   - 
   - 
   - 

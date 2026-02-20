@@ -13,16 +13,33 @@ public class PlayerZoneCheck : MonoBehaviour
     private PlayerController _playerController;
 
     private bool _isAttacking;
+    
+    private int _maxHealth;
+    private int _currentHealth;
+    private bool _gotHealthUpgrade;
 
     private void Awake()
     {
         _playerInformation = GetComponent<PlayerInformation>();
         _playerController = GetComponent<PlayerController>();
+        
+        _gotHealthUpgrade = false;
     }
 
     private void FixedUpdate()
     {
         _isAttacking = _playerController.ReturnIsAttacking();
+        
+        _currentHealth = _playerInformation.ReturnHealth();
+
+        if (_gotHealthUpgrade)
+        {
+            _maxHealth = 50;
+        }
+        else
+        {
+            _maxHealth = 40;
+        }
 
         ReturnGotItems();
     }
@@ -35,8 +52,10 @@ public class PlayerZoneCheck : MonoBehaviour
         {
             if (other.GetComponent<HealItem>())
             {
+                if (_currentHealth >= _maxHealth) return;
+                
                 other.gameObject.SetActive(false);
-                _playerInformation.SetHealth(_healItem.GetComponent<HealItem>().ReturnHealthAmount());
+                _playerInformation.SetHealth(other.GetComponent<HealItem>().ReturnHealthAmount());
             }
             else
             {
@@ -54,6 +73,14 @@ public class PlayerZoneCheck : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             gotSunGlasses = true;
+
+        }
+        
+        if (other.CompareTag("HealthUpgrade"))
+        {
+            _playerInformation.UpgradeHealth(); 
+            _gotHealthUpgrade = true;
+            other.gameObject.SetActive(false);
         }
     }
 

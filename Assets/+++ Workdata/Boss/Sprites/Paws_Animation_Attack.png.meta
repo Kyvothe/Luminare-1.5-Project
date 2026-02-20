@@ -1,0 +1,453 @@
+fileFormatVersion: 2
+guid: 6bdb8411687531944b4f7f12e7d03139
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9073525288622837746
+    second: Paws_Animation_Attack_0
+  - first:
+      213: -6102768160679034137
+    second: Paws_Animation_Attack_1
+  - first:
+      213: 8280322988178056280
+    second: Paws_Animation_Attack_2
+  - first:
+      213: 1488755988514030722
+    second: Paws_Animation_Attack_3
+  - first:
+      213: 4769923246786935648
+    second: Paws_Animation_Attack_4
+  - first:
+      213: 6645759555368033288
+    second: Paws_Animation_Attack_5
+  - first:
+      213: -6221134838116074183
+    second: Paws_Animation_Attack_6
+  - first:
+      213: 6733390327906700091
+    second: Paws_Animation_Attack_7
+  - first:
+      213: 740011213078608395
+    second: Paws_Animation_Attack_8
+  - first:
+      213: -8017421856541245496
+    second: Paws_Animation_Attack_9
+  - first:
+      213: 615933035180775456
+    second: Paws_Animation_Attack_10
+  - first:
+      213: -2292753001510607404
+    second: Paws_Animation_Attack_11
+  - first:
+      213: 6522966428793355505
+    second: Paws_Animation_Attack_12
+  - first:
+      213: -8531169112980498746
+    second: Paws_Animation_Attack_13
+  - first:
+      213: -2382379594746283641
+    second: Paws_Animation_Attack_14
+  - first:
+      213: -4485462788042234047
+    second: Paws_Animation_Attack_15
+  - first:
+      213: 3271780303136610589
+    second: Paws_Animation_Attack_16
+  - first:
+      213: 2572770433784028606
+    second: Paws_Animation_Attack_17
+  - first:
+      213: -151736684620763696
+    second: Paws_Animation_Attack_18
+  - first:
+      213: -8095266328838238968
+    second: Paws_Animation_Attack_19
+  - first:
+      213: -7363340380613697231
+    second: Paws_Animation_Attack_20
+  - first:
+      213: 333886139497926036
+    second: Paws_Animation_Attack_21
+  - first:
+      213: -9102203436682154557
+    second: Paws_Animation_Attack_22
+  - first:
+      213: 1607143654652327733
+    second: Paws_Animation_Attack_23
+  - first:
+      213: -3764376018422274703
+    second: Paws_Animation_Attack_24
+  - first:
+      213: -8360190984705293217
+    second: Paws_Animation_Attack_25
+  - first:
+      213: 1782234323997379217
+    second: Paws_Animation_Attack_26
+  - first:
+      213: 1672731986487375208
+    second: Paws_Animation_Attack_27
+  - first:
+      213: 4074674969976554549
+    second: Paws_Animation_Attack_28
+  - first:
+      213: 7319322498479873915
+    second: Paws_Animation_Attack_29
+  - first:
+      213: 949201494654561957
+    second: Paws_Animation_Attack_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 9
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Paws_Animation_Attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.1832139, y: 0.2029902}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e00bc17d2dc541280800000000000000
+      internalID: -9073525288622837746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paws_Animation_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.1832139, y: 0.2029902}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e2892411bc9e4ba0800000000000000
+      internalID: -6102768160679034137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paws_Animation_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.1832139, y: 0.2029902}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 854aadff2ed99e270800000000000000
+      internalID: 8280322988178056280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paws_Animation_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.1832139, y: 0.2029902}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2844d9c0faf19a410800000000000000
+      internalID: 1488755988514030722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paws_Animation_Attack_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.1832139, y: 0.2029902}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06bfc9abbeb223240800000000000000
+      internalID: 4769923246786935648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paws_Animation_Attack_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.1832139, y: 0.2029902}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c9e58da1b7a3c50800000000000000
+      internalID: 6645759555368033288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paws_Animation_Attack_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.1832139, y: 0.2029902}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93db84263d61aa9a0800000000000000
+      internalID: -6221134838116074183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paws_Animation_Attack_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.1832139, y: 0.2029902}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3b0ee404dec17d50800000000000000
+      internalID: 6733390327906700091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paws_Animation_Attack_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.1832139, y: 0.2029902}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0a3b5d074c054a00800000000000000
+      internalID: 740011213078608395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paws_Animation_Attack_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.1832139, y: 0.2029902}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cff762bc456cb090800000000000000
+      internalID: -8017421856541245496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 65aab6de6f62a094b895a575b5b4b529
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Paws_Animation_Attack_0: -9073525288622837746
+      Paws_Animation_Attack_1: -6102768160679034137
+      Paws_Animation_Attack_2: 8280322988178056280
+      Paws_Animation_Attack_3: 1488755988514030722
+      Paws_Animation_Attack_4: 4769923246786935648
+      Paws_Animation_Attack_5: 6645759555368033288
+      Paws_Animation_Attack_6: -6221134838116074183
+      Paws_Animation_Attack_7: 6733390327906700091
+      Paws_Animation_Attack_8: 740011213078608395
+      Paws_Animation_Attack_9: -8017421856541245496
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
