@@ -10,6 +10,7 @@ TagManager:
   - SunGlasses
   - SpawnPoint
   - HealthUpgrade
+  - BG_Music
   layers:
   - Default
   - TransparentFX
