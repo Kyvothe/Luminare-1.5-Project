@@ -103,6 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34de73a26f9bfff46b0c459718766a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _random: 0
+  BuffIgel: {fileID: 4660232785692139914, guid: 3985fefb80d4a354eb41e48d052fc6c2, type: 3}
 --- !u!95 &1818411025333091995
 Animator:
   serializedVersion: 7

@@ -151,7 +151,7 @@ MonoBehaviour:
   MenuManagerInGame: {fileID: 0}
   extraHeart1: {fileID: 0}
   extraHeart2: {fileID: 0}
-  isFirstLevel: 0
+  isFirstLevel: 1
 --- !u!114 &5162658125109409055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,7 +378,6 @@ MonoBehaviour:
   itemCount: 0
   gotAllItems: 0
   gotSunGlasses: 0
-  _healItem: {fileID: 0}
 --- !u!114 &37199861369031413
 MonoBehaviour:
   m_ObjectHideFlags: 0

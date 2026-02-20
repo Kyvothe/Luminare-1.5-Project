@@ -37,7 +37,7 @@ public class SpikesRise : MonoBehaviour
         {
             _random = Random.Range(0, 100);
 
-            if (_random > 90)
+            if (_random > 95)
             {
                 Instantiate(BuffIgel, _spawnPosition, Quaternion.identity);
                 Destroy(gameObject); 
