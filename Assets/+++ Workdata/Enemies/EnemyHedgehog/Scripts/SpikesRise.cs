@@ -60,6 +60,7 @@ public class SpikesRise : MonoBehaviour
                 _animator.SetTrigger("ActionTrigger");
 
                 _walkedOut = false;
+                _awake = true;
                 PlayAudio(Angy);
             }
         }
