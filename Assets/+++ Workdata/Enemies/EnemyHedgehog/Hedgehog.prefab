@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7910791269641214910}
   - component: {fileID: 6256279718346823205}
   - component: {fileID: 1755774750571372363}
-  - component: {fileID: 707104633218213579}
   - component: {fileID: 1455808601035625919}
+  - component: {fileID: 1818411025333091995}
   m_Layer: 0
   m_Name: Hedgehog
   m_TagString: Untagged
@@ -105,30 +105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34de73a26f9bfff46b0c459718766a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _awake: 0
+  Snore: {fileID: 9222319951977568770}
+  Angy: {fileID: 5064256089598616221}
   _random: 0
   BuffIgel: {fileID: 4660232785692139914, guid: 3985fefb80d4a354eb41e48d052fc6c2, type: 3}
---- !u!95 &1818411025333091995
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232586790596422987}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d0fd1728a7c7e0047a1f2296fd594d3e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!70 &1455808601035625919
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -166,6 +147,28 @@ CapsuleCollider2D:
   m_Offset: {x: -0.12013769, y: 3.172757}
   m_Size: {x: 2.0734549, y: 6.689264}
   m_Direction: 0
+--- !u!95 &1818411025333091995
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232586790596422987}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0fd1728a7c7e0047a1f2296fd594d3e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1578646445436973467
 GameObject:
   m_ObjectHideFlags: 0
