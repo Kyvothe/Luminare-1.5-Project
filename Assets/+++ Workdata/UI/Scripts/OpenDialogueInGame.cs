@@ -12,6 +12,7 @@ public class OpenDialogueInGame : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject GameOverScreen;
     public GameObject EndOfGameMenu;
+    public GameObject SureScreen;
     
     public GameObject Player;
     
@@ -77,7 +78,7 @@ public class OpenDialogueInGame : MonoBehaviour
     
     public void Button_Resume()                                                                                         // Button im Pause Menu als zweiter Weg zum Schließen
     {
-        pauseMenu.SetActive(false); 
+        _currentMenu.SetActive(false); 
         Time.timeScale = 1; 
         _isPaused = false;
         _anyMenuActive = false;
@@ -109,5 +110,19 @@ public class OpenDialogueInGame : MonoBehaviour
         
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(GameOverScreen.GetComponent<DefaultButtonSetter>().ReturnButton());
+    }
+    
+    public void OpenAreYouSure()                                                                                    // Aufgerufen wenn Player dead über GameOver() in PlayerInformation
+    {
+        _currentMenu.SetActive(false);
+        SureScreen.SetActive(true);
+        Time.timeScale = 0; 
+        _isPaused = true;
+        _noOtherMenuActive = false;
+        _anyMenuActive = true;
+        _currentMenu = SureScreen;
+        
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(SureScreen.GetComponent<DefaultButtonSetter>().ReturnButton());
     }
 }
