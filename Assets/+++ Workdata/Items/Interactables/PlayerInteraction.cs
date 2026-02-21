@@ -8,6 +8,8 @@ public class PlayerInteraction : MonoBehaviour
     
     private PlayerController playerController;
     
+    public GameObject interactableIndicator;
+    
     private bool _playerIsAttacking;
     
     private void Awake()
@@ -28,6 +30,8 @@ public class PlayerInteraction : MonoBehaviour
         
         if (other.GetComponent<Interactable>())                                                                         // Abfrage, ob es ein Interactable ist
         {
+            interactableIndicator.SetActive(true);
+            
             currentInteractables.Add(other.GetComponent<Interactable>());                                           // Item wird Liste hinzugefügt
             //other.GetComponent<Interactable>().onSelect?.Invoke();
             currentInteractables[^1].onSelect?.Invoke();                                                                // Zuletzt hingefügtes Items wird markiert
@@ -40,6 +44,8 @@ public class PlayerInteraction : MonoBehaviour
         
         if (other.GetComponent<Interactable>())
         {
+            interactableIndicator.SetActive(false);
+            
             currentInteractables.Remove(other.GetComponent<Interactable>());                                        // Item wird aus Liste entfernt
             other.GetComponent<Interactable>().onDeselect?.Invoke();                                                    // Item nicht mehr markiert
         }
