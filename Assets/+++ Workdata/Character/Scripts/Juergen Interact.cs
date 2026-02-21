@@ -11,13 +11,23 @@ public class JuergenInteract : MonoBehaviour
     public GameObject player;
     private PlayerZoneCheck _playerZoneCheck;
 
+    public GameObject dialogueFirst;
+    public GameObject dialogueSecond;
+    public GameObject dialogueUpgrade;
+    private GameObject _dialogue;
+    
     private bool _gotAllItems;
+    private bool _walkedInFirstTime;
 
     private void Awake()
     {
         _anim = gameObject.GetComponent<Animator>();
 
         _playerZoneCheck = player.GetComponent<PlayerZoneCheck>();
+        
+        _walkedInFirstTime = true;
+        
+        _dialogue = dialogueFirst;
     }
 
     private void FixedUpdate()
@@ -38,6 +48,9 @@ public class JuergenInteract : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             _anim.SetInteger(Hash_ActionId, 0);
+            
+            _dialogue.SetActive(false);
+            dialogueUpgrade.SetActive(false);
         }
     }
 
@@ -45,17 +58,32 @@ public class JuergenInteract : MonoBehaviour
     { 
         _anim.SetInteger(Hash_ActionId, 1);
         _anim.SetTrigger(Hash_ActionTrigger);
+        
+        _dialogue.SetActive(false);
 
         if (_gotAllItems)
         {
-            Debug.Log("nom nom"); // Dialog einbauen belohnung
             player.GetComponent<PlayerController>().SetCanDoubleJump(true);
+            player.GetComponent<PlayerController>().SetSock(true);
+            
+            _dialogue = dialogueUpgrade;
+            _dialogue.SetActive(true);
         }
-        else
+        
+        if (_walkedInFirstTime)
         {
-            Debug.Log("hello there"); // Dialog einbauen start der quest
             player.GetComponent<PlayerController>().SetCanBigJump(true);
+            
+            _walkedInFirstTime = false;
+            
+            _dialogue = dialogueFirst;
+            _dialogue.SetActive(true);
 
+        }
+        else if (!_walkedInFirstTime)
+        {
+            _dialogue = dialogueSecond;
+            _dialogue.SetActive(true);
         }
     }
 }

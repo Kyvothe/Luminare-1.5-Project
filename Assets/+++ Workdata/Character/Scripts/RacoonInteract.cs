@@ -12,9 +12,14 @@ public class RacoonInteract : MonoBehaviour
 
     public GameObject player;
     private PlayerZoneCheck _playerZoneCheck;
+    
+    public GameObject dialogueSecond;
+    public GameObject dialogueUpgrade;
+    private GameObject _dialogue;
 
     private bool _isTalking = false;
-
+    private bool _walkedInFirstTime;
+    
     private float _random = 0f;
 
     private void Awake()
@@ -22,6 +27,10 @@ public class RacoonInteract : MonoBehaviour
         _anim = gameObject.GetComponent<Animator>();
 
         _playerZoneCheck = player.GetComponent<PlayerZoneCheck>();
+        
+        _dialogue = dialogueUpgrade;
+        
+        _walkedInFirstTime = true;
     }
 
     private void FixedUpdate()
@@ -51,6 +60,8 @@ public class RacoonInteract : MonoBehaviour
 
             _isTalking = false;
             
+            _dialogue.SetActive(false);
+            
             StopCoroutine(RandomSpecial());
         }
     }
@@ -66,6 +77,19 @@ public class RacoonInteract : MonoBehaviour
         
         Debug.Log("Fix Wing"); // Dialog einbauen belohnung
         player.GetComponent<PlayerController>().SetCanFly(true);
+
+        if (_walkedInFirstTime)
+        {
+            _walkedInFirstTime = false;
+            
+            _dialogue =  dialogueUpgrade;
+        }
+        else
+        {
+            _dialogue = dialogueSecond;
+        }
+        
+        _dialogue.SetActive(true);
     }
 
     private IEnumerator RandomSpecial()

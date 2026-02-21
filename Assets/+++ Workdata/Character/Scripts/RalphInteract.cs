@@ -12,8 +12,14 @@ public class RalphInteract : MonoBehaviour
 
     public GameObject player;
     private PlayerZoneCheck _playerZoneCheck;
+    
+    public GameObject dialogueFirst;
+    public GameObject dialogueSecond;
+    public GameObject dialogueUpgrade;
+    private GameObject _dialogue;
 
     private bool _gotSunGlasses;
+    private bool _walkedInFirstTime;
 
     private bool _isTalking = false;
 
@@ -24,6 +30,10 @@ public class RalphInteract : MonoBehaviour
         _anim = gameObject.GetComponent<Animator>();
 
         _playerZoneCheck = player.GetComponent<PlayerZoneCheck>();
+        
+        _walkedInFirstTime = true;
+        
+        _dialogue = dialogueFirst;
     }
 
     private void FixedUpdate()
@@ -55,6 +65,9 @@ public class RalphInteract : MonoBehaviour
 
             _isTalking = false;
             
+            _dialogue.SetActive(false);
+            dialogueUpgrade.SetActive(false);
+            
             StopCoroutine(RandomSpecial());
         }
     }
@@ -72,10 +85,24 @@ public class RalphInteract : MonoBehaviour
         {
             Debug.Log("Whatever"); // Dialog einbauen belohnung
             player.GetComponent<PlayerController>().SetCanAttack(true);
+            
+            _dialogue = dialogueUpgrade;
+            _dialogue.SetActive(true);
         }
-        else
+        
+        if (_walkedInFirstTime)
         {
             Debug.Log("I want sun glasses you worm"); // Dialog einbauen start der quest
+            
+            _walkedInFirstTime = false;
+            
+            _dialogue = dialogueFirst;
+            _dialogue.SetActive(true);
+        }
+        else if (!_walkedInFirstTime)
+        {
+            _dialogue = dialogueSecond;
+            _dialogue.SetActive(true);
         }
     }
 

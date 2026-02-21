@@ -43,9 +43,9 @@ public class RatGangIndividual : MonoBehaviour
     {
         if (_playerIn)
         {
-            _isTalking = true;                                                                                          // irgenwas nicht gerferneced!!!!!!!!!!!!!!!!!!!
+            _isTalking = true;
             
-            StartCoroutine(RandomSpecial());                                                                        // Coroutine auschalten????????????? Gilt für alle interact scripts!!!!!!!!!!!
+            StartCoroutine(RandomSpecial());
         
             Debug.Log("Ey"); // Dialog einbauen
         }
