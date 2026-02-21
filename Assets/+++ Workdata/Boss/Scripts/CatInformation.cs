@@ -18,7 +18,7 @@ public class CatInformation : MonoBehaviour
 
     private void Awake()
     {
-        _pawsAlive = 2;
+        _pawsAlive = 3;
         
         _animator = GetComponent<Animator>();
 

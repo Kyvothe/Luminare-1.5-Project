@@ -96,6 +96,8 @@ public class PlayerInformation : MonoBehaviour
         _maxHealth = 50;
         _currentHealth = _maxHealth;
         
+        PlayerPrefs.SetInt("Health", _currentHealth);
+        
         extraHeart1.SetActive(true);
         extraHeart2.SetActive(true);
     }
