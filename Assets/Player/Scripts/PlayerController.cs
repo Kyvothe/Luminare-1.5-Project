@@ -104,6 +104,11 @@ public class PlayerController : MonoBehaviour
         _currentSpeed = _walkingSpeed;
 
         _currentTrigger = "ActionTrigger";
+
+        if (sock)
+        {
+            _animator.SetBool("Sock", true);
+        }
     }
 
     private void SetInputActions()
@@ -393,6 +398,7 @@ public class PlayerController : MonoBehaviour
     public void SetSock(bool value)
     {
         sock = true;
+        _animator.SetBool("Sock", true);
     }
     
     #endregion
