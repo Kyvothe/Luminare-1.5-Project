@@ -2607,11 +2607,11 @@ PrefabInstance:
       objectReference: {fileID: 1889291963}
     - target: {fileID: 7825972168922382389, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.24
+      value: -26.147
       objectReference: {fileID: 0}
     - target: {fileID: 7825972168922382389, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.255
+      value: -4.258
       objectReference: {fileID: 0}
     - target: {fileID: 7825972168922382389, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16772,6 +16772,91 @@ RectTransform:
   m_AnchoredPosition: {x: 60, y: -180}
   m_SizeDelta: {x: 435, y: 126.4849}
   m_Pivot: {x: 0, y: 1}
+--- !u!1001 &1873142234
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 449042619105499671, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
+      propertyPath: m_Name
+      value: Rat Gang
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194641662077524772, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194641662077524772, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658846185667388398, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
+      propertyPath: m_Name
+      value: RatGang 4 Shadowlord.xxx
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688119994125497288, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -20.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688119994125497288, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688119994125497288, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.051529683
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688119994125497288, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688119994125497288, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688119994125497288, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688119994125497288, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688119994125497288, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688119994125497288, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688119994125497288, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135493261410544986, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
+      propertyPath: m_Name
+      value: RatGang 5 Ted
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718151393041269794, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
+      propertyPath: m_Name
+      value: RatGang 1 Swagger
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247707056469542519, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
+      propertyPath: m_Name
+      value: RatGang 3 Felicia
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168102285154136378, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
+      propertyPath: m_Name
+      value: RatGang 2 Bob
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6eed950f873b75947a29af0493e0923e, type: 3}
 --- !u!1 &1882635248
 GameObject:
   m_ObjectHideFlags: 0
@@ -17722,3 +17807,4 @@ SceneRoots:
   - {fileID: 1889291967}
   - {fileID: 1226831255}
   - {fileID: 1027081290}
+  - {fileID: 1873142234}
