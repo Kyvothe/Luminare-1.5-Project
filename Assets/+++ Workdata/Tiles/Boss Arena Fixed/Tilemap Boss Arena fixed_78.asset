@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Tilemap Boss Arena fixed_78
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 485828995, guid: e1f8aac3de77ee44f96aa758d053ad2c, type: 3}
+  m_Sprite: {fileID: -1735884334, guid: e1f8aac3de77ee44f96aa758d053ad2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
