@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CatInformation : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class CatInformation : MonoBehaviour
     private Animator _animator;
     
     private Vector2 _spawnPosition;
+    
+    public UnityEvent OnDeath;
 
     private void Awake()
     {
@@ -26,6 +29,12 @@ public class CatInformation : MonoBehaviour
         _spawnPosition.y = 10;
     }
 
+    public void StartFight()
+    {
+        _animator.SetTrigger(Hash_ActionTrigger);
+        _animator.SetInteger(Hash_ActionId, 100);
+    }
+    
     public void PawDied()
     {
         _pawsAlive--;
@@ -44,6 +53,7 @@ public class CatInformation : MonoBehaviour
         {
             _catDied = true;
             _animator.SetInteger(Hash_ActionId, 20);
+            OnDeath.Invoke();
         }
     }
 

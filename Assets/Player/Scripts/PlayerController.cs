@@ -400,6 +400,19 @@ public class PlayerController : MonoBehaviour
         sock = true;
         _animator.SetBool("Sock", true);
     }
+
+    public void ToggleInput(bool _putOut)
+    {
+        if (_putOut)
+        {
+            _inputActions.Player.Disable();
+        }
+
+        if (!_putOut)
+        {
+            _inputActions.Player.Enable();
+        }
+    }
     
     #endregion
     

@@ -10,6 +10,8 @@ public class PawBehaviour : MonoBehaviour
     public int id;
 
     public bool isLeft;
+    public bool startFight;
+    private bool _startedFight = false;
 
     public int damage;
 
@@ -19,6 +21,11 @@ public class PawBehaviour : MonoBehaviour
     private void Awake()
     {
         _anim = GetComponent<Animator>();
+    }
+    
+    public void SetSartFight()
+    {
+        startFight = true;
         
         StartCoroutine(TimedRandom(5f));
     }
@@ -49,6 +56,7 @@ public class PawBehaviour : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<PlayerInformation>().SetDamage(damage);
+            Debug.Log("Hit");
         }
         
         if (other.CompareTag("SpawnPoint"))

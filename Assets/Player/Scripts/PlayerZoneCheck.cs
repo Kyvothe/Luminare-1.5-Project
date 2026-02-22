@@ -1,11 +1,14 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerZoneCheck : MonoBehaviour
 {
     [SerializeField] private int itemCount = 0;
     public bool gotAllItems = false;
     public bool gotSunGlasses = false;
+
+    public UnityEvent PickedUpItem;
 
     private PlayerInformation _playerInformation;
     private PlayerController _playerController;
@@ -54,6 +57,8 @@ public class PlayerZoneCheck : MonoBehaviour
                 
                 other.gameObject.SetActive(false);
                 _playerInformation.SetHealth(other.GetComponent<HealItem>().ReturnHealthAmount());
+                
+                PickedUpItem.Invoke();
             }
             else
             {

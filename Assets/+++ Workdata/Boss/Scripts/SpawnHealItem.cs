@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpawnHealItem : MonoBehaviour
@@ -5,6 +6,8 @@ public class SpawnHealItem : MonoBehaviour
    public int _random;
    
    public GameObject HealItem;
+   
+   private bool _spawned = false;
 
    public void DropItem()
    { 
@@ -13,7 +16,19 @@ public class SpawnHealItem : MonoBehaviour
 
       if (_random < 50)
       {
-         Instantiate(HealItem, gameObject.transform.position, gameObject.transform.rotation);
+         if (_spawned == false)
+         { 
+            Instantiate(HealItem, gameObject.transform.position, gameObject.transform.rotation);
+            _spawned = true;
+         }
+      }
+   }
+
+   public void ResetSpawn()
+   {
+      if (_spawned == true)
+      { 
+         _spawned = false;
       }
    }
 }
