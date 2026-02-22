@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.2805, y: 0.0089}
-  m_SizeDelta: {x: 3.6184, y: 0.948}
+  m_AnchoredPosition: {x: -0.2805, y: -0.1069}
+  m_SizeDelta: {x: 3.6184, y: 1.1796}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &327857851303575848
 CanvasRenderer:
@@ -65,7 +65,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hey, bird! Yes, you, worm down there! My name is Ralph - with PH mind you!
+  m_text: '<b>Ralph</b>
+
+    Hey, bird! Yes, you, worm down there! My name is Ralph
+    - with PH, mind you! If you want to get past me, you''ll have to get me my divine
+    sunglasses, otherwise you can SCRAM,  loser!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -92,8 +96,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.2
-  m_fontSizeBase: 0.2
+  m_fontSize: 0.17
+  m_fontSizeBase: 0.17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -275,7 +279,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Finally. I had thought, you'd never make it. Farewell
+  m_text: '<b>Ralph</b>
+
+    Finally. You''re not so useless after all. Here, I''ll
+    be so gracious as to teach you my most stylish technique - Peck Attack!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -380,8 +387,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.28049946, y: 0.008900166}
-  m_SizeDelta: {x: 3.6184, y: 0.948}
+  m_AnchoredPosition: {x: -0.28049946, y: -0.0788}
+  m_SizeDelta: {x: 3.6184, y: 1.1234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5045882038593574420
 CanvasRenderer:
@@ -411,8 +418,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '*gasp* Did you just call me Ralf?! With F?! How dare you! Get out of my
-    sight and get me my sun glasses, you useless thing!'
+  m_text: '<b>Ralph</b>
+
+    *gasp* Did you just call me Ralf?! How dare you! Get
+    out of my sight and get me my sunglasses, you useless thing!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
