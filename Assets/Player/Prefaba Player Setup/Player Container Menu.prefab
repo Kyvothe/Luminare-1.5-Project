@@ -199,6 +199,8 @@ GameObject:
   - component: {fileID: 8458117023163855491}
   - component: {fileID: 2105403762185471993}
   - component: {fileID: 37199861369031413}
+  - component: {fileID: 7459916862199160146}
+  - component: {fileID: 2124441777891276728}
   m_Layer: 3
   m_Name: Player Container Menu
   m_TagString: Player
@@ -468,6 +470,9 @@ MonoBehaviour:
   itemCount: 0
   gotAllItems: 0
   gotSunGlasses: 0
+  PickedUpItem:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &37199861369031413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,3 +487,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentInteractables: []
   interactableIndicator: {fileID: 3930109189629624521}
+--- !u!61 &7459916862199160146
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8269161703913586673}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.00782299, y: -0.20270336}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.4777179, y: 0.2549823}
+    oldSize: {x: 2.1333334, y: 2.1333334}
+    newSize: {x: 1.8125, y: 2.1875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.528965, y: 0.18479276}
+  m_EdgeRadius: 0
+--- !u!114 &2124441777891276728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8269161703913586673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee1ebe51a4308b428705f0514585c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footStepsLeaf: {fileID: 8300000, guid: 9255a0624c4cc2e4d9f367c23e6d63f9, type: 3}
+  footStepsConcrete: {fileID: 8300000, guid: 24265bfc37f95b649afe3e12d32ebfc5, type: 3}
+  footStepsCarpet: {fileID: 8300000, guid: 9cca4a1a86603474fb2f54557ad13398, type: 3}
+  footStepsMetal: {fileID: 8300000, guid: d05bdd4882932ed4789de5f8d34f8a79, type: 3}
+  footStepsWood: {fileID: 8300000, guid: e3bcb6c5c608b4a4ba90f69106965243, type: 3}
