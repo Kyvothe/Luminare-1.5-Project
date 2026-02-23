@@ -1,106 +1,88 @@
 fileFormatVersion: 2
-guid: 715f634bc9d0dba429f8056c60f2c81c
+guid: 347586bd83ed4b24abaf2383b1cc73a6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4090530861270193234
-    second: Pigeon_geheilt_0
+      213: -3254443629177532889
+    second: Pigeon_with_socken_verband_aaaaaaaa_0
   - first:
-      213: 3542479633932520851
-    second: Pigeon_geheilt_1
+      213: 7981916065056200052
+    second: Pigeon_with_socken_verband_aaaaaaaa_1
   - first:
-      213: -3186964524888836033
-    second: Pigeon_geheilt_2
+      213: 6199726824381431770
+    second: Pigeon_with_socken_verband_aaaaaaaa_2
   - first:
-      213: -3484046540227927148
-    second: Pigeon_geheilt_3
+      213: 3292703238201933480
+    second: Pigeon_with_socken_verband_aaaaaaaa_3
   - first:
-      213: -3197629879257130024
-    second: Pigeon_geheilt_4
+      213: -8301435494581098133
+    second: Pigeon_with_socken_verband_aaaaaaaa_4
   - first:
-      213: -5542561183406390729
-    second: Pigeon_geheilt_5
+      213: 5121928285760356367
+    second: Pigeon_with_socken_verband_aaaaaaaa_5
   - first:
-      213: 2131933347681538335
-    second: Pigeon_geheilt_6
+      213: -35033518674370127
+    second: Pigeon_with_socken_verband_aaaaaaaa_6
   - first:
-      213: -2803821862758362627
-    second: Pigeon_geheilt_7
+      213: -3125954169795643800
+    second: Pigeon_with_socken_verband_aaaaaaaa_7
   - first:
-      213: -3277831016495726182
-    second: Pigeon_geheilt_8
+      213: -7242900293464850083
+    second: Pigeon_with_socken_verband_aaaaaaaa_8
   - first:
-      213: 7256250581399082565
-    second: Pigeon_geheilt_9
+      213: -2008733321927524515
+    second: Pigeon_with_socken_verband_aaaaaaaa_9
   - first:
-      213: 7542331657865623850
-    second: Pigeon_geheilt_10
+      213: 4385930411424571226
+    second: Pigeon_with_socken_verband_aaaaaaaa_10
   - first:
-      213: -7815429445253834700
-    second: Pigeon_geheilt_11
+      213: 7620133926124237834
+    second: Pigeon_with_socken_verband_aaaaaaaa_11
   - first:
-      213: -3849921676144946620
-    second: Pigeon_geheilt_12
+      213: 8509971950173073657
+    second: Pigeon_with_socken_verband_aaaaaaaa_12
   - first:
-      213: -5933287949156313036
-    second: Pigeon_geheilt_13
+      213: 8290581134607745735
+    second: Pigeon_with_socken_verband_aaaaaaaa_13
   - first:
-      213: -1375368406522548308
-    second: Pigeon_geheilt_14
+      213: -3390557776937035691
+    second: Pigeon_with_socken_verband_aaaaaaaa_14
   - first:
-      213: 3440072035484799397
-    second: Pigeon_geheilt_15
+      213: 1216411009818968218
+    second: Pigeon_with_socken_verband_aaaaaaaa_15
   - first:
-      213: 6489694065498524816
-    second: Pigeon_geheilt_16
+      213: 4208132441978554602
+    second: Pigeon_with_socken_verband_aaaaaaaa_16
   - first:
-      213: 3181863233040293425
-    second: Pigeon_geheilt_17
+      213: -3008373026516061311
+    second: Pigeon_with_socken_verband_aaaaaaaa_17
   - first:
-      213: 5211796333736175570
-    second: Pigeon_geheilt_18
+      213: -7064878803406976960
+    second: Pigeon_with_socken_verband_aaaaaaaa_18
   - first:
-      213: 6182243983108093552
-    second: Pigeon_geheilt_19
+      213: -6141366521288022888
+    second: Pigeon_with_socken_verband_aaaaaaaa_19
   - first:
-      213: -982173744494896866
-    second: Pigeon_geheilt_20
+      213: 4595801380878502698
+    second: Pigeon_with_socken_verband_aaaaaaaa_20
   - first:
-      213: 404185607259895937
-    second: Pigeon_geheilt_21
+      213: -4474588449736979727
+    second: Pigeon_with_socken_verband_aaaaaaaa_21
   - first:
-      213: 2090547045660342639
-    second: Pigeon_geheilt_22
+      213: -3907398137523178045
+    second: Pigeon_with_socken_verband_aaaaaaaa_22
   - first:
-      213: -6465726709121869536
-    second: Pigeon_geheilt_23
+      213: 7505213900182279494
+    second: Pigeon_with_socken_verband_aaaaaaaa_23
   - first:
-      213: 3862025362603802232
-    second: Pigeon_geheilt_24
+      213: 3863987745385982979
+    second: Pigeon_with_socken_verband_aaaaaaaa_24
   - first:
-      213: 7820544618142809073
-    second: Pigeon_geheilt_25
+      213: -3202052470066056235
+    second: Pigeon_with_socken_verband_aaaaaaaa_25
   - first:
-      213: 4496546092809063713
-    second: Pigeon_geheilt_26
-  - first:
-      213: -6091042635729616508
-    second: Pigeon_geheilt_27
-  - first:
-      213: -8184659866300908834
-    second: Pigeon_geheilt_28
-  - first:
-      213: 7837479097995972938
-    second: Pigeon_geheilt_29
-  - first:
-      213: 5872679692031610125
-    second: Pigeon_geheilt_30
-  - first:
-      213: 8037760827681069631
-    second: Pigeon_geheilt_31
-  - first:
-      213: 7042879837193831819
-    second: Pigeon_geheilt_32
+      213: 5839719490997590271
+    second: Pigeon_with_socken_verband_aaaaaaaa_26
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -147,7 +129,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 30
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -209,7 +191,535 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pigeon_geheilt_0
+      name: Pigeon_with_socken_verband_aaaaaaaa_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72e075513c4e5d2d0800000000000000
+      internalID: -3254443629177532889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47598a40f5675ce60800000000000000
+      internalID: 7981916065056200052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf37bff2bad90650800000000000000
+      internalID: 6199726824381431770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aefdcf462802bd20800000000000000
+      internalID: 3292703238201933480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b69acab86606bcc80800000000000000
+      internalID: -8301435494581098133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0085c583aeb41740800000000000000
+      internalID: 5121928285760356367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b1ae2c4339838ff0800000000000000
+      internalID: -35033518674370127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 866fd2d9e316e94d0800000000000000
+      internalID: -3125954169795643800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d518470ce8c0c7b90800000000000000
+      internalID: -7242900293464850083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5ff40abfab8f14e0800000000000000
+      internalID: -2008733321927524515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5f5b86b874fddc30800000000000000
+      internalID: 4385930411424571226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_11
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a04b98fbe6720c960800000000000000
+      internalID: 7620133926124237834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f0ba92a66e791670800000000000000
+      internalID: 8509971950173073657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c289d5dd9f0e0370800000000000000
+      internalID: 8290581134607745735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 558da337aa152f0d0800000000000000
+      internalID: -3390557776937035691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a90422d5e5f81e010800000000000000
+      internalID: 1216411009818968218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae8cdeb092a466a30800000000000000
+      internalID: 4208132441978554602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_17
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 183b4a2ebac1046d0800000000000000
+      internalID: -3008373026516061311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0488dbdd82284fd90800000000000000
+      internalID: -7064878803406976960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 894a62fefab75caa0800000000000000
+      internalID: -6141366521288022888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b438d910197cf30800000000000000
+      internalID: 4595801380878502698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa8c59238117e1c0800000000000000
+      internalID: -4474588449736979727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c578e0a81226c9c0800000000000000
+      internalID: -3907398137523178045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_23
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64550b32740e72860800000000000000
+      internalID: 7505213900182279494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon_with_socken_verband_aaaaaaaa_24
       rect:
         serializedVersion: 2
         x: 0
@@ -217,21 +727,21 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eaba73faad38b37c0800000000000000
-      internalID: -4090530861270193234
+      spriteID: 30ca134d164af9530800000000000000
+      internalID: 3863987745385982979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pigeon_geheilt_1
+      name: Pigeon_with_socken_verband_aaaaaaaa_25
       rect:
         serializedVersion: 2
         x: 64
@@ -239,21 +749,21 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 39d8a9c457a692130800000000000000
-      internalID: 3542479633932520851
+      spriteID: 5d3fc816e360093d0800000000000000
+      internalID: -3202052470066056235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pigeon_geheilt_2
+      name: Pigeon_with_socken_verband_aaaaaaaa_26
       rect:
         serializedVersion: 2
         x: 128
@@ -261,675 +771,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f38ba3e56a0a5c3d0800000000000000
-      internalID: -3186964524888836033
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 49329c4812e26afc0800000000000000
-      internalID: -3484046540227927148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8db14bb019cbf93d0800000000000000
-      internalID: -3197629879257130024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 732813d28fdd413b0800000000000000
-      internalID: -5542561183406390729
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f111e519516269d10800000000000000
-      internalID: 2131933347681538335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_7
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: df150d00fd2d619d0800000000000000
-      internalID: -2803821862758362627
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_8
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a91c304ae0ec282d0800000000000000
-      internalID: -3277831016495726182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_9
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5469381657163b460800000000000000
-      internalID: 7256250581399082565
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_10
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a29734d8eaebba860800000000000000
-      internalID: 7542331657865623850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_11
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4385484d3540a8390800000000000000
-      internalID: -7815429445253834700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_12
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 442dd4022a4529ac0800000000000000
-      internalID: -3849921676144946620
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_13
-      rect:
-        serializedVersion: 2
-        x: 832
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4389e60db0ab8ada0800000000000000
-      internalID: -5933287949156313036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_14
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cafade5a8b5b9ece0800000000000000
-      internalID: -1375368406522548308
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_15
-      rect:
-        serializedVersion: 2
-        x: 960
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a193dc3a479dbf20800000000000000
-      internalID: 3440072035484799397
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_16
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 09c00036e56001a50800000000000000
-      internalID: 6489694065498524816
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_17
-      rect:
-        serializedVersion: 2
-        x: 1088
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 13e1e3190cf382c20800000000000000
-      internalID: 3181863233040293425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_18
-      rect:
-        serializedVersion: 2
-        x: 1152
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2d7270af625045840800000000000000
-      internalID: 5211796333736175570
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_19
-      rect:
-        serializedVersion: 2
-        x: 1216
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 07634ffc52ebbc550800000000000000
-      internalID: 6182243983108093552
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_20
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e199aa3ee2e9e52f0800000000000000
-      internalID: -982173744494896866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_21
-      rect:
-        serializedVersion: 2
-        x: 1344
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1883d081ba4fb9500800000000000000
-      internalID: 404185607259895937
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_22
-      rect:
-        serializedVersion: 2
-        x: 1408
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f69b3da367d130d10800000000000000
-      internalID: 2090547045660342639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_23
-      rect:
-        serializedVersion: 2
-        x: 1472
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0291900a0df1546a0800000000000000
-      internalID: -6465726709121869536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_24
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 87e7c8bfa9ba89530800000000000000
-      internalID: 3862025362603802232
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_25
-      rect:
-        serializedVersion: 2
-        x: 1600
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1fbbe7a25e7288c60800000000000000
-      internalID: 7820544618142809073
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_26
-      rect:
-        serializedVersion: 2
-        x: 1664
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 12d0e0209d0f66e30800000000000000
-      internalID: 4496546092809063713
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_27
-      rect:
-        serializedVersion: 2
-        x: 1728
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 481c3999ef4487ba0800000000000000
-      internalID: -6091042635729616508
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_28
-      rect:
-        serializedVersion: 2
-        x: 1792
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: edafcbd373f3a6e80800000000000000
-      internalID: -8184659866300908834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_29
-      rect:
-        serializedVersion: 2
-        x: 1856
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a41599207b154cc60800000000000000
-      internalID: 7837479097995972938
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_30
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d0dc13ba013ff7150800000000000000
-      internalID: 5872679692031610125
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_31
-      rect:
-        serializedVersion: 2
-        x: 1984
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f3ada7b03ecdb8f60800000000000000
-      internalID: 8037760827681069631
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pigeon_geheilt_32
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4777179, y: 0.2549823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b8503bba5e55db160800000000000000
-      internalID: 7042879837193831819
+      spriteID: ff816d8dfe9da0150800000000000000
+      internalID: 5839719490997590271
       vertices: []
       indices: 
       edges: []
@@ -938,7 +788,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: be6d01dc5d118f345966f8bc66c24165
+    spriteID: 9fdc20cef429fba4bb181e9f73e6d5a6
     internalID: 0
     vertices: []
     indices: 
@@ -948,39 +798,33 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Pigeon_geheilt_0: -4090530861270193234
-      Pigeon_geheilt_1: 3542479633932520851
-      Pigeon_geheilt_10: 7542331657865623850
-      Pigeon_geheilt_11: -7815429445253834700
-      Pigeon_geheilt_12: -3849921676144946620
-      Pigeon_geheilt_13: -5933287949156313036
-      Pigeon_geheilt_14: -1375368406522548308
-      Pigeon_geheilt_15: 3440072035484799397
-      Pigeon_geheilt_16: 6489694065498524816
-      Pigeon_geheilt_17: 3181863233040293425
-      Pigeon_geheilt_18: 5211796333736175570
-      Pigeon_geheilt_19: 6182243983108093552
-      Pigeon_geheilt_2: -3186964524888836033
-      Pigeon_geheilt_20: -982173744494896866
-      Pigeon_geheilt_21: 404185607259895937
-      Pigeon_geheilt_22: 2090547045660342639
-      Pigeon_geheilt_23: -6465726709121869536
-      Pigeon_geheilt_24: 3862025362603802232
-      Pigeon_geheilt_25: 7820544618142809073
-      Pigeon_geheilt_26: 4496546092809063713
-      Pigeon_geheilt_27: -6091042635729616508
-      Pigeon_geheilt_28: -8184659866300908834
-      Pigeon_geheilt_29: 7837479097995972938
-      Pigeon_geheilt_3: -3484046540227927148
-      Pigeon_geheilt_30: 5872679692031610125
-      Pigeon_geheilt_31: 8037760827681069631
-      Pigeon_geheilt_32: 7042879837193831819
-      Pigeon_geheilt_4: -3197629879257130024
-      Pigeon_geheilt_5: -5542561183406390729
-      Pigeon_geheilt_6: 2131933347681538335
-      Pigeon_geheilt_7: -2803821862758362627
-      Pigeon_geheilt_8: -3277831016495726182
-      Pigeon_geheilt_9: 7256250581399082565
+      Pigeon_with_socken_verband_aaaaaaaa_0: -3254443629177532889
+      Pigeon_with_socken_verband_aaaaaaaa_1: 7981916065056200052
+      Pigeon_with_socken_verband_aaaaaaaa_10: 4385930411424571226
+      Pigeon_with_socken_verband_aaaaaaaa_11: 7620133926124237834
+      Pigeon_with_socken_verband_aaaaaaaa_12: 8509971950173073657
+      Pigeon_with_socken_verband_aaaaaaaa_13: 8290581134607745735
+      Pigeon_with_socken_verband_aaaaaaaa_14: -3390557776937035691
+      Pigeon_with_socken_verband_aaaaaaaa_15: 1216411009818968218
+      Pigeon_with_socken_verband_aaaaaaaa_16: 4208132441978554602
+      Pigeon_with_socken_verband_aaaaaaaa_17: -3008373026516061311
+      Pigeon_with_socken_verband_aaaaaaaa_18: -7064878803406976960
+      Pigeon_with_socken_verband_aaaaaaaa_19: -6141366521288022888
+      Pigeon_with_socken_verband_aaaaaaaa_2: 6199726824381431770
+      Pigeon_with_socken_verband_aaaaaaaa_20: 4595801380878502698
+      Pigeon_with_socken_verband_aaaaaaaa_21: -4474588449736979727
+      Pigeon_with_socken_verband_aaaaaaaa_22: -3907398137523178045
+      Pigeon_with_socken_verband_aaaaaaaa_23: 7505213900182279494
+      Pigeon_with_socken_verband_aaaaaaaa_24: 3863987745385982979
+      Pigeon_with_socken_verband_aaaaaaaa_25: -3202052470066056235
+      Pigeon_with_socken_verband_aaaaaaaa_26: 5839719490997590271
+      Pigeon_with_socken_verband_aaaaaaaa_3: 3292703238201933480
+      Pigeon_with_socken_verband_aaaaaaaa_4: -8301435494581098133
+      Pigeon_with_socken_verband_aaaaaaaa_5: 5121928285760356367
+      Pigeon_with_socken_verband_aaaaaaaa_6: -35033518674370127
+      Pigeon_with_socken_verband_aaaaaaaa_7: -3125954169795643800
+      Pigeon_with_socken_verband_aaaaaaaa_8: -7242900293464850083
+      Pigeon_with_socken_verband_aaaaaaaa_9: -2008733321927524515
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
