@@ -13,6 +13,7 @@ TagManager:
   - BG_Music
   - Concrete
   - Leaf
+  - Wood
   layers:
   - Default
   - TransparentFX
