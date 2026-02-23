@@ -298,7 +298,7 @@ MonoBehaviour:
   _isGrounded: 0
   _canJump: 1
   _isFlying: 0
-  sock: 0
+  sock: 1
   _currentTrigger: 
 --- !u!114 &7944675498100664021
 MonoBehaviour:
@@ -468,6 +468,9 @@ MonoBehaviour:
   itemCount: 0
   gotAllItems: 0
   gotSunGlasses: 0
+  PickedUpItem:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &37199861369031413
 MonoBehaviour:
   m_ObjectHideFlags: 0
