@@ -7,7 +7,7 @@ public class AttackDetector : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            _crow.anim.SetBool("InAttackRange", true);
+            _crow.SetAttackInfos(true);
         }
     }
     
@@ -15,7 +15,7 @@ public class AttackDetector : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            _crow.anim.SetBool("InAttackRange", false);
+            _crow.SetAttackInfos(false);
         }
     }
 }

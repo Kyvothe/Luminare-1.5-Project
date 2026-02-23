@@ -69,7 +69,7 @@ public class enemyRatInformation : MonoBehaviour
             }
         }
         
-       // _colorSpriteSetter.ColorObject();                                                                               // feuert nicht!!!!!!!!!!
+        _colorSpriteSetter.ColorObject(); 
     }
 
     public void DestroyEnemey()
