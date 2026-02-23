@@ -11,6 +11,8 @@ TagManager:
   - SpawnPoint
   - HealthUpgrade
   - BG_Music
+  - Concrete
+  - Leaf
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,6 @@ TagManager:
   - Ground
   - Enemy
   - Player
-  - 
   - 
   - 
   - 

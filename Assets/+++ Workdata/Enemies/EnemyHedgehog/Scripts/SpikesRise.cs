@@ -53,7 +53,7 @@ public class SpikesRise : MonoBehaviour
             }
             else
             {
-                transform.position = new Vector2(transform.position.x, transform.position.y + 0.3f);
+                transform.position = new Vector2(transform.position.x, transform.position.y + 0.4f);
                 //gameObject.GetComponent<BoxCollider2D>().enabled = true;
 
                 _animator.SetInteger("ActionId", 1);

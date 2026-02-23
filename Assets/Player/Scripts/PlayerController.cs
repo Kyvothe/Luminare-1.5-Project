@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
     private float _walkingSpeed = 3f;
     private float _sprintingSpeed = 4f;
     
-    private float bigJumpForce = 7f;
+    private float bigJumpForce = 8f;
     private float hopsForce = 5f;
     public float flyForce = 3f;
 
