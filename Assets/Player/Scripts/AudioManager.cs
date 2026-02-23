@@ -7,7 +7,10 @@ public class AudioManager: MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+        }
     }
 
     public void PlaySFX(AudioClip audioClip, float volume = 1f)
