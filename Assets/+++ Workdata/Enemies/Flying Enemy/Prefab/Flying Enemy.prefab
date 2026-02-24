@@ -80,8 +80,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.1355567, y: 0.99167204}
-  m_Radius: 2.180749
+  m_Offset: {x: -0.046583176, y: 0.99167204}
+  m_Radius: 1.284071
 --- !u!1 &2798136253549140134
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +164,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clawDamage: 5
-  chaseContainer: {fileID: 0}
 --- !u!1 &4435102215640540415
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,6 +178,7 @@ GameObject:
   - component: {fileID: 4692548017490909691}
   - component: {fileID: 2297907087836853843}
   - component: {fileID: 7909431071634164709}
+  - component: {fileID: 1723078531849995148}
   m_Layer: 7
   m_Name: Flying Enemy
   m_TagString: Enemy
@@ -408,6 +408,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1723078531849995148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4435102215640540415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ecd9337c868df45996c668ad6dedaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorSprite: {r: 1, g: 0.48584908, b: 0.48584908, a: 1}
+  colorTime: 0.5
 --- !u!1 &5194021394272332473
 GameObject:
   m_ObjectHideFlags: 0

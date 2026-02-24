@@ -6641,8 +6641,8 @@ GameObject:
   - component: {fileID: 928185280}
   - component: {fileID: 928185282}
   - component: {fileID: 928185283}
-  - component: {fileID: 928185284}
   - component: {fileID: 928185285}
+  - component: {fileID: 928185286}
   m_Layer: 0
   m_Name: Paw Right
   m_TagString: Paw
@@ -6750,7 +6750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907a1d9e09cc20c44973eb58d044c338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 5
+  _health: 10
   cat: {fileID: 1030153925}
 --- !u!95 &928185282
 Animator:
@@ -6820,20 +6820,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.8238182, y: 4.782319}
   m_EdgeRadius: 0
---- !u!114 &928185284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 928185277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed71905f82b646246b86379394f542c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorSprite: {r: 0.754717, g: 0.2242791, b: 0.2242791, a: 1}
-  colorTime: 0.5
 --- !u!50 &928185285
 Rigidbody2D:
   serializedVersion: 5
@@ -6861,6 +6847,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &928185286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928185277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed71905f82b646246b86379394f542c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorSprite: {r: 1, g: 0.18396229, b: 0.18396229, a: 1}
+  colorTime: 0.5
 --- !u!1 &960483592
 GameObject:
   m_ObjectHideFlags: 0
@@ -18239,8 +18239,8 @@ GameObject:
   - component: {fileID: 1775897337}
   - component: {fileID: 1775897336}
   - component: {fileID: 1775897339}
-  - component: {fileID: 1775897340}
   - component: {fileID: 1775897341}
+  - component: {fileID: 1775897342}
   m_Layer: 0
   m_Name: Paw Left
   m_TagString: Paw
@@ -18370,7 +18370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907a1d9e09cc20c44973eb58d044c338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 5
+  _health: 10
   cat: {fileID: 1030153925}
 --- !u!61 &1775897339
 BoxCollider2D:
@@ -18418,20 +18418,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.0368805, y: 4.742606}
   m_EdgeRadius: 0
---- !u!114 &1775897340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775897333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed71905f82b646246b86379394f542c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorSprite: {r: 0.75686276, g: 0.22745098, b: 0.22745098, a: 1}
-  colorTime: 0.5
 --- !u!50 &1775897341
 Rigidbody2D:
   serializedVersion: 5
@@ -18459,6 +18445,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &1775897342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775897333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed71905f82b646246b86379394f542c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorSprite: {r: 1, g: 0.18396229, b: 0.18396229, a: 1}
+  colorTime: 0.5
 --- !u!1 &1783486112
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 524255459205486100}
   - component: {fileID: 4198668380049167075}
   - component: {fileID: 3330129503072158964}
+  - component: {fileID: 3591392982431664163}
   m_Layer: 7
   m_Name: EnemyRat
   m_TagString: Enemy
@@ -349,6 +350,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3591392982431664163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85084065689585220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed71905f82b646246b86379394f542c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorSprite: {r: 0.9245283, g: 0.5451228, b: 0.5451228, a: 1}
+  colorTime: 0.5
 --- !u!1 &640966672659908122
 GameObject:
   m_ObjectHideFlags: 0

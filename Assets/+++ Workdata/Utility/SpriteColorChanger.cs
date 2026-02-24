@@ -6,23 +6,14 @@ public class SpriteColorChanger : MonoBehaviour
 {
     public Color colorSprite;
     public float colorTime;
-    SpriteRenderer[] allSprites;
-    Shader[] defaultShaders;
-    Color[] defaultColors;
-    Shader textGUIShader;
+    
+    private SpriteRenderer sprite;
+    private Color defaultColors;
 
     void Start()
     {
-        textGUIShader = Shader.Find("GUI/Text Shader");
-
-        allSprites = gameObject.GetComponentsInChildren<SpriteRenderer>();
-        defaultShaders = new Shader[allSprites.Length];
-        defaultColors = new Color[allSprites.Length];
-        for(int i = 0; i < allSprites.Length; i++)
-        {
-            defaultShaders[i] = allSprites[i]?.material?.shader;
-            defaultColors[i] = allSprites[i].color;
-        }
+        sprite = gameObject.GetComponent<SpriteRenderer>();
+        defaultColors = sprite.color;
     }
 
     public void ColorObject()
@@ -33,20 +24,12 @@ public class SpriteColorChanger : MonoBehaviour
     
     private void TurnToColor()
     {
-        for (int i = 0; i < allSprites.Length; i++)
-        {
-            allSprites[i].material.shader = textGUIShader;
-            allSprites[i].color = colorSprite;
-        }
+        sprite.color = colorSprite;
     }
 
     private void TurnNormal()
-    {
-        for (int i = 0; i < allSprites.Length; i++)
-        {
-            allSprites[i].material.shader = defaultShaders[i];
-            allSprites[i].color = defaultColors[i];
-        }
+    { 
+        sprite.color = defaultColors;
     }
 }
 

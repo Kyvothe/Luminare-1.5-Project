@@ -360,10 +360,12 @@ public class PlayerController : MonoBehaviour
         {
             return true;
         }
-        else
+
+        if (playerDirectionState == PlayerDirectionState.Right)
         {
             return false;
         }
+        return true;
     }
 
     public void SetPaused(bool value)
