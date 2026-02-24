@@ -19,9 +19,11 @@ public class SpikesRise : MonoBehaviour
     public GameObject BuffIgel;
 
     private Vector2 _spawnPosition;
+    private Vector2 _stayPosition;
 
     private void Awake()
     {
+        _stayPosition = transform.position;
         _animator = GetComponent<Animator>();
         _awake = false;
         PlayAudio(Snore);
@@ -84,6 +86,7 @@ public class SpikesRise : MonoBehaviour
 
             _walkedOut = true;
             PlayAudio(Snore);
+            transform.position = _stayPosition;
         }
     }
 

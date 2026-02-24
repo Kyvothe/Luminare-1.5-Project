@@ -70,6 +70,7 @@ public class OpenDialogueInGame : MonoBehaviour
         _isPaused = false;
         _anyMenuActive = false;
         _currentMenu = null;
+        _noOtherMenuActive = true;
         Player.GetComponent<PlayerController>().SetPaused(false);
     }
     
