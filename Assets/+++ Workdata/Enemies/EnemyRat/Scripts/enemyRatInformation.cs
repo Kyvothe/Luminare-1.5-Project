@@ -14,7 +14,7 @@ public class enemyRatInformation : MonoBehaviour
     
     private bool _isDead;
 
-    private ColorSpriteSetter _colorSpriteSetter;
+    private SpriteColorChanger _colorSpriteSetter;
     private Collider2D _coll;
     private Rigidbody2D _rb;
     
@@ -29,7 +29,7 @@ public class enemyRatInformation : MonoBehaviour
         
         _animator = GetComponent<Animator>();
         
-        _colorSpriteSetter = GetComponent<ColorSpriteSetter>();
+        _colorSpriteSetter = GetComponent<SpriteColorChanger>();
         _coll = GetComponent<Collider2D>();
         _rb = GetComponent<Rigidbody2D>();
         
@@ -58,7 +58,8 @@ public class enemyRatInformation : MonoBehaviour
             gameObject.GetComponentInChildren<ContactDamage>().SetIsDead();
             
             _position = transform.position;
-
+            _position.y = transform.position.y + 0.5f;
+            
             if (player.GetComponent<PlayerController>().ReturnDirection())
             {
                 _position.x = transform.position.x - 1.5f;
@@ -67,13 +68,15 @@ public class enemyRatInformation : MonoBehaviour
             {
                 _position.x = transform.position.x + 1.5f;
             }
-        }
+            
+        } 
         
-       // _colorSpriteSetter.ColorObject();                                                                               // feuert nicht!!!!!!!!!!
+        _colorSpriteSetter.ColorObject(); 
     }
 
     public void DestroyEnemey()
     {
+        _animator.enabled = false;
         Destroy(gameObject);
     }
 

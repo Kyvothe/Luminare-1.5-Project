@@ -164,7 +164,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clawDamage: 5
-  chaseContainer: {fileID: 0}
 --- !u!1 &4435102215640540415
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,6 +178,7 @@ GameObject:
   - component: {fileID: 4692548017490909691}
   - component: {fileID: 2297907087836853843}
   - component: {fileID: 7909431071634164709}
+  - component: {fileID: 3337536628568152793}
   m_Layer: 7
   m_Name: Flying Enemy
   m_TagString: Enemy
@@ -242,14 +242,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c179ab018dd5e8347a211d76bd9725c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flyState: 2
   speed: 3
-  chase: 0
   startPos: {fileID: 0}
   controlPos: {fileID: 0}
   startReached: 0
   controlReached: 0
   anim: {fileID: 2671821585039340343}
   InAttackRange: 0
+  attackDelayTime: 0
+  _canAttack: 0
+  _playerDetected: 0
 --- !u!70 &4692548017490909691
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -405,6 +408,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3337536628568152793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4435102215640540415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71938bbb7ed3c1643b1d8659f88374cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorSprite: {r: 1, g: 0.0141509175, b: 0.0141509175, a: 1}
+  colorTime: 0.5
 --- !u!1 &5194021394272332473
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +505,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.25, y: 2.25}
+  m_Size: {x: 2.6666667, y: 2.6666667}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

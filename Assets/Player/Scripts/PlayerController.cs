@@ -193,6 +193,8 @@ public class PlayerController : MonoBehaviour
             _hasLanded = true;
 
             doubleJump = true;
+
+            _canJump = true;
         }
         else
         {

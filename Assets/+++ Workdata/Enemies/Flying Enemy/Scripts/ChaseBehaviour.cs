@@ -3,22 +3,22 @@ using UnityEngine;
 
 public class ChaseBehaviour : MonoBehaviour
 {
-   public FlyingEnemy Enemy;
+    public FlyingEnemy Enemy;
 
-   private void OnTriggerEnter2D(Collider2D other)
-   {
-      if (other.CompareTag("Player"))
-         {
-            Enemy.chase = true;
-         }
-   }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Enemy.PlayerDetected(true);
+        }
+    }
    
-   private void OnTriggerExit2D(Collider2D other)
-   {
-      if (other.CompareTag("Player"))
-      {
-            Enemy.chase = false;
-            gameObject.GetComponent<FlyingEnemy>().ReturnToStart();
-      }
-   }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Enemy.PlayerDetected(false);
+
+        }
+    }
 }

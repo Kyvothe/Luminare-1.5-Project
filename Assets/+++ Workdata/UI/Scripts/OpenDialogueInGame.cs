@@ -40,16 +40,6 @@ public class OpenDialogueInGame : MonoBehaviour
         _pauseAction.performed -= Pause;
     }
     
-    private void Update()
-    {
-        if (_anyMenuActive == false) return;
-        
-        if (Keyboard.current.anyKey.wasPressedThisFrame && EventSystem.current.currentSelectedGameObject == null)
-        { 
-            EventSystem.current.SetSelectedGameObject(_currentMenu.GetComponent<DefaultButtonSetter>().ReturnButton());
-        }
-    }
-    
     private void Pause(InputAction.CallbackContext ctx)                                                                 // PauseMenu       
     {
         if (!_isPaused && _noOtherMenuActive)                                                                           // Erster Druck auf Escape --> Oeffnen; es darf kein anderes Menu offen sein
@@ -61,9 +51,6 @@ public class OpenDialogueInGame : MonoBehaviour
             
             _anyMenuActive = true;
             _currentMenu = pauseMenu;
-            
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(pauseMenu.GetComponent<DefaultButtonSetter>().ReturnButton());
         }
        else if (_isPaused && _noOtherMenuActive)                                                                        // Zweiter Druck auf Escape --> Schließen; es darf kein anderes Menu offen sein
         {
@@ -94,9 +81,6 @@ public class OpenDialogueInGame : MonoBehaviour
         _noOtherMenuActive = false;
         _anyMenuActive = true;
         _currentMenu = GameOverScreen;
-        
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(GameOverScreen.GetComponent<DefaultButtonSetter>().ReturnButton());
     }
 
     public void OpenEndOfGameMenu()                                                                                     // Aufgerufen wenn Finish Zone erreicht über PlayerZoneCheck
@@ -107,9 +91,6 @@ public class OpenDialogueInGame : MonoBehaviour
         Player.GetComponent<PlayerController>().SetPaused(true);
         _currentMenu = EndOfGameMenu;
         _anyMenuActive = true;
-        
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(GameOverScreen.GetComponent<DefaultButtonSetter>().ReturnButton());
     }
     
     public void OpenAreYouSure()                                                                                    // Aufgerufen wenn Player dead über GameOver() in PlayerInformation
@@ -121,8 +102,5 @@ public class OpenDialogueInGame : MonoBehaviour
         _noOtherMenuActive = false;
         _anyMenuActive = true;
         _currentMenu = SureScreen;
-        
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(SureScreen.GetComponent<DefaultButtonSetter>().ReturnButton());
     }
 }

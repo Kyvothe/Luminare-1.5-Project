@@ -56,7 +56,7 @@ public class PreStory_UIManager : MonoBehaviour
         }
     }
 
-   public void Continue()
+    public void Continue()
     {
         _currentMenu.SetActive(false);
         _count++;

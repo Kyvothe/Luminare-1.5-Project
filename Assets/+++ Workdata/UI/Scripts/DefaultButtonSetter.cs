@@ -1,11 +1,21 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DefaultButtonSetter : MonoBehaviour
 {
-    public GameObject defaultButton;
+    public Button defaultButton;
 
-    public GameObject ReturnButton()
+    private void OnEnable()
     {
-        return defaultButton;
+        Selectable newSelection;
+        newSelection = defaultButton;
+        StartCoroutine(DelaySelection(newSelection));
+    }
+
+    IEnumerator DelaySelection(Selectable newSelection)
+    {
+        yield return null;
+        newSelection.Select();
     }
 }

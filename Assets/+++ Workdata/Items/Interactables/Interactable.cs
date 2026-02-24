@@ -14,6 +14,18 @@ public class Interactable : MonoBehaviour
  
     public bool Interact()                                                                                              // Aufgerufen über PlayerInteraction
     {
+        if (GetComponent<BerryBush>() != null)
+        {
+            if (!GetComponent<BerryBush>().CheckIfInteractable())
+            {
+                return false;
+            }
+            else
+            {
+                reusable = false;
+            }
+        }
+        
         onInteract?.Invoke();                                                                                           // Unity event für sämtliche Interactions
         _alreadyInteracted = true;
 
