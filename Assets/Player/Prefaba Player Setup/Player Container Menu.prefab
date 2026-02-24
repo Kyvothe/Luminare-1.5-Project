@@ -285,7 +285,7 @@ MonoBehaviour:
   _isGrounded: 0
   _canJump: 1
   _isFlying: 0
-  sock: 1
+  sock: 0
   _currentTrigger: 
 --- !u!114 &7944675498100664021
 MonoBehaviour:
