@@ -193,6 +193,8 @@ public class PlayerController : MonoBehaviour
             _hasLanded = true;
 
             doubleJump = true;
+
+            _canJump = true;
         }
         else
         {
@@ -369,10 +371,12 @@ public class PlayerController : MonoBehaviour
         {
             return true;
         }
-        else
+
+        if (playerDirectionState == PlayerDirectionState.Right)
         {
             return false;
         }
+        return true;
     }
 
     public void SetPaused(bool value)
