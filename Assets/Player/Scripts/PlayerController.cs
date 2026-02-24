@@ -270,8 +270,17 @@ public class PlayerController : MonoBehaviour
         
         _rb.linearVelocity = Vector2.zero;
         _rb.angularVelocity = 0f;
+
+        if (!_isGrounded)
+        {
+            _rb.AddForce(Vector2.up * 6f, ForceMode2D.Impulse);
+        }
+
+        if (_isGrounded)
+        {
+            _rb.AddForce(Vector2.up * bigJumpForce, ForceMode2D.Impulse);
+        }
         
-        _rb.AddForce(Vector2.up * bigJumpForce, ForceMode2D.Impulse);
         SetActionId(1);
         playerActionState = PlayerActionState.DoubleJump; 
         
