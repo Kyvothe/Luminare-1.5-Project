@@ -22,8 +22,6 @@ public class enemyInformation : MonoBehaviour
     private Vector2 _position;
     private int _random;
     
-    private SpriteColorChangerChildren _colorSpriteSetter;
-    
     [Header("Ground Setup")] 
     [SerializeField] private Vector2 groundBoxPos;
     [SerializeField] private Vector2 groundBoxSize;
@@ -35,7 +33,6 @@ public class enemyInformation : MonoBehaviour
         _coll = GetComponent<Collider2D>();
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponentInChildren<Animator>();
-        _colorSpriteSetter = GetComponentInChildren<SpriteColorChangerChildren>();
     }
 
     private void FixedUpdate()
@@ -80,8 +77,8 @@ public class enemyInformation : MonoBehaviour
             {
                 _position.x = transform.position.x + 1.5f;
             }
+            
         }
-        _colorSpriteSetter.ColorObject();
     }
 
     public void DestroyEnemey()

@@ -20,6 +20,10 @@ public class MainMenu_UiManager : MonoBehaviour
 
     private void Update()
     {
+        if (Keyboard.current.anyKey.wasPressedThisFrame && EventSystem.current.currentSelectedGameObject == null)
+        { 
+            EventSystem.current.SetSelectedGameObject(_currentMenu.GetComponent<DefaultButtonSetter>().ReturnButton());
+        }
     }
 
     public void OpenOptionsMenu()
@@ -28,6 +32,9 @@ public class MainMenu_UiManager : MonoBehaviour
         optionsMenuContainer.SetActive(true);
         
         _currentMenu = optionsMenuContainer;
+        
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(_currentMenu.GetComponent<DefaultButtonSetter>().ReturnButton());
     }
     
     public void OpenCreditsMenu()
@@ -35,7 +42,10 @@ public class MainMenu_UiManager : MonoBehaviour
         _currentMenu.SetActive(false);
         creditsMenuContainer.SetActive(true);
         
-        _currentMenu = creditsMenuContainer; 
+        _currentMenu = creditsMenuContainer;
+        
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(_currentMenu.GetComponent<DefaultButtonSetter>().ReturnButton());
     }
 
     public void OpenMainMenu()
@@ -44,6 +54,9 @@ public class MainMenu_UiManager : MonoBehaviour
         mainMenuContainer.SetActive(true);
         
         _currentMenu = mainMenuContainer;
+        
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(_currentMenu.GetComponent<DefaultButtonSetter>().ReturnButton());
     }
 
     public void QuitGame()

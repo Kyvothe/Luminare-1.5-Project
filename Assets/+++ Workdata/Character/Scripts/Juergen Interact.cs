@@ -56,12 +56,12 @@ public class JuergenInteract : MonoBehaviour
 
     public void StartDialogue()
     { 
-        _anim.SetInteger(Hash_ActionId, 1);                                                                        // Start speak animation
+        _anim.SetInteger(Hash_ActionId, 1);
         _anim.SetTrigger(Hash_ActionTrigger);
         
         _dialogue.SetActive(false);
 
-        if (_gotAllItems)                                                                                               // Belohnungsdialog und Upgrade auf DoubleJump und SockenAnimation
+        if (_gotAllItems)
         {
             player.GetComponent<PlayerController>().SetCanDoubleJump(true);
             player.GetComponent<PlayerController>().SetSock(true);
@@ -70,7 +70,7 @@ public class JuergenInteract : MonoBehaviour
             _dialogue.SetActive(true);
         }
         
-        if (_walkedInFirstTime)                                                                                         // Begrueßungsdialog und Upgrade of BigJump
+        if (_walkedInFirstTime)
         {
             player.GetComponent<PlayerController>().SetCanBigJump(true);
             
@@ -80,7 +80,7 @@ public class JuergenInteract : MonoBehaviour
             _dialogue.SetActive(true);
 
         }
-        else if (!_walkedInFirstTime)                                                                                   // Wiederholung der Quest wenn erneut ansprechen
+        else if (!_walkedInFirstTime)
         {
             _dialogue = dialogueSecond;
             _dialogue.SetActive(true);

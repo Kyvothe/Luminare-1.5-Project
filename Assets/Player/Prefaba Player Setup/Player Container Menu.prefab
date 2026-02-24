@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 7215681207946805515}
   - component: {fileID: 429581718687187035}
   - component: {fileID: 5636871068656106830}
+  - component: {fileID: 2284620764138865494}
   m_Layer: 0
   m_Name: AttackCollider
   m_TagString: Untagged
@@ -157,6 +158,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
 --- !u!114 &5636871068656106830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8223406015916570542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ddd7304f2e62e14fb708b2cc7e27eab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2284620764138865494
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -455,9 +468,6 @@ MonoBehaviour:
   itemCount: 0
   gotAllItems: 0
   gotSunGlasses: 0
-  PickedUpItem:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &37199861369031413
 MonoBehaviour:
   m_ObjectHideFlags: 0

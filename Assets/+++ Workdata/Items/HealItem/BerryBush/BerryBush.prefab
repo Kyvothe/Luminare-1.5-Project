@@ -248,7 +248,7 @@ MonoBehaviour:
   onDeselect:
     m_PersistentCalls:
       m_Calls: []
-  reusable: 1
+  reusable: 0
   destroyAfterUse: 0
 --- !u!114 &5381523646069494214
 MonoBehaviour:
@@ -263,7 +263,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 5
-  _maxHealth: 40
   playerInformation: {fileID: 0}
 --- !u!1 &7073107704702865288
 GameObject:

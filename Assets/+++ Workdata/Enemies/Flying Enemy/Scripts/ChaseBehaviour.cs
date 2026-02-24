@@ -9,7 +9,7 @@ public class ChaseBehaviour : MonoBehaviour
    {
       if (other.CompareTag("Player"))
          {
-           Enemy.PlayerDetected(true);
+            Enemy.chase = true;
          }
    }
    
@@ -17,8 +17,8 @@ public class ChaseBehaviour : MonoBehaviour
    {
       if (other.CompareTag("Player"))
       {
-         Enemy.PlayerDetected(false);
-
+            Enemy.chase = false;
+            gameObject.GetComponent<FlyingEnemy>().ReturnToStart();
       }
    }
 }

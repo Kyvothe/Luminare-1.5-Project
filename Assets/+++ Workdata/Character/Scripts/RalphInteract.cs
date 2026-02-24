@@ -40,7 +40,7 @@ public class RalphInteract : MonoBehaviour
     {
         _gotSunGlasses = _playerZoneCheck.ReturnSunGlasses();
 
-        if (_random == 2 )                                                                                              // wuerfelt Wahrscheinlichkeit fuer SpecialAnimation aus
+        if (_random == 2 )
         {
             _anim.SetInteger(Hash_ActionId, 3);
             _anim.SetTrigger(Hash_ActionTrigger);
@@ -81,22 +81,25 @@ public class RalphInteract : MonoBehaviour
 
         StartCoroutine(RandomSpecial());
 
-        if (_gotSunGlasses)                                                                                             // Belohnungsdialog und Attack Upgrade
+        if (_gotSunGlasses)
         {
+            Debug.Log("Whatever"); // Dialog einbauen belohnung
             player.GetComponent<PlayerController>().SetCanAttack(true);
             
             _dialogue = dialogueUpgrade;
             _dialogue.SetActive(true);
         }
         
-        if (_walkedInFirstTime)                                                                                         // Begrueßungsdialog beim ersten Ansprechen
+        if (_walkedInFirstTime)
         {
+            Debug.Log("I want sun glasses you worm"); // Dialog einbauen start der quest
+            
             _walkedInFirstTime = false;
             
             _dialogue = dialogueFirst;
             _dialogue.SetActive(true);
         }
-        else if (!_walkedInFirstTime)                                                                                   // Wiederholung der Quest beim erneuten Ansprechen
+        else if (!_walkedInFirstTime)
         {
             _dialogue = dialogueSecond;
             _dialogue.SetActive(true);

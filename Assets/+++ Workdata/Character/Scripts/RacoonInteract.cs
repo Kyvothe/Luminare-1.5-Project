@@ -35,7 +35,7 @@ public class RacoonInteract : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_random == 2 )                                                                                              // Abspielen von SpeicalAnimation
+        if (_random == 2 )
         {
             _anim.SetInteger(Hash_ActionId, 3);
             _anim.SetTrigger(Hash_ActionTrigger);
@@ -62,20 +62,21 @@ public class RacoonInteract : MonoBehaviour
             
             _dialogue.SetActive(false);
             
-            StopCoroutine(RandomSpecial());                                                                       // wuerfelt Wahrscheinlichkeit fuer SpecialAnimation aus
+            StopCoroutine(RandomSpecial());
         }
     }
 
     public void StartDialogue()
     { 
-        _anim.SetInteger(Hash_ActionId, 1);                                                                        // SpeakAnimation
+        _anim.SetInteger(Hash_ActionId, 1);
         _anim.SetTrigger(Hash_ActionTrigger);
 
         _isTalking = true;
 
         StartCoroutine(RandomSpecial());
         
-        player.GetComponent<PlayerController>().SetCanFly(true);                                                        // Upgrade auf Fly beim ersten Ansprechen
+        Debug.Log("Fix Wing"); // Dialog einbauen belohnung
+        player.GetComponent<PlayerController>().SetCanFly(true);
 
         if (_walkedInFirstTime)
         {
@@ -85,7 +86,7 @@ public class RacoonInteract : MonoBehaviour
         }
         else
         {
-            _dialogue = dialogueSecond;                                                                                 // Wiederholung beim erneutem Ansprechen
+            _dialogue = dialogueSecond;
         }
         
         _dialogue.SetActive(true);
