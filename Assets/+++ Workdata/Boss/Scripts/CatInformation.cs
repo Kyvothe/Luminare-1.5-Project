@@ -26,7 +26,7 @@ public class CatInformation : MonoBehaviour
         _animator = GetComponent<Animator>();
 
         _spawnPosition.x = 0;
-        _spawnPosition.y = 10;
+        _spawnPosition.y = 6;
     }
 
     public void StartFight()
@@ -49,7 +49,7 @@ public class CatInformation : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_pawsAlive < 1 && !_catDied)
+        if (_pawsAlive <= 1 && !_catDied)
         {
             _catDied = true;
             _animator.SetInteger(Hash_ActionId, 20);
