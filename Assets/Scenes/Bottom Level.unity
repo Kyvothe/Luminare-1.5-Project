@@ -57828,6 +57828,14 @@ PrefabInstance:
       propertyPath: MenuManagerInGame
       value: 
       objectReference: {fileID: 1733200395}
+    - target: {fileID: 5162658125109409055, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
+      propertyPath: _canAttack
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162658125109409055, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
+      propertyPath: canBigJump
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7825972168922382389, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7

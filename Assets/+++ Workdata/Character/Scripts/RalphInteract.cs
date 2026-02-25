@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using UnityEngine.Events;
 using Random = System.Random;
 
 public class RalphInteract : MonoBehaviour
@@ -12,6 +13,11 @@ public class RalphInteract : MonoBehaviour
 
     public GameObject player;
     private PlayerZoneCheck _playerZoneCheck;
+
+    public UnityEvent AfterRalphsBit;
+    public UnityEvent GotUpgrade;
+
+    public GameObject ralphTrigger;
     
     public GameObject dialogueFirst;
     public GameObject dialogueSecond;
@@ -88,18 +94,10 @@ public class RalphInteract : MonoBehaviour
             
             _dialogue = dialogueUpgrade;
             _dialogue.SetActive(true);
-        }
-        
-        if (_walkedInFirstTime)
-        {
-            Debug.Log("I want sun glasses you worm"); // Dialog einbauen start der quest
             
-            _walkedInFirstTime = false;
-            
-            _dialogue = dialogueFirst;
-            _dialogue.SetActive(true);
+            GotUpgrade.Invoke();
         }
-        else if (!_walkedInFirstTime)
+        else
         {
             _dialogue = dialogueSecond;
             _dialogue.SetActive(true);
@@ -113,6 +111,36 @@ public class RalphInteract : MonoBehaviour
             yield return new WaitForSeconds(1.5f);
             _random = UnityEngine.Random.Range(1,3);
         }
+    }
+
+    public void StartDialogueOnCam()                                                                                    // aufgerufen über Ralph Trigger Camera Pan
+    {
+        _anim.SetInteger(Hash_ActionId, 1);
+        _anim.SetTrigger(Hash_ActionTrigger);
+
+        _isTalking = true;
+
+        StartCoroutine(RandomSpecial());
+
+        _dialogue = dialogueFirst;
+        _dialogue.SetActive(true);
+
+        StartCoroutine(RalphsBit());
+
+    }
+
+    private IEnumerator RalphsBit()
+    {
+        yield return new WaitForSeconds(10f);
+        _dialogue.SetActive(false);
+        StopCoroutine(RandomSpecial());
+        EndOfRalphsBit();
+    }
+
+    public void EndOfRalphsBit()
+    {
+        AfterRalphsBit.Invoke();
+        Destroy(ralphTrigger);
     }
 }
 
