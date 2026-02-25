@@ -15,6 +15,7 @@ TagManager:
   - Leaf
   - Wood
   - Metal
+  - Door
   layers:
   - Default
   - TransparentFX

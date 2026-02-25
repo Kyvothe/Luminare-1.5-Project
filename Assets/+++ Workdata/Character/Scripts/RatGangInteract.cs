@@ -7,6 +7,7 @@ public class RatGangInteract : MonoBehaviour
     private bool _playerIn = false;
 
     public Collider2D coll;
+    public Collider2D coll2;
     
     public GameObject player;
     public GameObject RatGang;
@@ -75,5 +76,6 @@ public class RatGangInteract : MonoBehaviour
         Light2.SetActive(false);
         
         Destroy(coll.gameObject);
+        Destroy(coll2.gameObject);
     }
 }

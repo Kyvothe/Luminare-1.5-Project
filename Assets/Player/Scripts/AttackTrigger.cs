@@ -24,5 +24,10 @@ public class AttackTrigger : MonoBehaviour
                 Debug.Log("Found rat");
             }
         }
+
+        if (other.CompareTag("Door"))
+        {
+            other.GetComponent<DoorBehaviour>().SetDamage(1);
+        }
     }
 }
