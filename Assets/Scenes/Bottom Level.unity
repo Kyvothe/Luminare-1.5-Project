@@ -5226,6 +5226,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3857506105124339581, guid: 8c023792a115db44f86179258c2f8382, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 4900081985476211972, guid: 8c023792a115db44f86179258c2f8382, type: 3}
       propertyPath: m_Name
       value: Washing Machine (3)
@@ -54425,10 +54429,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1124890832}
   - {fileID: 2048464410}
   - {fileID: 523419731}
   - {fileID: 511733327}
-  - {fileID: 1124890832}
   - {fileID: 1614937440}
   - {fileID: 774458557}
   - {fileID: 1593466273}
@@ -65597,6 +65601,7 @@ SceneRoots:
   - {fileID: 1580158096}
   - {fileID: 3870665734086230749}
   - {fileID: 5369125902438874921}
+  - {fileID: 1148087424}
   - {fileID: 7176291085706180704}
   - {fileID: 9158907018788525623}
   - {fileID: 980013911}
@@ -65630,7 +65635,6 @@ SceneRoots:
   - {fileID: 1189560876}
   - {fileID: 1306256255}
   - {fileID: 1020092459}
-  - {fileID: 1148087424}
   - {fileID: 622114844048541224}
   - {fileID: 5574534070218037557}
   - {fileID: 8862553015497595537}
