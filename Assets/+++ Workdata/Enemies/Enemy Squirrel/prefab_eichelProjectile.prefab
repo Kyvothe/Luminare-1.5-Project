@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5688237373473493130}
   - component: {fileID: 5974864958530428760}
   - component: {fileID: 4753458633672334469}
-  - component: {fileID: 6949073650722203713}
+  - component: {fileID: 3175915318171489313}
   m_Layer: 0
   m_Name: prefab_eichelProjectile
   m_TagString: Enemy
@@ -195,8 +195,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &6949073650722203713
-CircleCollider2D:
+--- !u!61 &3175915318171489313
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -229,5 +229,15 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.044240832, y: 0.66041374}
-  m_Radius: 0.49472392
+  m_Offset: {x: -0.050001144, y: 0.75670725}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.24202587}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.3786888, y: 0.6593522}
+  m_EdgeRadius: 0

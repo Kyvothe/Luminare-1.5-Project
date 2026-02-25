@@ -12,9 +12,14 @@ public class ApproachSquirrelBehaviour : MonoBehaviour
     public bool _dropsStuff = false;
     Coroutine _coroutine;
 
+    private Vector2 _spawnPosition;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+
+        _spawnPosition = transform.position;
+        _spawnPosition.y = transform.position.y - 0.5f;
     }
 
     private void Update()
@@ -35,14 +40,14 @@ public class ApproachSquirrelBehaviour : MonoBehaviour
         while (true)
         {
             DropProjectile();
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(2f);
         }
     }
     
     private void DropProjectile()
     {
         GameObject newprojectile = Instantiate(newProjectile);
-        newprojectile.transform.position = gameObject.transform.position;
+        newprojectile.transform.position = _spawnPosition;
         
         _animator.SetTrigger(Hash_ActionTrigger);
         _animator.SetInteger(Hash_ActionId, 10);

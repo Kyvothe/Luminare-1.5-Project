@@ -9,6 +9,7 @@ public class ProjectileBehaviour : MonoBehaviour
     private Animator _animator;
     private bool _isGrounded;
     private bool _notDestroyed = true;
+    private BoxCollider2D _coll;
 
     public int damage;
     
@@ -20,6 +21,7 @@ public class ProjectileBehaviour : MonoBehaviour
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _coll = GetComponent< BoxCollider2D>();
     }
     
     private void FixedUpdate()
@@ -38,6 +40,12 @@ public class ProjectileBehaviour : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public void DisableDamage()
+    {
+        _coll.enabled = false;
+    }
+    
     
     private void CheckIsGrounded()
     {
