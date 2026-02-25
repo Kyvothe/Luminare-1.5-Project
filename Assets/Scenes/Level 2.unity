@@ -66074,7 +66074,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2137297128}
-  - component: {fileID: 2137297127}
   m_Layer: 5
   m_Name: SunGlasses Container
   m_TagString: Untagged
@@ -66082,19 +66081,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &2137297127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137297126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b480d252628ed64d9521222db1e2b4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultButton: {fileID: 0}
 --- !u!224 &2137297128
 RectTransform:
   m_ObjectHideFlags: 0
