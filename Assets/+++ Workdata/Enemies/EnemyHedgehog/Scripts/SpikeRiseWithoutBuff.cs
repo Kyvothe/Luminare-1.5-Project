@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SpikesRise : MonoBehaviour
+public class SpikeRiseWithoutBuff : MonoBehaviour
 {
     private Animator _animator;
     BoxCollider2D _boxCollider2D;
@@ -13,12 +13,7 @@ public class SpikesRise : MonoBehaviour
     private AudioSource _currentAudioSource;
 
     private bool _walkedOut = false;
-
-    public int _random;
-
-    public GameObject BuffIgel;
-
-    private Vector2 _spawnPosition;
+    
     private Vector2 _stayPosition;
 
     private void Awake()
@@ -27,9 +22,6 @@ public class SpikesRise : MonoBehaviour
         _animator = GetComponent<Animator>();
         _awake = false;
         PlayAudio(Snore);
-
-        _spawnPosition.x = gameObject.transform.position.x;
-        _spawnPosition.y = gameObject.transform.position.y + 0.2f;
     }
 
     private void Update()
@@ -46,25 +38,15 @@ public class SpikesRise : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            _random = Random.Range(0, 100);
+            transform.position = new Vector2(transform.position.x, transform.position.y + 0.4f);
+            //gameObject.GetComponent<BoxCollider2D>().enabled = true;
 
-            if (_random > 95)
-            {
-                Instantiate(BuffIgel, _spawnPosition, Quaternion.identity);
-                Destroy(gameObject); 
-            }
-            else
-            {
-                transform.position = new Vector2(transform.position.x, transform.position.y + 0.4f);
-                //gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            _animator.SetInteger("ActionId", 1);
+            _animator.SetTrigger("ActionTrigger");
 
-                _animator.SetInteger("ActionId", 1);
-                _animator.SetTrigger("ActionTrigger");
-
-                _walkedOut = false;
-                _awake = true;
-                PlayAudio(Angy);
-            }
+            _walkedOut = false;
+            _awake = true;
+            PlayAudio(Angy);
         }
     }
     
@@ -138,3 +120,4 @@ public class SpikesRise : MonoBehaviour
     
     */
 }
+
