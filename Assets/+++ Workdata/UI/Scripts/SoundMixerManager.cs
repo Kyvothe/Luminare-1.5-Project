@@ -21,4 +21,9 @@ public class SoundMixerManager : MonoBehaviour
     {
         _audioMixer.SetFloat("musicVolume", level);
     }
+    
+    public void SetAmbienceVolume(float level)
+    {
+        _audioMixer.SetFloat("ambienceVolume", level);
+    }
 }
