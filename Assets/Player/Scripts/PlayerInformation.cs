@@ -58,6 +58,7 @@ public class PlayerInformation : MonoBehaviour
         {
             SetActionId(40); 
             _playerDead = true;
+            GetComponent<PlayerController>().enabled = false;
         }
         
         PlayerPrefs.SetInt("Health", _currentHealth);

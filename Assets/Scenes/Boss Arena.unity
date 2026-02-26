@@ -18040,18 +18040,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2105403762185471993, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
-      propertyPath: PickedUpItem.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2105403762185471993, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
-      propertyPath: PickedUpItem.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2105403762185471993, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
-      propertyPath: PickedUpItem.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2105403762185471993, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: PickedUpItem.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1801024675}
@@ -18059,38 +18047,6 @@ PrefabInstance:
       propertyPath: PickedUpItem.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1801024675}
-    - target: {fileID: 2105403762185471993, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
-      propertyPath: PickedUpItem.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2105403762185471993, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
-      propertyPath: PickedUpItem.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2105403762185471993, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
-      propertyPath: PickedUpItem.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResetSpawn
-      objectReference: {fileID: 0}
-    - target: {fileID: 2105403762185471993, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
-      propertyPath: PickedUpItem.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ResetSpawn
-      objectReference: {fileID: 0}
-    - target: {fileID: 2105403762185471993, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
-      propertyPath: PickedUpItem.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SpawnHealItem, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2105403762185471993, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
-      propertyPath: PickedUpItem.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SpawnHealItem, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2105403762185471993, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
-      propertyPath: PickedUpItem.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2105403762185471993, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
-      propertyPath: PickedUpItem.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 3692064147782553254, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: extraHeart1
       value: 
@@ -18100,21 +18056,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1796106732}
     - target: {fileID: 3692064147782553254, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
-      propertyPath: isFirstLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3692064147782553254, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: MenuManagerInGame
       value: 
       objectReference: {fileID: 1889291963}
-    - target: {fileID: 5162658125109409055, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
-      propertyPath: sock
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162658125109409055, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
-      propertyPath: canDoubleJump
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7825972168922382389, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.86
