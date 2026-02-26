@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 37199861369031413}
   - component: {fileID: 7459916862199160146}
   - component: {fileID: 2124441777891276728}
+  - component: {fileID: 5805953850220136108}
   m_Layer: 3
   m_Name: Player Container Menu
   m_TagString: Player
@@ -561,3 +562,16 @@ MonoBehaviour:
   footStepsCarpet: {fileID: 8300000, guid: 9cca4a1a86603474fb2f54557ad13398, type: 3}
   footStepsMetal: {fileID: 8300000, guid: d05bdd4882932ed4789de5f8d34f8a79, type: 3}
   footStepsWood: {fileID: 8300000, guid: e3bcb6c5c608b4a4ba90f69106965243, type: 3}
+--- !u!114 &5805953850220136108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8269161703913586673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bab8861974a6024ebb70a7e760bee27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenuManagerInGame: {fileID: 0}

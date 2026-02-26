@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 2564244254293751203}
   - component: {fileID: 7543235347479922280}
   - component: {fileID: 4325469432534065990}
+  - component: {fileID: 8660079949053261940}
   m_Layer: 3
   m_Name: Fly Player Container
   m_TagString: Player
@@ -369,6 +370,19 @@ MonoBehaviour:
   footStepsCarpet: {fileID: 8300000, guid: 9cca4a1a86603474fb2f54557ad13398, type: 3}
   footStepsMetal: {fileID: 8300000, guid: d05bdd4882932ed4789de5f8d34f8a79, type: 3}
   footStepsWood: {fileID: 8300000, guid: e3bcb6c5c608b4a4ba90f69106965243, type: 3}
+--- !u!114 &8660079949053261940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210644360005309081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bab8861974a6024ebb70a7e760bee27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenuManagerInGame: {fileID: 0}
 --- !u!1 &762717124762232147
 GameObject:
   m_ObjectHideFlags: 0
