@@ -19,6 +19,7 @@ public class AnimationEndCat : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.gameObject.GetComponent<PawBehaviour>().MakePawVisible();
+        animator.gameObject.GetComponent<PawBehaviour>().ResetHit();
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

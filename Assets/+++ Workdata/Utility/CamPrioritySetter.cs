@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class CamPrioritySetter : MonoBehaviour
 {
-    public CinemachineCamera camera;
+    public CinemachineCamera cam;
 
     public void SetPriority(int priority)
     {
-        camera.Priority = priority;
+        cam.Priority = priority;
     }
 }

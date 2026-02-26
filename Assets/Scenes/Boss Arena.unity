@@ -19365,7 +19365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed71905f82b646246b86379394f542c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorSprite: {r: 0.21698111, g: 0.17575172, b: 0.16682982, a: 1}
+  colorSprite: {r: 0.4056604, g: 0.13051763, b: 0, a: 1}
   colorTime: 0.5
 --- !u!1 &420970690
 GameObject:
@@ -22021,6 +22021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   isLeft: 0
+  hasHit: 0
   startFight: 0
   damage: 10
   decoPawLeft: {fileID: 1384703132}
@@ -33721,6 +33722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   isLeft: 1
+  hasHit: 0
   startFight: 0
   damage: 10
   decoPawLeft: {fileID: 1384703132}

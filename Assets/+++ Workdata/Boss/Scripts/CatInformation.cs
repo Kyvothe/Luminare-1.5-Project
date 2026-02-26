@@ -25,7 +25,7 @@ public class CatInformation : MonoBehaviour
         
         _animator = GetComponent<Animator>();
 
-        _spawnPosition.x = 0;
+        _spawnPosition.x = -4.39f;
         _spawnPosition.y = 6;
     }
 

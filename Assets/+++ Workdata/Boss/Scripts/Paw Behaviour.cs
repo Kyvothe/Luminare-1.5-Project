@@ -10,6 +10,8 @@ public class PawBehaviour : MonoBehaviour
     public int id;
 
     public bool isLeft;
+
+    public bool hasHit;
     public bool startFight;
     private bool _startedFight = false;
 
@@ -21,6 +23,7 @@ public class PawBehaviour : MonoBehaviour
     private void Awake()
     {
         _anim = GetComponent<Animator>();
+        hasHit = false;
     }
     
     public void SetSartFight()
@@ -53,10 +56,13 @@ public class PawBehaviour : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (hasHit) return;
+        
         if (other.CompareTag("Player"))
         {
             other.GetComponent<PlayerInformation>().SetDamage(damage);
             Debug.Log("Hit");
+            hasHit = true;
         }
         
         if (other.CompareTag("SpawnPoint"))
@@ -68,5 +74,10 @@ public class PawBehaviour : MonoBehaviour
     public void MakePawVisible()
     {
         (isLeft? decoPawLeft : decoPawRight).SetActive(true);
+    }
+
+    public void ResetHit()
+    {
+        hasHit = false;
     }
 }
