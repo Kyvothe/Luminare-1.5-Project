@@ -33002,7 +33002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b480d252628ed64d9521222db1e2b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultButton: {fileID: 349709622}
+  defaultButton: {fileID: 349709623}
 --- !u!224 &1496953277
 RectTransform:
   m_ObjectHideFlags: 0
