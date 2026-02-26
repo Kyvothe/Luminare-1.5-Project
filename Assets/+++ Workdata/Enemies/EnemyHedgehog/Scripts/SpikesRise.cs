@@ -21,6 +21,8 @@ public class SpikesRise : MonoBehaviour
     private Vector2 _spawnPosition;
     private Vector2 _stayPosition;
 
+    private bool _alreadyUp = false;
+
     private void Awake()
     {
         _stayPosition = transform.position;
@@ -44,6 +46,8 @@ public class SpikesRise : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (_alreadyUp) return;
+        
         if (other.CompareTag("Player"))
         {
             _random = Random.Range(0, 100);
@@ -63,6 +67,7 @@ public class SpikesRise : MonoBehaviour
 
                 _walkedOut = false;
                 _awake = true;
+                _alreadyUp = true;
                 PlayAudio(Angy);
             }
         }
@@ -85,6 +90,7 @@ public class SpikesRise : MonoBehaviour
             _awake = false;
 
             _walkedOut = true;
+            _alreadyUp = false;
             PlayAudio(Snore);
             transform.position = _stayPosition;
         }

@@ -16859,6 +16859,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1810390066}
     - target: {fileID: 3692064147782553254, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
+      propertyPath: isFirstLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3692064147782553254, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: MenuManagerInGame
       value: 
       objectReference: {fileID: 1618550789}
@@ -16874,6 +16878,10 @@ PrefabInstance:
       propertyPath: canDoubleJump
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5805953850220136108, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
+      propertyPath: MenuManagerInGame
+      value: 
+      objectReference: {fileID: 1618550789}
     - target: {fileID: 7825972168922382389, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -30511,7 +30519,7 @@ PrefabInstance:
       objectReference: {fileID: 545088723}
     - target: {fileID: 5775186172770675770, guid: a17b652ff0b54f340acace8816944ee9, type: 3}
       propertyPath: GotUpgrade.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5775186172770675770, guid: a17b652ff0b54f340acace8816944ee9, type: 3}
       propertyPath: AfterRalphsBit.m_PersistentCalls.m_Calls.Array.size
@@ -30522,9 +30530,17 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5775186172770675770, guid: a17b652ff0b54f340acace8816944ee9, type: 3}
+      propertyPath: GotUpgrade.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775186172770675770, guid: a17b652ff0b54f340acace8816944ee9, type: 3}
       propertyPath: GotUpgrade.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 155923491}
+    - target: {fileID: 5775186172770675770, guid: a17b652ff0b54f340acace8816944ee9, type: 3}
+      propertyPath: GotUpgrade.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2137297126}
     - target: {fileID: 5775186172770675770, guid: a17b652ff0b54f340acace8816944ee9, type: 3}
       propertyPath: AfterRalphsBit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 3
@@ -30542,6 +30558,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5775186172770675770, guid: a17b652ff0b54f340acace8816944ee9, type: 3}
+      propertyPath: GotUpgrade.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775186172770675770, guid: a17b652ff0b54f340acace8816944ee9, type: 3}
       propertyPath: AfterRalphsBit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2078533204}
@@ -30555,6 +30575,10 @@ PrefabInstance:
       objectReference: {fileID: 2078533204}
     - target: {fileID: 5775186172770675770, guid: a17b652ff0b54f340acace8816944ee9, type: 3}
       propertyPath: GotUpgrade.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775186172770675770, guid: a17b652ff0b54f340acace8816944ee9, type: 3}
+      propertyPath: GotUpgrade.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 5775186172770675770, guid: a17b652ff0b54f340acace8816944ee9, type: 3}
@@ -30583,6 +30607,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5775186172770675770, guid: a17b652ff0b54f340acace8816944ee9, type: 3}
       propertyPath: GotUpgrade.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775186172770675770, guid: a17b652ff0b54f340acace8816944ee9, type: 3}
+      propertyPath: GotUpgrade.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5775186172770675770, guid: a17b652ff0b54f340acace8816944ee9, type: 3}
@@ -30623,6 +30651,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5775186172770675770, guid: a17b652ff0b54f340acace8816944ee9, type: 3}
       propertyPath: GotUpgrade.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775186172770675770, guid: a17b652ff0b54f340acace8816944ee9, type: 3}
+      propertyPath: GotUpgrade.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5775186172770675770, guid: a17b652ff0b54f340acace8816944ee9, type: 3}
@@ -61003,7 +61035,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level 3
+          m_StringArgument: Level 3 left
           m_BoolArgument: 0
         m_CallState: 2
   TriggerExit:
@@ -65396,7 +65428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17778842723c51f49838affdba279af6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 2078533202}
+  cam: {fileID: 2078533202}
 --- !u!1001 &2083917044
 PrefabInstance:
   m_ObjectHideFlags: 0

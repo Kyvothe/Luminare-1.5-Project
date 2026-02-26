@@ -57,6 +57,11 @@ public class PlayerInteraction : MonoBehaviour
 
         if (!currentInteractables[0].Interact())
         {
+            if (currentInteractables[0].isBerryBush || currentInteractables[0].isDoor)
+            {
+                return;
+            }
+            
             if (currentInteractables[0].reusable)                                                                       // Abfrage, ob Item als reusable in Inspector gestellt wurde
             {
                 Interactable currentInteractable = currentInteractables[0];                                             // Wenn reusable, dann wird es aus Liste genommen und hinten wieder eingefügt
@@ -69,7 +74,5 @@ public class PlayerInteraction : MonoBehaviour
                 currentInteractables.RemoveAt(0);
             }
         }
-        
-        
     }
 }

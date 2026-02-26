@@ -16,6 +16,9 @@ public class SpikeRiseWithoutBuff : MonoBehaviour
     
     private Vector2 _stayPosition;
 
+    private bool _alreadyUp = false;
+    private bool _hasHit = false;
+
     private void Awake()
     {
         _stayPosition = transform.position;
@@ -36,6 +39,8 @@ public class SpikeRiseWithoutBuff : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (_alreadyUp) return;
+        
         if (other.CompareTag("Player"))
         {
             transform.position = new Vector2(transform.position.x, transform.position.y + 0.4f);
@@ -46,6 +51,7 @@ public class SpikeRiseWithoutBuff : MonoBehaviour
 
             _walkedOut = false;
             _awake = true;
+            _alreadyUp = true;
             PlayAudio(Angy);
         }
     }
@@ -67,6 +73,7 @@ public class SpikeRiseWithoutBuff : MonoBehaviour
             _awake = false;
 
             _walkedOut = true;
+            _alreadyUp = false;
             PlayAudio(Snore);
             transform.position = _stayPosition;
         }

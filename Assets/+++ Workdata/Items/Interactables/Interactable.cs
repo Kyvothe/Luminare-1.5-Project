@@ -9,6 +9,8 @@ public class Interactable : MonoBehaviour
 
     public bool reusable;
     public bool destroyAfterUse;
+    public bool isBerryBush;
+    public bool isDoor;
 
     private bool _alreadyInteracted;
  

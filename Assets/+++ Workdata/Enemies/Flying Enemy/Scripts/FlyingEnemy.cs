@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class FlyingEnemy : MonoBehaviour
@@ -103,9 +104,7 @@ public class FlyingEnemy : MonoBehaviour
     
     public void InitiateAttack()
     {
-        flyState = FlyState.Attack;
-        _lastAttackTime = Time.time;
-        anim.SetBool("Attack", true);
+        StartCoroutine(AttackDelay());
     }
 
     public void EndAttack()
@@ -113,6 +112,14 @@ public class FlyingEnemy : MonoBehaviour
         anim.SetBool("Attack", false);
 
         flyState = FlyState.Patrol;
+    }
+
+    private IEnumerator AttackDelay()
+    {
+        yield return new WaitForSeconds(1f);
+        flyState = FlyState.Attack;
+        _lastAttackTime = Time.time;
+        anim.SetBool("Attack", true);  
     }
 
     /*
@@ -147,6 +154,11 @@ public class FlyingEnemy : MonoBehaviour
     {
         transform.rotation = Quaternion.Euler(0, yRot, 0);
 
+    }
+
+    public void StopChase()
+    {
+        flyState = FlyState.Patrol;
     }
     
 }

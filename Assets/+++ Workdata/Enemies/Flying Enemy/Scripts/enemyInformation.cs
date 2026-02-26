@@ -14,7 +14,7 @@ public class enemyInformation : MonoBehaviour
     
     private Animator _animator;
     
-    private Collider2D _coll;
+    public GameObject chaseContainer;
     private Rigidbody2D _rb;
     
     private bool _isGrounded;
@@ -32,7 +32,6 @@ public class enemyInformation : MonoBehaviour
     private void Awake()
     {
         _currentLifePoints = enemyMaxLifePoints;
-        _coll = GetComponent<Collider2D>();
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponentInChildren<Animator>();
         _colorSpriteSetter = GetComponentInChildren<SpriteColorChangerChildren>();
@@ -44,6 +43,7 @@ public class enemyInformation : MonoBehaviour
 
         if (_isGrounded)
         {
+            _position.y = transform.position.y + 0.5f;
             _animator.SetBool("isGrounded", true);
         }
     }
@@ -62,8 +62,7 @@ public class enemyInformation : MonoBehaviour
             FlyingEnemy flyingEnemy = GetComponentInChildren<FlyingEnemy>();
             flyingEnemy.enabled = false;
             
-            ChaseBehaviour chaseBehaviour = GetComponentInChildren<ChaseBehaviour>();
-            chaseBehaviour.enabled = false;
+            chaseContainer.SetActive(false);
                 
             _animator.SetBool("InAttackRange", false);
             
