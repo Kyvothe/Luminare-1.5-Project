@@ -148,5 +148,10 @@ public class FlyingEnemy : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, yRot, 0);
 
     }
+
+    public void StopChase()
+    {
+        flyState = FlyState.Patrol;
+    }
     
 }

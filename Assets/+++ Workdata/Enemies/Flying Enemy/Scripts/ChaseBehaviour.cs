@@ -18,6 +18,7 @@ public class ChaseBehaviour : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Enemy.PlayerDetected(false);
+            Enemy.StopChase();
 
         }
     }
