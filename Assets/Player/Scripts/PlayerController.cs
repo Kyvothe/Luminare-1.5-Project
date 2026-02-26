@@ -47,8 +47,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector2 groundBoxPos;
     [SerializeField] private Vector2 groundBoxSize;
     [SerializeField] private LayerMask groundLayer;
-
-    
     #endregion Inspector Variables
     
     #region private Variables
@@ -189,17 +187,19 @@ public class PlayerController : MonoBehaviour
             playerActionState = PlayerActionState.Default;
 
             _coyoteTimeCounter = coyoteTime;
-            
-            _hasLanded = true;
 
             doubleJump = true;
 
             _canJump = true;
+            
+            _hasLanded = true;
+
         }
         else
         {
             _coyoteTimeCounter -= Time.deltaTime;
             _canJump = false;
+
         }
     }
     
