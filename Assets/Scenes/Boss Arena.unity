@@ -521,10 +521,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1889291966}
-        m_TargetAssemblyTypeName: OpenDialogueInGame, Assembly-CSharp
-        m_MethodName: OpenAreYouSure
-        m_Mode: 1
+      - m_Target: {fileID: 1889291965}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadSceneByName
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18056,6 +18056,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1796106732}
     - target: {fileID: 3692064147782553254, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
+      propertyPath: MenuManagerInGame
+      value: 
+      objectReference: {fileID: 1889291963}
+    - target: {fileID: 5805953850220136108, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: MenuManagerInGame
       value: 
       objectReference: {fileID: 1889291963}

@@ -9,7 +9,7 @@ public class OpenGameOverFailSafe : MonoBehaviour
 
     public GameObject MenuManagerInGame;
 
-    private int _health;
+    public int _health;
     private PlayerInformation _playerInformation;
 
     private void Awake()
