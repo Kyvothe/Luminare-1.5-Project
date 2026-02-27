@@ -181,6 +181,12 @@ public class PlayerController : MonoBehaviour
 
     private void CheckIsGrounded()
     {
+        if (_isFlying)
+        {
+            _isGrounded = false;
+            return;
+        }
+        
         _isGrounded = Physics2D.OverlapBox((Vector2)transform.position + groundBoxPos, groundBoxSize, 0, groundLayer);
 
         if (_isGrounded)

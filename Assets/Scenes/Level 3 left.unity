@@ -3145,7 +3145,7 @@ PrefabInstance:
       objectReference: {fileID: 1617258208}
     - target: {fileID: 5162658125109409055, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: canFly
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5162658125109409055, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: flyForce

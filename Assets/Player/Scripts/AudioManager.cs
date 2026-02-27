@@ -28,8 +28,8 @@ public class AudioManager: MonoBehaviour
         audioSource.volume = volume;
         audioSource.Play();
 
-        yield return new WaitForSeconds(audioSource.clip.length * 2);
-
+        yield return new WaitForSeconds(0.5f);
+        
         Destroy(audioSource);
     }
     

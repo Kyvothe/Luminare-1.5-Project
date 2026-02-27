@@ -19,7 +19,7 @@ AudioRandomContainer:
   m_Name: Footsteps Metal
   m_Volume: 0
   m_Pitch: 0
-  m_AutomaticTriggerTime: 0
+  m_AutomaticTriggerTime: 0.2
   m_LoopCount: 1
   m_VolumeRandomizationRange: {x: -15, y: 15}
   m_PitchRandomizationRange: {x: -100, y: 100}
@@ -29,7 +29,7 @@ AudioRandomContainer:
   - {fileID: 5398194833250671444}
   m_AvoidRepeatingLast: 0
   m_PlaybackMode: 2
-  m_TriggerMode: 0
+  m_TriggerMode: 1
   m_AutomaticTriggerMode: 1
   m_LoopMode: 2
   m_VolumeRandomizationEnabled: 1
