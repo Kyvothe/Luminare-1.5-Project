@@ -5549,7 +5549,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.5
+  orthographic size: 8.36
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5574,7 +5574,7 @@ Transform:
   m_GameObject: {fileID: 714372469}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7, y: -0.9000001, z: -9.969119}
+  m_LocalPosition: {x: 47.59, y: -2.6, z: -9.969119}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -57904,6 +57904,22 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 0.5941161
       objectReference: {fileID: 0}
+    - target: {fileID: 2124441777891276728, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
+      propertyPath: footStepsLeaf
+      value: 
+      objectReference: {fileID: 6418180475301049370, guid: e7df860bd379bac49a56970258725b8e, type: 2}
+    - target: {fileID: 2124441777891276728, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
+      propertyPath: footStepsWood
+      value: 
+      objectReference: {fileID: 6418180475301049370, guid: 179835211690ae448b4150558f07c52b, type: 2}
+    - target: {fileID: 2124441777891276728, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
+      propertyPath: footStepsMetal
+      value: 
+      objectReference: {fileID: 6418180475301049370, guid: dafb805aaa0fe134f8c28974e035f8f3, type: 2}
+    - target: {fileID: 2124441777891276728, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
+      propertyPath: footStepsConcrete
+      value: 
+      objectReference: {fileID: 6418180475301049370, guid: 1556fbfd4479bdd46ba7b8eae00fcfd0, type: 2}
     - target: {fileID: 3692064147782553254, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
       propertyPath: extraHeart1
       value: 

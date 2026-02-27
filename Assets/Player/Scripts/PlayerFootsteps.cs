@@ -1,14 +1,14 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerFootsteps : MonoBehaviour
 {
-    public AudioClip footStepsLeaf;
-    public AudioClip footStepsConcrete;
-    public AudioClip footStepsCarpet;
-    public AudioClip footStepsMetal;
-    public AudioClip footStepsWood;
+    public AudioResource footStepsLeaf;
+    public AudioResource footStepsConcrete;
+    public AudioResource footStepsMetal;
+    public AudioResource footStepsWood;
     private bool _playThisShit = true;
 
     private string _currentFloor;
@@ -39,7 +39,6 @@ public class PlayerFootsteps : MonoBehaviour
         {
             if (_currentSpeed.x != 0 && _yesIsGrounded)
             {
-                Debug.Log("footsteps");
                 if (_currentFloor == "Leaf")
                 {
                     AudioManager.instance.PlaySFX(footStepsLeaf);
@@ -48,11 +47,6 @@ public class PlayerFootsteps : MonoBehaviour
                 if (_currentFloor == "Concrete")
                 {
                     AudioManager.instance.PlaySFX(footStepsConcrete);
-                }
-                
-                if (_currentFloor == "Carpet")
-                {
-                    AudioManager.instance.PlaySFX(footStepsCarpet);
                 }
                 
                 if (_currentFloor == "Metal")
@@ -75,7 +69,6 @@ public class PlayerFootsteps : MonoBehaviour
     {
         Debug.Log("_currentFloor: " + _currentFloor + "");
         if (other.CompareTag("Leaf")) SetFloor("Leaf");
-        if (other.CompareTag("Carpet")) SetFloor("Carpet");
         if (other.CompareTag("Wood")) SetFloor("Wood");
         if (other.CompareTag("Concrete")) SetFloor("Concrete");
         if (other.CompareTag("Metal")) SetFloor("Metal");
