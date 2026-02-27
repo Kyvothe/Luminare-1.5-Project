@@ -24,6 +24,8 @@ public class PlayerInformation : MonoBehaviour
 
     public bool isFirstLevel;
 
+    public bool hasHealthUpgrade;
+
     private OpenDialogueInGame _openDialogueInGame;
 
     private void Awake()
@@ -36,6 +38,11 @@ public class PlayerInformation : MonoBehaviour
         else
         {
             _currentHealth = PlayerPrefs.GetInt("Health");
+        }
+
+        if (hasHealthUpgrade)
+        {
+            UpgradeHealthWithoutHeal();
         }
         
         _animator = GetComponent<Animator>();
@@ -99,6 +106,12 @@ public class PlayerInformation : MonoBehaviour
         
         PlayerPrefs.SetInt("Health", _currentHealth);
         
+        extraHeart1.SetActive(true);
+        extraHeart2.SetActive(true);
+    }
+
+    private void UpgradeHealthWithoutHeal()
+    {
         extraHeart1.SetActive(true);
         extraHeart2.SetActive(true);
     }

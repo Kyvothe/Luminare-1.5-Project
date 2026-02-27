@@ -61,7 +61,8 @@ MonoBehaviour:
   MenuManagerInGame: {fileID: 0}
   extraHeart1: {fileID: 0}
   extraHeart2: {fileID: 0}
-  isFirstLevel: 1
+  isFirstLevel: 0
+  hasHealthUpgrade: 1
 --- !u!114 &4198201664836032160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,7 +108,7 @@ MonoBehaviour:
   coyoteTime: 0.2
   jumpCounter: 0
   canBigJump: 1
-  canDoubleJump: 0
+  canDoubleJump: 1
   doubleJump: 1
   _canAttack: 1
   canFly: 0
@@ -116,11 +117,12 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  flyForce: 30
+  _moveInput: {x: 0, y: 0}
+  flyForce: 8
   _isGrounded: 0
   _canJump: 1
   _isFlying: 0
-  sock: 0
+  sock: 1
   _currentTrigger: 
 --- !u!114 &4768609741433261870
 MonoBehaviour:
@@ -367,7 +369,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footStepsLeaf: {fileID: 8300000, guid: 9255a0624c4cc2e4d9f367c23e6d63f9, type: 3}
   footStepsConcrete: {fileID: 8300000, guid: 24265bfc37f95b649afe3e12d32ebfc5, type: 3}
-  footStepsCarpet: {fileID: 8300000, guid: 9cca4a1a86603474fb2f54557ad13398, type: 3}
   footStepsMetal: {fileID: 8300000, guid: d05bdd4882932ed4789de5f8d34f8a79, type: 3}
   footStepsWood: {fileID: 8300000, guid: e3bcb6c5c608b4a4ba90f69106965243, type: 3}
 --- !u!114 &8660079949053261940
@@ -383,6 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MenuManagerInGame: {fileID: 0}
+  _health: 0
 --- !u!1 &762717124762232147
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,8 +452,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: 0.5941161, y: 0}
+  m_Radius: 0.5941161
 --- !u!114 &5947421191608851279
 MonoBehaviour:
   m_ObjectHideFlags: 0

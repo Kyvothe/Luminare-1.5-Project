@@ -65,7 +65,7 @@ public class PlayerZoneCheck : MonoBehaviour
                 itemCount++;
                 other.gameObject.SetActive(false);
             
-                if (itemCount == 5)
+                if (itemCount >= 10)
                 { 
                     gotAllItems = true;
                 } 

@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5075853558104655328
 RectTransform:
   m_ObjectHideFlags: 0
@@ -189,7 +189,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5034462, y: 0.162277}
-    oldSize: {x: 3.2, y: 3.2}
+    oldSize: {x: 2.56, y: 2.56}
     newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -232,6 +232,8 @@ MonoBehaviour:
       m_Calls: []
   reusable: 1
   destroyAfterUse: 0
+  isBerryBush: 0
+  isDoor: 0
 --- !u!114 &8205221333994122977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,7 +464,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -5.02, y: 2.96}
+  m_AnchoredPosition: {x: -5.15, y: 2.25}
   m_SizeDelta: {x: 9, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7667272974851984468

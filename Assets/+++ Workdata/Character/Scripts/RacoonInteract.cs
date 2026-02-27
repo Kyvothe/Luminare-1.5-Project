@@ -17,6 +17,8 @@ public class RacoonInteract : MonoBehaviour
     public GameObject dialogueUpgrade;
     private GameObject _dialogue;
 
+    public GameObject explanation;
+
     private bool _isTalking = false;
     private bool _walkedInFirstTime;
     
@@ -83,6 +85,9 @@ public class RacoonInteract : MonoBehaviour
             _walkedInFirstTime = false;
             
             _dialogue =  dialogueUpgrade;
+            
+            explanation.SetActive(true);
+            player.GetComponent<PlayerController>().SetSock(true);
         }
         else
         {

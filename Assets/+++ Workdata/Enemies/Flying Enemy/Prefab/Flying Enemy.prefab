@@ -80,8 +80,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.1355567, y: 0.99167204}
-  m_Radius: 2.180749
+  m_Offset: {x: 0.3280152, y: 0.57467914}
+  m_Radius: 1.1382657
 --- !u!1 &2798136253549140134
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,6 +306,7 @@ MonoBehaviour:
   _currentLifePoints: 0
   enemyDrop: {fileID: 4586904303430537700, guid: 9d25c2323f2ec2c43ab3c399b34cd3b6, type: 3}
   player: {fileID: 0}
+  chaseContainer: {fileID: 0}
   groundBoxPos: {x: 0, y: 0}
   groundBoxSize: {x: 0.5, y: 0.5}
   groundLayer:

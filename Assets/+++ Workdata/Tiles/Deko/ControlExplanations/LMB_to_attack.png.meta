@@ -61,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 27
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,7 +99,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -140,10 +140,10 @@ TextureImporter:
       name: LMB_to_attack_0
       rect:
         serializedVersion: 2
-        x: 60
-        y: 66
-        width: 31
-        height: 36
+        x: 0
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,187 +158,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: LMB_to_attack_1
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 91
-        width: 19
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8c67f816260063960800000000000000
-      internalID: 7581247445268395720
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LMB_to_attack_2
-      rect:
-        serializedVersion: 2
-        x: 44
-        y: 58
-        width: 23
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: db681b8a46fc22570800000000000000
-      internalID: 8440536682879616701
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LMB_to_attack_3
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 50
-        width: 24
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 53863083458f76200800000000000000
-      internalID: 173380151277742133
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LMB_to_attack_4
-      rect:
-        serializedVersion: 2
-        x: 88
-        y: 64
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 05e3df2d31e5969b0800000000000000
-      internalID: -5086430864901063088
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LMB_to_attack_5
-      rect:
-        serializedVersion: 2
-        x: 92
-        y: 69
-        width: 17
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a0cfe9edf88cc6e80800000000000000
-      internalID: -8183945902598194166
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LMB_to_attack_6
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 23
-        width: 39
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8fa5b681533b11af0800000000000000
-      internalID: -427363448999159048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LMB_to_attack_7
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 52
-        width: 13
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5e1ee42c094eaa580800000000000000
-      internalID: -8814982010237951515
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LMB_to_attack_8
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 37
-        width: 23
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a250b651161be51b0800000000000000
-      internalID: -5665896250656226006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b66cc7a9ba7dcd045a7f60df6e9934fd
     internalID: 0
     vertices: []
     indices: 
@@ -349,14 +173,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       LMB_to_attack_0: 7761693326739838212
-      LMB_to_attack_1: 7581247445268395720
-      LMB_to_attack_2: 8440536682879616701
-      LMB_to_attack_3: 173380151277742133
-      LMB_to_attack_4: -5086430864901063088
-      LMB_to_attack_5: -8183945902598194166
-      LMB_to_attack_6: -427363448999159048
-      LMB_to_attack_7: -8814982010237951515
-      LMB_to_attack_8: -5665896250656226006
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

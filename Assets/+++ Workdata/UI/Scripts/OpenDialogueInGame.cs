@@ -48,6 +48,7 @@ public class OpenDialogueInGame : MonoBehaviour
             Time.timeScale = 0;                                                                                         // Spiel gefreezed
             _isPaused = true;
             Player.GetComponent<PlayerController>().SetPaused(true);
+            FreezePlayer(true);
             
             _anyMenuActive = true;
             _currentMenu = pauseMenu;
@@ -60,6 +61,7 @@ public class OpenDialogueInGame : MonoBehaviour
             _anyMenuActive = false;
             _currentMenu = null;
             Player.GetComponent<PlayerController>().SetPaused(false);
+            FreezePlayer(false);
         } 
     }
     
@@ -72,6 +74,7 @@ public class OpenDialogueInGame : MonoBehaviour
         _currentMenu = null;
         _noOtherMenuActive = true;
         Player.GetComponent<PlayerController>().SetPaused(false);
+        FreezePlayer(false);
     }
     
     public void OpenGameOverScreen()                                                                                    // Aufgerufen wenn Player dead über GameOver() in PlayerInformation
@@ -82,6 +85,7 @@ public class OpenDialogueInGame : MonoBehaviour
         _noOtherMenuActive = false;
         _anyMenuActive = true;
         _currentMenu = GameOverScreen;
+        FreezePlayer(true);
     }
 
     public void OpenEndOfGameMenu()                                                                                     // Aufgerufen wenn Finish Zone erreicht über PlayerZoneCheck
@@ -92,6 +96,7 @@ public class OpenDialogueInGame : MonoBehaviour
         Player.GetComponent<PlayerController>().SetPaused(true);
         _currentMenu = EndOfGameMenu;
         _anyMenuActive = true;
+        FreezePlayer(true);
     }
     
     public void OpenAreYouSure()                                                                                    // Aufgerufen wenn Player dead über GameOver() in PlayerInformation
@@ -103,5 +108,10 @@ public class OpenDialogueInGame : MonoBehaviour
         _noOtherMenuActive = false;
         _anyMenuActive = true;
         _currentMenu = SureScreen;
+    }
+
+    private void FreezePlayer(bool value)
+    {
+        Player.GetComponent<PlayerController>().ToggleInput(value);
     }
 }

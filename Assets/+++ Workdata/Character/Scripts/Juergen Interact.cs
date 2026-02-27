@@ -1,10 +1,13 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class JuergenInteract : MonoBehaviour
 {
     public static readonly int Hash_ActionId = Animator.StringToHash("ActionId");
     public static readonly int Hash_ActionTrigger = Animator.StringToHash("ActionTrigger");
+    
+    public UnityEvent onUpgrade;
     
     private Animator _anim;
 
@@ -68,6 +71,7 @@ public class JuergenInteract : MonoBehaviour
             
             _dialogue = dialogueUpgrade;
             _dialogue.SetActive(true);
+            onUpgrade.Invoke();
         }
         
         if (_walkedInFirstTime)

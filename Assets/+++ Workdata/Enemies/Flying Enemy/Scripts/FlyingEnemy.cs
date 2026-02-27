@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FlyingEnemy : MonoBehaviour
 {
-    public enum FlyState{ Chase, Attack, Patrol}
+    public enum FlyState{ Chase, Attack, Patrol, Hover}
 
     public FlyState flyState;
     
@@ -104,6 +104,7 @@ public class FlyingEnemy : MonoBehaviour
     
     public void InitiateAttack()
     {
+        flyState = FlyState.Hover;
         StartCoroutine(AttackDelay());
     }
 
@@ -116,7 +117,7 @@ public class FlyingEnemy : MonoBehaviour
 
     private IEnumerator AttackDelay()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         flyState = FlyState.Attack;
         _lastAttackTime = Time.time;
         anim.SetBool("Attack", true);  
