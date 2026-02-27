@@ -85,6 +85,10 @@ public class PlayerController : MonoBehaviour
     private bool _paused = false;
     
     private Vector2 _flyVelocity;
+
+
+    private int _playerLayer;
+    private int _oneWayLayer;
     
     #endregion
     
@@ -96,6 +100,9 @@ public class PlayerController : MonoBehaviour
         _animator = GetComponent<Animator>();
         
         _playerOneWay = GetComponent<PlayerOneWay>();
+        
+        _playerLayer = gameObject.layer;
+        _oneWayLayer = LayerMask.NameToLayer("OneWayPlatform");
         
         SetInputActions();
 
@@ -179,6 +186,12 @@ public class PlayerController : MonoBehaviour
 
     private void CheckIsGrounded()
     {
+        if (_isFlying)
+        {
+            _isGrounded = false;
+            return;
+        }
+        
         _isGrounded = Physics2D.OverlapBox((Vector2)transform.position + groundBoxPos, groundBoxSize, 0, groundLayer);
 
         if (_isGrounded)
@@ -193,6 +206,8 @@ public class PlayerController : MonoBehaviour
             _canJump = true;
             
             _hasLanded = true;
+            
+            Physics2D.IgnoreLayerCollision(_playerLayer, _oneWayLayer, false);
 
         }
         else
@@ -300,7 +315,9 @@ public class PlayerController : MonoBehaviour
             if (_hasLanded)
             {
                 //_rb.AddForce(Vector2.up * flyForce, ForceMode2D.Impulse);
-                _isFlying = true;    
+                _isFlying = true;  
+                Physics2D.IgnoreLayerCollision(_playerLayer, _oneWayLayer, true);
+
             }
         }
     }
@@ -329,7 +346,8 @@ public class PlayerController : MonoBehaviour
         else
         {
             _isFlying = false;
-            _canJump = true;
+            _canJump = true; 
+            Physics2D.IgnoreLayerCollision(_playerLayer, _oneWayLayer, false);
         }
     }
 
@@ -338,6 +356,7 @@ public class PlayerController : MonoBehaviour
         _isFlying  = false; 
         playerActionState = PlayerActionState.Default;
         _canJump = true;
+        Physics2D.IgnoreLayerCollision(_playerLayer, _oneWayLayer, false);
     }
     
     private void Attack(InputAction.CallbackContext ctx)
