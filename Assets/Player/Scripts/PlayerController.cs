@@ -207,7 +207,7 @@ public class PlayerController : MonoBehaviour
             
             _hasLanded = true;
             
-            Physics2D.IgnoreLayerCollision(_playerLayer, _oneWayLayer, false);
+           // Physics2D.IgnoreLayerCollision(_playerLayer, _oneWayLayer, false);
 
         }
         else
@@ -316,7 +316,7 @@ public class PlayerController : MonoBehaviour
             {
                 //_rb.AddForce(Vector2.up * flyForce, ForceMode2D.Impulse);
                 _isFlying = true;  
-                Physics2D.IgnoreLayerCollision(_playerLayer, _oneWayLayer, true);
+               // Physics2D.IgnoreLayerCollision(_playerLayer, _oneWayLayer, true);
 
             }
         }
@@ -347,7 +347,7 @@ public class PlayerController : MonoBehaviour
         {
             _isFlying = false;
             _canJump = true; 
-            Physics2D.IgnoreLayerCollision(_playerLayer, _oneWayLayer, false);
+           // Physics2D.IgnoreLayerCollision(_playerLayer, _oneWayLayer, false);
         }
     }
 
@@ -356,7 +356,7 @@ public class PlayerController : MonoBehaviour
         _isFlying  = false; 
         playerActionState = PlayerActionState.Default;
         _canJump = true;
-        Physics2D.IgnoreLayerCollision(_playerLayer, _oneWayLayer, false);
+      //  Physics2D.IgnoreLayerCollision(_playerLayer, _oneWayLayer, false);
     }
     
     private void Attack(InputAction.CallbackContext ctx)
