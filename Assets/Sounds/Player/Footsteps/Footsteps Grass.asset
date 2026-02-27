@@ -8,7 +8,7 @@ AudioContainerElement:
   m_PrefabAsset: {fileID: 0}
   m_Name: Footsteps Grass 02_{-5970847694908401758}
   m_AudioClip: {fileID: 8300000, guid: 6c5afc225e0480c4dbfb5cf6e98db87d, type: 3}
-  m_Volume: 0
+  m_Volume: -20
   m_Enabled: 1
 --- !u!1307931743 &6418180475301049370
 AudioRandomContainer:
@@ -45,5 +45,5 @@ AudioContainerElement:
   m_PrefabAsset: {fileID: 0}
   m_Name: Footsteps Grass 01_{8017413261636715340}
   m_AudioClip: {fileID: 8300000, guid: 9255a0624c4cc2e4d9f367c23e6d63f9, type: 3}
-  m_Volume: 0
+  m_Volume: -20
   m_Enabled: 1
