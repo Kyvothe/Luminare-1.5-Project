@@ -9,22 +9,37 @@ public class PlayerFootsteps : MonoBehaviour
     public AudioClip footStepsCarpet;
     public AudioClip footStepsMetal;
     public AudioClip footStepsWood;
+    private bool _playThisShit = true;
 
     private string _currentFloor;
+    private Vector2 _currentSpeed;
+    private bool _yesIsGrounded;
     
     private PlayerController playerController;
+    
+    private void Awake()
+    {
+        _currentFloor = "Leaf";
+    }
     void Start()
     {
         playerController = GetComponent<PlayerController>();
         StartCoroutine(PlayFootSteps());
     }
 
+    private void FixedUpdate()
+    {
+        _currentSpeed = playerController.ReturnMovement();
+        _yesIsGrounded = playerController.ReturnIsGrounded();
+    }
+
     IEnumerator PlayFootSteps()
     {
-        while (true)
+        while (_playThisShit)
         {
-            if (PlayerController.Hash_MovementValue > 0.1f && playerController._isGrounded)
+            if (_currentSpeed.x != 0 && _yesIsGrounded)
             {
+                Debug.Log("footsteps");
                 if (_currentFloor == "Leaf")
                 {
                     AudioManager.instance.PlaySFX(footStepsLeaf);
@@ -51,13 +66,14 @@ public class PlayerFootsteps : MonoBehaviour
                 }
             }
 
-            yield return new WaitForSeconds(0.35f);
+            yield return new WaitForSeconds(0.2f);
         }
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("_currentFloor: " + _currentFloor + "");
         if (other.CompareTag("Leaf")) SetFloor("Leaf");
         if (other.CompareTag("Carpet")) SetFloor("Carpet");
         if (other.CompareTag("Wood")) SetFloor("Wood");

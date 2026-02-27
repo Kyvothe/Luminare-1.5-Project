@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
     private InputAction _attackAction;
     private InputAction _interactAction;
     
-    private Vector2 _moveInput;
+    public Vector2 _moveInput;
 
     private float _currentSpeed;
     private float _walkingSpeed = 3f;
@@ -153,6 +153,8 @@ public class PlayerController : MonoBehaviour
         {
             _currentTrigger = "ActionTriggerSock";
         }
+
+        ReturnMovement();
     }
     
     private void OnDisable()
@@ -380,6 +382,16 @@ public class PlayerController : MonoBehaviour
     public void SetPaused(bool value)
     {
         _paused = value;
+    }
+
+    public Vector2 ReturnMovement()
+    {
+        return _moveInput;
+    }
+
+    public bool ReturnIsGrounded()
+    {
+        return _isGrounded;
     }
     
     #endregion
