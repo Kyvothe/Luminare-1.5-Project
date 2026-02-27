@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Audio;
+
 public class AudioManager: MonoBehaviour
 {
     public static AudioManager instance;
@@ -13,16 +15,16 @@ public class AudioManager: MonoBehaviour
         }
     }
 
-    public void PlaySFX(AudioClip audioClip, float volume = 1f)
+    public void PlaySFX(AudioResource audioResource, float volume = 1f)
     {
-        StartCoroutine(PlaySFXCoroutine(audioClip, volume));
+        StartCoroutine(PlaySFXCoroutine(audioResource, volume));
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
-    IEnumerator PlaySFXCoroutine(AudioClip audioClip, float volume = 1f)
+    IEnumerator PlaySFXCoroutine(AudioResource audioResource, float volume = 1f)
     {
         AudioSource audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.clip = audioClip;
+        audioSource.resource = audioResource;
         audioSource.volume = volume;
         audioSource.Play();
 

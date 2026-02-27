@@ -17,4 +17,14 @@ public class Music_Manager : MonoBehaviour
     {
         BG_Music.SetActive(false);
     }
+    
+    public void Music_Pause()
+    {
+        BG_Music.GetComponent<AudioSource>().Pause();
+    }
+    
+    public void Music_Unpause()
+    {
+        BG_Music.GetComponent<AudioSource>().UnPause();
+    }
 }

@@ -1,29 +1,43 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerFootsteps : MonoBehaviour
 {
-    public AudioClip footStepsLeaf;
-    public AudioClip footStepsConcrete;
-    public AudioClip footStepsCarpet;
-    public AudioClip footStepsMetal;
-    public AudioClip footStepsWood;
+    public AudioResource footStepsLeaf;
+    public AudioResource footStepsConcrete;
+    public AudioResource footStepsMetal;
+    public AudioResource footStepsWood;
+    private bool _playThisShit = true;
 
     private string _currentFloor;
+    private Vector2 _currentSpeed;
+    private bool _yesIsGrounded;
     
     private PlayerController playerController;
+    
+    private void Awake()
+    {
+        _currentFloor = "Leaf";
+    }
     void Start()
     {
         playerController = GetComponent<PlayerController>();
         StartCoroutine(PlayFootSteps());
     }
 
+    private void FixedUpdate()
+    {
+        _currentSpeed = playerController.ReturnMovement();
+        _yesIsGrounded = playerController.ReturnIsGrounded();
+    }
+
     IEnumerator PlayFootSteps()
     {
-        while (true)
+        while (_playThisShit)
         {
-            if (PlayerController.Hash_MovementValue > 0.1f && playerController._isGrounded)
+            if (_currentSpeed.x != 0 && _yesIsGrounded)
             {
                 if (_currentFloor == "Leaf")
                 {
@@ -33,11 +47,6 @@ public class PlayerFootsteps : MonoBehaviour
                 if (_currentFloor == "Concrete")
                 {
                     AudioManager.instance.PlaySFX(footStepsConcrete);
-                }
-                
-                if (_currentFloor == "Carpet")
-                {
-                    AudioManager.instance.PlaySFX(footStepsCarpet);
                 }
                 
                 if (_currentFloor == "Metal")
@@ -51,15 +60,15 @@ public class PlayerFootsteps : MonoBehaviour
                 }
             }
 
-            yield return new WaitForSeconds(0.35f);
+            yield return new WaitForSeconds(0.2f);
         }
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("_currentFloor: " + _currentFloor + "");
         if (other.CompareTag("Leaf")) SetFloor("Leaf");
-        if (other.CompareTag("Carpet")) SetFloor("Carpet");
         if (other.CompareTag("Wood")) SetFloor("Wood");
         if (other.CompareTag("Concrete")) SetFloor("Concrete");
         if (other.CompareTag("Metal")) SetFloor("Metal");

@@ -135,7 +135,7 @@ MonoBehaviour:
   enemyMovementState: 0
   enemyActionState: 0
   enemyAggroState: 0
-  isFacingRight: 0
+  isFacingRight: 1
   movementSpeed: 3
   changeDirectionTime: 1
   attackDistance: 1
@@ -262,7 +262,7 @@ AudioSource:
   m_GameObject: {fileID: 85084065689585220}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8310141942691439604, guid: 8edba9068d9a03d429c388c641267b55, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 6418180475301049370, guid: cce1bf641f341914f81ce9fc4baf507c, type: 2}
   m_PlayOnAwake: 1
@@ -310,7 +310,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
