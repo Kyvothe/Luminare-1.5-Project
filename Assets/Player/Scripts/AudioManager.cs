@@ -5,7 +5,8 @@ using UnityEngine.Audio;
 public class AudioManager: MonoBehaviour
 {
     public static AudioManager instance;
-    
+    private float _stepLength;
+    public AudioMixerGroup SoundsFX;
 
     private void Awake()
     {
@@ -25,10 +26,13 @@ public class AudioManager: MonoBehaviour
     {
         AudioSource audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.resource = audioResource;
+        audioSource.outputAudioMixerGroup = SoundsFX;
         audioSource.volume = volume;
         audioSource.Play();
+        _stepLength = audioSource.clip.length;
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(_stepLength);
+        
         
         Destroy(audioSource);
     }

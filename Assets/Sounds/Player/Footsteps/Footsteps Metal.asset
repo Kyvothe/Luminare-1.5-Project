@@ -8,7 +8,7 @@ AudioContainerElement:
   m_PrefabAsset: {fileID: 0}
   m_Name: Footsteps Metal_{5398194833250671444}
   m_AudioClip: {fileID: 8300000, guid: d05bdd4882932ed4789de5f8d34f8a79, type: 3}
-  m_Volume: 0
+  m_Volume: -20
   m_Enabled: 1
 --- !u!1307931743 &6418180475301049370
 AudioRandomContainer:

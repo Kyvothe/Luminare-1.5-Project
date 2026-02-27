@@ -34,5 +34,5 @@ AudioContainerElement:
   m_PrefabAsset: {fileID: 0}
   m_Name: Footsteps Stone 01_{7508347555026214450}
   m_AudioClip: {fileID: 8300000, guid: 24265bfc37f95b649afe3e12d32ebfc5, type: 3}
-  m_Volume: 0
+  m_Volume: -20
   m_Enabled: 1
