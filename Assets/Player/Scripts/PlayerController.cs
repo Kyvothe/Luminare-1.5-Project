@@ -275,7 +275,7 @@ public class PlayerController : MonoBehaviour
         
         _canJump = false;
         _rb.AddForce(Vector2.up * currentJumpForce, ForceMode2D.Impulse);
-        AudioManager.instance.PlaySoundFXClip(_jumpSound, transform, 1f);
+        AudioManager.instance.PlaySoundFXClip(_jumpSound, transform, 2f);
         SetActionId(1);
         playerActionState = canBigJump ? PlayerActionState.Jump : PlayerActionState.Hops;  
         
@@ -293,13 +293,13 @@ public class PlayerController : MonoBehaviour
         if (!_isGrounded)
         {
             _rb.AddForce(Vector2.up * 6f, ForceMode2D.Impulse);
-            AudioManager.instance.PlaySoundFXClip(_jumpSound, transform, 1f);
+            AudioManager.instance.PlaySoundFXClip(_jumpSound, transform, 2f);
         }
 
         if (_isGrounded)
         {
             _rb.AddForce(Vector2.up * bigJumpForce, ForceMode2D.Impulse);
-            AudioManager.instance.PlaySoundFXClip(_jumpSound, transform, 1f);
+            AudioManager.instance.PlaySoundFXClip(_jumpSound, transform, 2f);
         }
         
         SetActionId(1);
