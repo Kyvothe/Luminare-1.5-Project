@@ -8,7 +8,7 @@ public class PlayerInformation : MonoBehaviour
     
     #region Inspector Variables
 
-    private int _maxHealth = 40;
+    public int _maxHealth = 40;
     [SerializeField] private int _currentHealth;
 
     public GameObject MenuManagerInGame;
@@ -114,6 +114,7 @@ public class PlayerInformation : MonoBehaviour
 
     private void UpgradeHealthWithoutHeal()
     {
+        _maxHealth = 50;
         extraHeart1.SetActive(true);
         extraHeart2.SetActive(true);
     }

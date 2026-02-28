@@ -3085,6 +3085,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5031475237315277016, guid: 586a25ca5b2225c48bf7f6dc4e8c0df0, type: 3}
+      propertyPath: _gotHealthUpgrade
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8660079949053261940, guid: 586a25ca5b2225c48bf7f6dc4e8c0df0, type: 3}
       propertyPath: MenuManagerInGame
       value: 
@@ -3248,7 +3252,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MainMenu
+          m_StringArgument: Main Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &444639981

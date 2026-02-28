@@ -15,16 +15,23 @@ public class PlayerZoneCheck : MonoBehaviour
 
     private bool _isAttacking;
     
-    private int _maxHealth;
+    public int _maxHealth;
     private int _currentHealth;
-    private bool _gotHealthUpgrade;
+    public bool _gotHealthUpgrade;
 
     private void Awake()
     {
         _playerInformation = GetComponent<PlayerInformation>();
         _playerController = GetComponent<PlayerController>();
         
-        _gotHealthUpgrade = false;
+        if (_gotHealthUpgrade)
+        {
+            _maxHealth = 50;
+        }
+        else
+        {
+            _maxHealth = 40;
+        }
     }
 
     private void FixedUpdate()
