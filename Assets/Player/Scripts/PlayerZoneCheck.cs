@@ -15,23 +15,19 @@ public class PlayerZoneCheck : MonoBehaviour
 
     private bool _isAttacking;
     
-    public int _maxHealth;
+    private int _maxHealth;
     private int _currentHealth;
-    public bool _gotHealthUpgrade;
+    private bool _gotHealthUpgrade;
+    
+    [SerializeField] private AudioClip _crumbSound;
+    [SerializeField] private AudioClip _triumphSound;
 
     private void Awake()
     {
         _playerInformation = GetComponent<PlayerInformation>();
         _playerController = GetComponent<PlayerController>();
         
-        if (_gotHealthUpgrade)
-        {
-            _maxHealth = 50;
-        }
-        else
-        {
-            _maxHealth = 40;
-        }
+        _gotHealthUpgrade = false;
     }
 
     private void FixedUpdate()
@@ -61,7 +57,6 @@ public class PlayerZoneCheck : MonoBehaviour
             if (other.GetComponent<HealItem>())
             {
                 if (_currentHealth >= _maxHealth) return;
-                
                 other.gameObject.SetActive(false);
                 _playerInformation.SetHealth(other.GetComponent<HealItem>().ReturnHealthAmount());
                 
@@ -71,9 +66,11 @@ public class PlayerZoneCheck : MonoBehaviour
             {
                 itemCount++;
                 other.gameObject.SetActive(false);
+                AudioManager.instance.PlaySoundFXClip(_crumbSound, transform, 1f);
             
                 if (itemCount >= 10)
                 { 
+                    AudioManager.instance.PlaySoundFXClip(_triumphSound, transform, 1f);
                     gotAllItems = true;
                 } 
             }
@@ -83,6 +80,7 @@ public class PlayerZoneCheck : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             gotSunGlasses = true;
+            AudioManager.instance.PlaySoundFXClip(_triumphSound, transform, 1f);
 
         }
         
@@ -91,6 +89,7 @@ public class PlayerZoneCheck : MonoBehaviour
             _playerInformation.UpgradeHealth(); 
             _gotHealthUpgrade = true;
             other.gameObject.SetActive(false);
+            AudioManager.instance.PlaySoundFXClip(_triumphSound, transform, 1f);
         }
     }
 

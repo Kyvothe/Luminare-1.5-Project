@@ -15,6 +15,10 @@ public class PlayerInformation : MonoBehaviour
     
     public GameObject extraHeart1;
     public GameObject extraHeart2;
+    
+    [SerializeField] private AudioClip _hurtSound;
+    [SerializeField] private AudioClip _deathSound;
+    [SerializeField] private AudioClip _healSound;
 
     #endregion
     
@@ -60,11 +64,13 @@ public class PlayerInformation : MonoBehaviour
     public void SetDamage(int damage)
     {
         _currentHealth -= damage;
+        AudioManager.instance.PlaySoundFXClip(_hurtSound, transform, 1f);
         
         SetActionId(30);
 
         if (_currentHealth < 5)
         {
+            AudioManager.instance.PlaySoundFXClip(_deathSound, transform, 1f);
             SetActionId(40); 
             _playerDead = true;
             GetComponent<PlayerController>().enabled = false;
@@ -78,6 +84,7 @@ public class PlayerInformation : MonoBehaviour
         if ((_currentHealth + health) <= _maxHealth)
         {
             _currentHealth += health;
+            AudioManager.instance.PlaySoundFXClip(_healSound, transform, 1f);
         }
         else
         {

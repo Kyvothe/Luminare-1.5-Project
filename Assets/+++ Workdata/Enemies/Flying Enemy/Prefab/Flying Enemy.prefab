@@ -312,6 +312,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  _hitSound: {fileID: 8300000, guid: ea9f70147cf4df247b7d5cfa77fdfe3a, type: 3}
+  _deathSound: {fileID: 8300000, guid: 2a17acb7cdb3e9f4399d078ed92d0209, type: 3}
 --- !u!82 &7909431071634164709
 AudioSource:
   m_ObjectHideFlags: 0

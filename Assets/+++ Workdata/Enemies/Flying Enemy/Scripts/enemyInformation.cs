@@ -28,6 +28,9 @@ public class enemyInformation : MonoBehaviour
     [SerializeField] private Vector2 groundBoxPos;
     [SerializeField] private Vector2 groundBoxSize;
     [SerializeField] private LayerMask groundLayer;
+    
+    [SerializeField] private AudioClip _hitSound;
+    [SerializeField] private AudioClip _deathSound;
 
     private void Awake()
     {
@@ -51,10 +54,12 @@ public class enemyInformation : MonoBehaviour
     public void SetDamage(int dmg)
     {
         _currentLifePoints -= dmg;
+        AudioManager.instance.PlaySoundFXClip(_hitSound, transform, 1f);
 
         if (_currentLifePoints < 1)
         {
             Debug.Log("Dead");
+            AudioManager.instance.PlaySoundFXClip(_deathSound, transform, 1f);
             
             _rb.bodyType = RigidbodyType2D.Dynamic;
             _rb.gravityScale = 5;

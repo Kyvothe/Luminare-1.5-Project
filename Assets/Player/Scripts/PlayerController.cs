@@ -3,6 +3,7 @@ using System;
 using UnityEditor.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
+using UnityEngine.Audio;
 
 public class PlayerController : MonoBehaviour
 {
@@ -47,6 +48,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector2 groundBoxPos;
     [SerializeField] private Vector2 groundBoxSize;
     [SerializeField] private LayerMask groundLayer;
+    
+    [Header("Sounds")] 
+    [SerializeField] private AudioClip _attackSound;
+    [SerializeField] private AudioResource _flySound;
+    [SerializeField] private AudioClip _jumpSound;
     #endregion Inspector Variables
     
     #region private Variables
@@ -269,6 +275,7 @@ public class PlayerController : MonoBehaviour
         
         _canJump = false;
         _rb.AddForce(Vector2.up * currentJumpForce, ForceMode2D.Impulse);
+        AudioManager.instance.PlaySoundFXClip(_jumpSound, transform, 1f);
         SetActionId(1);
         playerActionState = canBigJump ? PlayerActionState.Jump : PlayerActionState.Hops;  
         
@@ -286,11 +293,13 @@ public class PlayerController : MonoBehaviour
         if (!_isGrounded)
         {
             _rb.AddForce(Vector2.up * 6f, ForceMode2D.Impulse);
+            AudioManager.instance.PlaySoundFXClip(_jumpSound, transform, 1f);
         }
 
         if (_isGrounded)
         {
             _rb.AddForce(Vector2.up * bigJumpForce, ForceMode2D.Impulse);
+            AudioManager.instance.PlaySoundFXClip(_jumpSound, transform, 1f);
         }
         
         SetActionId(1);
@@ -335,6 +344,7 @@ public class PlayerController : MonoBehaviour
             _rb.linearVelocity = _flyVelocity;
 
             playerActionState = PlayerActionState.Fly;
+            AudioManager.instance.PlaySFX(_flySound);
         }
         else
         {

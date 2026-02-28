@@ -7,6 +7,7 @@ public class enemyRatInformation : MonoBehaviour
     
     [SerializeField] private int enemyMaxLifePoints;
     [SerializeField] private AudioClip _deathSound;
+    [SerializeField] private AudioClip _hitSound;
     
     public float _currentLifePoints;
 
@@ -40,7 +41,7 @@ public class enemyRatInformation : MonoBehaviour
     public void SetDamage(int dmg)
     {
         _currentLifePoints -= dmg;
-        AudioManager.instance.PlaySoundFXClip(_deathSound, transform, 1f);
+        AudioManager.instance.PlaySoundFXClip(_hitSound, transform, 1f);
 
         if (_currentLifePoints < 1)
         {
