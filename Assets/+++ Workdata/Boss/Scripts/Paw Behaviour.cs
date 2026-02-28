@@ -30,7 +30,7 @@ public class PawBehaviour : MonoBehaviour
     {
         startFight = true;
         
-        StartCoroutine(TimedRandom(5f));
+        StartCoroutine(TimedRandom(5.1f));
     }
     
 
