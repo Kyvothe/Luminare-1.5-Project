@@ -173,6 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newProjectile: {fileID: 7282757729946218123, guid: b47f32de9f16fa14d8565ee2d3379cef, type: 3}
   _dropsStuff: 0
+  _throwSound: {fileID: 8300000, guid: 54ce8f6aa48a82840ad52197b69038de, type: 3}
 --- !u!82 &701681410689198538
 AudioSource:
   m_ObjectHideFlags: 0

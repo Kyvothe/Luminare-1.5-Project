@@ -3034,6 +3034,18 @@ PrefabInstance:
       value: Fly Player Container
       objectReference: {fileID: 0}
     - target: {fileID: 2568796818815203183, guid: 586a25ca5b2225c48bf7f6dc4e8c0df0, type: 3}
+      propertyPath: _healSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e22c1541ba897924b8a0917168c60d36, type: 3}
+    - target: {fileID: 2568796818815203183, guid: 586a25ca5b2225c48bf7f6dc4e8c0df0, type: 3}
+      propertyPath: _hurtSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 424698f002d1ce54bb473a3b11b28e17, type: 3}
+    - target: {fileID: 2568796818815203183, guid: 586a25ca5b2225c48bf7f6dc4e8c0df0, type: 3}
+      propertyPath: _deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: cf05b7da915bf624dbd02b8487a8a708, type: 3}
+    - target: {fileID: 2568796818815203183, guid: 586a25ca5b2225c48bf7f6dc4e8c0df0, type: 3}
       propertyPath: extraHeart1
       value: 
       objectReference: {fileID: 667457659}
@@ -3045,6 +3057,18 @@ PrefabInstance:
       propertyPath: MenuManagerInGame
       value: 
       objectReference: {fileID: 1424800632}
+    - target: {fileID: 4198201664836032160, guid: 586a25ca5b2225c48bf7f6dc4e8c0df0, type: 3}
+      propertyPath: _flySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 64b4ed9ade02f0e43ab32522dd607d14, type: 3}
+    - target: {fileID: 4198201664836032160, guid: 586a25ca5b2225c48bf7f6dc4e8c0df0, type: 3}
+      propertyPath: _jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d43d5c6d53afde74cb9b0ae402224042, type: 3}
+    - target: {fileID: 4198201664836032160, guid: 586a25ca5b2225c48bf7f6dc4e8c0df0, type: 3}
+      propertyPath: _attackSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 12fbc7828f57e6940a95f31573dec317, type: 3}
     - target: {fileID: 4379579340421409704, guid: 586a25ca5b2225c48bf7f6dc4e8c0df0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 47
@@ -54764,10 +54788,6 @@ PrefabInstance:
       propertyPath: chaseContainer
       value: 
       objectReference: {fileID: 282159942}
-    - target: {fileID: 2798136253549140134, guid: f00bd2c56c3c43b40be55cf42ebbce4c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4435102215640540415, guid: f00bd2c56c3c43b40be55cf42ebbce4c, type: 3}
       propertyPath: m_Name
       value: Flying Enemy

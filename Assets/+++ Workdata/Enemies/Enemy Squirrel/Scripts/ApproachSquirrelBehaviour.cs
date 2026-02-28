@@ -13,6 +13,8 @@ public class ApproachSquirrelBehaviour : MonoBehaviour
     Coroutine _coroutine;
 
     private Vector2 _spawnPosition;
+    
+    [SerializeField] private AudioClip _throwSound;
 
     private void Awake()
     {
@@ -40,6 +42,7 @@ public class ApproachSquirrelBehaviour : MonoBehaviour
         while (true)
         {
             DropProjectile();
+            AudioManager.instance.PlaySoundFXClip(_throwSound, transform, 1f);
             yield return new WaitForSeconds(2f);
         }
     }
