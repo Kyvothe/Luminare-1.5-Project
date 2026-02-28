@@ -4,6 +4,8 @@ using UnityEngine.Events;
 
 public class OnTriggerEnterCam : MonoBehaviour
 {
+    // nicht nur für Camera sondern fuer saemtliche Events mit Triggern
+    
     public UnityEvent TriggerEnter;
     public UnityEvent TriggerExit;
     

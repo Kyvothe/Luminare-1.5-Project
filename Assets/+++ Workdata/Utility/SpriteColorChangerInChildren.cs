@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpriteColorChangerChildren : MonoBehaviour
 {
+    // fuer gameobjects mit visual root verwenden
+    
     public Color colorSprite;
     public float colorTime;
     SpriteRenderer[] allSprites;
@@ -25,7 +27,7 @@ public class SpriteColorChangerChildren : MonoBehaviour
         }
     }
 
-    public void ColorObject()
+    public void ColorObject()                                                                                           // diese Methode fuer colouchange aufrufen
     {
         TurnToColor();
         Invoke("TurnNormal", colorTime);
