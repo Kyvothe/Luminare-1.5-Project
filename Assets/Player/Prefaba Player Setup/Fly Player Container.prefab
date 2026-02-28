@@ -122,7 +122,7 @@ MonoBehaviour:
   _isGrounded: 0
   _canJump: 1
   _isFlying: 0
-  sock: 1
+  sock: 0
   _currentTrigger: 
 --- !u!114 &4768609741433261870
 MonoBehaviour:

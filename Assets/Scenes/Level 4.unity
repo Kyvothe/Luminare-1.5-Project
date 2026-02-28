@@ -3042,17 +3042,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1868982345}
     - target: {fileID: 2568796818815203183, guid: 586a25ca5b2225c48bf7f6dc4e8c0df0, type: 3}
-      propertyPath: isFirstLevel
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2568796818815203183, guid: 586a25ca5b2225c48bf7f6dc4e8c0df0, type: 3}
       propertyPath: MenuManagerInGame
       value: 
       objectReference: {fileID: 1424800632}
-    - target: {fileID: 4198201664836032160, guid: 586a25ca5b2225c48bf7f6dc4e8c0df0, type: 3}
-      propertyPath: sock
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4379579340421409704, guid: 586a25ca5b2225c48bf7f6dc4e8c0df0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 47
