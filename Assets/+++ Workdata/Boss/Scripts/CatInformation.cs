@@ -26,7 +26,7 @@ public class CatInformation : MonoBehaviour
         _animator = GetComponent<Animator>();
 
         _spawnPosition.x = -4.39f;
-        _spawnPosition.y = 6;
+        _spawnPosition.y = 4.12f;
     }
 
     public void StartFight()

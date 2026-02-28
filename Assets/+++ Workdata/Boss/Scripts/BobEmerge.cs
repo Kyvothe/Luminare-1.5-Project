@@ -14,12 +14,12 @@ public class BobEmerge : MonoBehaviour
     {
         StartCoroutine(BobRise());
         
-        _moveTo = new Vector2(11.5f, -4.64f);
+        _moveTo = new Vector2(5.84f, -4.64f);
     }
 
     private IEnumerator BobRise()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(155);
         Debug.Log("BobRise");
         gameObject.transform.position = _moveTo;
         

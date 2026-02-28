@@ -10,8 +10,6 @@ public class PawInformation : MonoBehaviour
 
     private void Awake()
     {
-        _health = 2;
-
         _catInformation = cat.GetComponent<CatInformation>();
     }
 

@@ -12,6 +12,8 @@ public class ProjectileBehaviour : MonoBehaviour
     private BoxCollider2D _coll;
 
     public int damage;
+
+    private bool _hasHit = false;
     
     [Header("Ground Setup")] 
     [SerializeField] private Vector2 groundBoxPos;
@@ -38,6 +40,7 @@ public class ProjectileBehaviour : MonoBehaviour
     
     public void DestroyProjectile()                                                                                     // aufgerufen über AnimationEndAcorn am Ende von Shatter Animantion
     {
+        _hasHit = false;
         Destroy(gameObject);
     }
 
@@ -54,12 +57,16 @@ public class ProjectileBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (_hasHit) return;
+        
         if (other.CompareTag("Player"))
         {
             other.GetComponent<PlayerInformation>().SetDamage(damage);
             
             _animator.SetTrigger(Hash_ActionTrigger);
             _animator.SetInteger(Hash_ActionId, 1);
+            
+            _hasHit = true;
         }
     }
 
