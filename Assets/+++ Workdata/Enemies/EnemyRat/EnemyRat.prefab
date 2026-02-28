@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyMaxLifePoints: 2
+  _deathSound: {fileID: 8300000, guid: be138c700d9a2124fb78130a6747acb8, type: 3}
   _currentLifePoints: 10
   enemyDrop: {fileID: 1494483632787932071, guid: 4283b79a6f56c7f40a132441d7e045b5, type: 3}
   player: {fileID: 0}

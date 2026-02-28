@@ -6,6 +6,7 @@ public class enemyRatInformation : MonoBehaviour
     public static readonly int Hash_ActionId = Animator.StringToHash("ActionId");
     
     [SerializeField] private int enemyMaxLifePoints;
+    [SerializeField] private AudioClip _deathSound;
     
     public float _currentLifePoints;
 
@@ -39,6 +40,7 @@ public class enemyRatInformation : MonoBehaviour
     public void SetDamage(int dmg)
     {
         _currentLifePoints -= dmg;
+        AudioManager.instance.PlaySoundFXClip(_deathSound, transform, 1f);
 
         if (_currentLifePoints < 1)
         {
@@ -52,6 +54,7 @@ public class enemyRatInformation : MonoBehaviour
             
             _animator.SetTrigger(Hash_ActionTrigger);
             _animator.SetInteger(Hash_ActionId, 10);
+            AudioManager.instance.PlaySoundFXClip(_deathSound, transform, 1f);
             
             _isDead = true;
 
