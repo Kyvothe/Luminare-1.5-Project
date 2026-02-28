@@ -26,6 +26,8 @@ public class PlayerInformation : MonoBehaviour
 
     public bool hasHealthUpgrade;
 
+    private string _currentTrigger = "ActionTrigger";
+
     private OpenDialogueInGame _openDialogueInGame;
 
     private void Awake()
@@ -116,9 +118,14 @@ public class PlayerInformation : MonoBehaviour
         extraHeart2.SetActive(true);
     }
 
+    public void SetSock2()
+    {
+        _currentTrigger = "ActionTriggerSock";
+    }
+
     private void SetActionId(int id)
     {
-        _animator.SetTrigger(Hash_ActionTrigger);
+        _animator.SetTrigger(_currentTrigger);
         _animator.SetInteger(Hash_ActionId, id);
     }
 }

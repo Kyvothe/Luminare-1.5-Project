@@ -106,6 +106,7 @@ public class PlayerController : MonoBehaviour
         if (sock)
         {
             _animator.SetBool("Sock", true);
+            GetComponent<PlayerInformation>().SetSock2();
         }
     }
 
@@ -152,6 +153,7 @@ public class PlayerController : MonoBehaviour
         if (sock)
         {
             _currentTrigger = "ActionTriggerSock";
+            GetComponent<PlayerInformation>().SetSock2();
         }
 
         ReturnMovement();

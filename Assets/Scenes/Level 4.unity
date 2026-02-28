@@ -3042,6 +3042,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1868982345}
     - target: {fileID: 2568796818815203183, guid: 586a25ca5b2225c48bf7f6dc4e8c0df0, type: 3}
+      propertyPath: isFirstLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2568796818815203183, guid: 586a25ca5b2225c48bf7f6dc4e8c0df0, type: 3}
       propertyPath: MenuManagerInGame
       value: 
       objectReference: {fileID: 1424800632}
@@ -52607,6 +52611,7 @@ GameObject:
   - component: {fileID: 1860293425}
   - component: {fileID: 1860293424}
   - component: {fileID: 1860293423}
+  - component: {fileID: 1860293426}
   m_Layer: 5
   m_Name: Button Try Again
   m_TagString: Untagged
@@ -52690,6 +52695,18 @@ MonoBehaviour:
           m_StringArgument: Level 4
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1860293426}
+        m_TargetAssemblyTypeName: PlayerPrefsReset, Assembly-CSharp
+        m_MethodName: ResetHealth50
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1860293424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52728,6 +52745,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860293421}
   m_CullTransparentMesh: 1
+--- !u!114 &1860293426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860293421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5d76a161f6cf244a431f2dfcf1d1e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1863819666 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4909542360845951221, guid: f00bd2c56c3c43b40be55cf42ebbce4c, type: 3}
