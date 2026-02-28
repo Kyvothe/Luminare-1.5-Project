@@ -6,7 +6,10 @@ public class AudioManager: MonoBehaviour
 {
     public static AudioManager instance;
     private float _stepLength;
+    private float _fxsLength;
     public AudioMixerGroup SoundsFX;
+    
+    [SerializeField] private AudioSource soundFXObject;
 
     private void Awake()
     {
@@ -36,5 +39,20 @@ public class AudioManager: MonoBehaviour
         
         Destroy(audioSource);
     }
+    
+    public void PlaySoundFXClip(AudioClip audioClip, Transform spawnTransform, float volume)
+    {
+        AudioSource audioSource = Instantiate(soundFXObject, spawnTransform.position, Quaternion.identity);
+        
+        audioSource.clip = audioClip;
+        audioSource.outputAudioMixerGroup = SoundsFX;
+        audioSource.volume = volume;
+        audioSource.Play();
+        _fxsLength = audioSource.clip.length;
+        
+        Destroy(audioSource.gameObject, _fxsLength);
+    }
+
+   
     
 }
