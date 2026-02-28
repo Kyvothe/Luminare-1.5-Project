@@ -27,7 +27,14 @@ public class PlayerZoneCheck : MonoBehaviour
         _playerInformation = GetComponent<PlayerInformation>();
         _playerController = GetComponent<PlayerController>();
         
-        _gotHealthUpgrade = false;
+        if (_gotHealthUpgrade)
+        {
+            _maxHealth = 50;
+        }
+        else
+        {
+            _maxHealth = 40;
+        }
     }
 
     private void FixedUpdate()
