@@ -33,18 +33,18 @@ public class CatInformation : MonoBehaviour
         _spawnPosition.y = 4.12f;
     }
 
-    public void StartFight()
+    public void StartFight()                                                                                            // Start Idle Animation
     {
         _animator.SetTrigger(Hash_ActionTrigger);
         _animator.SetInteger(Hash_ActionId, 100);
     }
     
-    public void PawDied()
+    public void PawDied()                                                                                               // Aufgerufen wenn eine Paw kein Health mehr hat
     {
         _pawsAlive--;
     }
 
-    public void TakesDamage()
+    public void TakesDamage()                                                                                           // Katze nimmt Schaden
     {
         Debug.Log("Hurt");
         _animator.SetTrigger(Hash_ActionTrigger);
@@ -54,7 +54,7 @@ public class CatInformation : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_pawsAlive <= 1 && !_catDied)
+        if (_pawsAlive <= 1 && !_catDied)                                                                               // Katze tot
         {
             _catDied = true;
             _animator.SetInteger(Hash_ActionId, 20);
@@ -63,7 +63,7 @@ public class CatInformation : MonoBehaviour
         }
     }
 
-    public void SpawnHealthUpgrade()
+    public void SpawnHealthUpgrade()                                                                                    // Spawn HealthUpgrade Soggy Pizza   
     {
         Instantiate(item, _spawnPosition, Quaternion.identity);
     }

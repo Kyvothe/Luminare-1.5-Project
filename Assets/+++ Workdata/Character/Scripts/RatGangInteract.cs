@@ -43,7 +43,7 @@ public class RatGangInteract : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player"))                                                                                 // Start "Cutscene" RatGang
         {
             _playerIn = true;
             
@@ -72,7 +72,7 @@ public class RatGangInteract : MonoBehaviour
         return _playerIn;
     }
 
-    public void StartFightAfterAnimation()
+    public void StartFightAfterAnimation()                                                                              // Start Fight
     {
         _pawBehaviour1.SetSartFight();
         _pawBehaviour2.SetSartFight();
@@ -83,7 +83,7 @@ public class RatGangInteract : MonoBehaviour
         Light1.SetActive(false);
         Light2.SetActive(false);
         
-        Destroy(coll.gameObject);
+        Destroy(coll.gameObject);                                                                                       // Blocks und Trigger weg
         Destroy(coll2.gameObject);
         
         ratMusic.SetActive(false);

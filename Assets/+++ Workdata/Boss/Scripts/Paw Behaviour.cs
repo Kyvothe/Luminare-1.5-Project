@@ -26,7 +26,7 @@ public class PawBehaviour : MonoBehaviour
         hasHit = false;
     }
     
-    public void SetSartFight()
+    public void SetSartFight()                                                                                          // Start Fight
     {
         startFight = true;
         
@@ -34,7 +34,7 @@ public class PawBehaviour : MonoBehaviour
     }
     
 
-    private IEnumerator TimedRandom(float time)
+    private IEnumerator TimedRandom(float time)                                                                         // Zufaellige Paw Movements
     {
         while (true)
         {
@@ -49,14 +49,14 @@ public class PawBehaviour : MonoBehaviour
 
             if (id == 1 || id == 2)
             {
-                (isLeft? decoPawLeft : decoPawRight).SetActive(false);
+                (isLeft? decoPawLeft : decoPawRight).SetActive(false);                                                  // Entsprechende Deko Paws ausschalten
             }
         }
     }
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (hasHit) return;
+        if (hasHit) return;                                                                                             // Nur ein Hit
         
         if (other.CompareTag("Player"))
         {
@@ -65,7 +65,7 @@ public class PawBehaviour : MonoBehaviour
             hasHit = true;
         }
         
-        if (other.CompareTag("SpawnPoint"))
+        if (other.CompareTag("SpawnPoint"))                                                                             // Aktivieren von den SpawnPoints beim Drüberfahren
         {
             other.GetComponent<SpawnHealItem>().DropItem();
         }

@@ -20,11 +20,11 @@ public class DoorBehaviour : MonoBehaviour
     
     public void SetDamage(int damage)
     {
-        _health -= damage;
+        _health -= damage;                                                                                              // Door nimmt Schaden
 
-        if (_health <= 0)
+        if (_health <= 0)                                                                                               // Door tot
         {
-            Instantiate(item, _spawnPosition, Quaternion.identity);
+            Instantiate(item, _spawnPosition, Quaternion.identity);                                                  // Spawn Soggy Pizza
             Destroy(gameObject);
         }
         

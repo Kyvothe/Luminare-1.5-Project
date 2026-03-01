@@ -15,11 +15,11 @@ public class PawInformation : MonoBehaviour
 
     public void SetDamage(int damage)
     {
-        _health -= damage;
+        _health -= damage;                                                                                              // Paw nimmt Schaden
 
         _catInformation.TakesDamage();
 
-        if (_health < 1)
+        if (_health < 1)                                                                                                // Paw tot
         {
             Debug.Log("Paw Death");
             _catInformation.PawDied();
