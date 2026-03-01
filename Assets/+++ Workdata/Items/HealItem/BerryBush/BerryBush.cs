@@ -18,7 +18,7 @@ public class BerryBush : MonoBehaviour
     {
         _playerHealth = playerInformation.ReturnHealth();
 
-        if (_playerHealth < _maxHealth)
+        if (_playerHealth < _maxHealth)                                                                                 // Nur heilen, wenn Player nicht full health hat
         {
             return true;
         }

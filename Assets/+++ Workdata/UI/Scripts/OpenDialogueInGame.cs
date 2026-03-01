@@ -99,7 +99,7 @@ public class OpenDialogueInGame : MonoBehaviour
         FreezePlayer(true);
     }
     
-    public void OpenAreYouSure()                                                                                    // Aufgerufen wenn Player dead über GameOver() in PlayerInformation
+    public void OpenAreYouSure()                                                                                        // Aufgerufen wenn Player dead über GameOver() in PlayerInformation
     {
         _currentMenu.SetActive(false);
         SureScreen.SetActive(true);
@@ -110,7 +110,7 @@ public class OpenDialogueInGame : MonoBehaviour
         _currentMenu = SureScreen;
     }
 
-    private void FreezePlayer(bool value)
+    private void FreezePlayer(bool value)                                                                               // Freeze Bewegung von Player
     {
         Player.GetComponent<PlayerController>().ToggleInput(value);
     }

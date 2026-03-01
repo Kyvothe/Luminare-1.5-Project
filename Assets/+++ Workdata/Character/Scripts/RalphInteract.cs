@@ -63,7 +63,7 @@ public class RalphInteract : MonoBehaviour
         }
     }
     
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D other)                                                                      // Dialog aus wenn Player raus
     {
         if (other.CompareTag("Player"))
         {
@@ -78,7 +78,7 @@ public class RalphInteract : MonoBehaviour
         }
     }
 
-    public void StartDialogue()
+    public void StartDialogue()                                                                                         // Aufgerufen on Interact
     { 
         _anim.SetInteger(Hash_ActionId, 1);
         _anim.SetTrigger(Hash_ActionTrigger);
@@ -87,7 +87,7 @@ public class RalphInteract : MonoBehaviour
 
         StartCoroutine(RandomSpecial());
 
-        if (_gotSunGlasses)
+        if (_gotSunGlasses)                                                                                             // Wenn Sonnenbrille eingesammelt, dann Upgrade
         {
             Debug.Log("Whatever"); // Dialog einbauen belohnung
             player.GetComponent<PlayerController>().SetCanAttack(true);
@@ -98,13 +98,13 @@ public class RalphInteract : MonoBehaviour
             GotUpgrade.Invoke();
         }
         else
-        {
+        {                                                                                                               // Zweites Ansprechen
             _dialogue = dialogueSecond;
             _dialogue.SetActive(true);
         }
     }
 
-    private IEnumerator RandomSpecial()
+    private IEnumerator RandomSpecial()                                                                                 // Zufaellige Special Animation
     {
         while (_isTalking)
         {
@@ -113,7 +113,7 @@ public class RalphInteract : MonoBehaviour
         }
     }
 
-    public void StartDialogueOnCam()                                                                                    // aufgerufen über Ralph Trigger Camera Pan
+    public void StartDialogueOnCam()                                                                                    // Aufgerufen über Ralph Trigger Camera Pan
     {
         _anim.SetInteger(Hash_ActionId, 1);
         _anim.SetTrigger(Hash_ActionTrigger);
@@ -129,7 +129,7 @@ public class RalphInteract : MonoBehaviour
 
     }
 
-    private IEnumerator RalphsBit()
+    private IEnumerator RalphsBit()                                                                                     // On Pan zu Ralph
     {
         yield return new WaitForSeconds(10f);
         _dialogue.SetActive(false);

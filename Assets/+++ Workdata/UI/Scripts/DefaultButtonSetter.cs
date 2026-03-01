@@ -10,7 +10,7 @@ public class DefaultButtonSetter : MonoBehaviour
     {
         Selectable newSelection;
         newSelection = defaultButton;
-        StartCoroutine(DelaySelection(newSelection));
+        StartCoroutine(DelaySelection(newSelection));                                                            // Sicherheitsdelay
     }
 
     IEnumerator DelaySelection(Selectable newSelection)

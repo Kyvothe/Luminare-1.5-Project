@@ -38,16 +38,16 @@ public class enemyRatInformation : MonoBehaviour
         _isDead = false;
     }
 
-    public void SetDamage(int dmg)
+    public void SetDamage(int dmg)                                                                                      // Ratte nimmt Schaden
     {
         _currentLifePoints -= dmg;
         AudioManager.instance.PlaySoundFXClip(_hitSound, transform, 1f);
 
-        if (_currentLifePoints < 1)
+        if (_currentLifePoints < 1)                                                                                     // Ratte tot
         {
             _coll.enabled = false;
             _rb.bodyType = RigidbodyType2D.Static;
-            GetComponentInChildren<enemyRatAnimation>().SetEnemyDeath();                                                // maybe rausnehmen???????????
+            GetComponentInChildren<enemyRatAnimation>().SetEnemyDeath();                                    
             enemyRatPatrolMovement enemyPatrol = GetComponentInChildren<enemyRatPatrolMovement>();
             
             GetComponentInChildren<enemyRatPatrolMovement>().SetActionState(2);
@@ -64,7 +64,7 @@ public class enemyRatInformation : MonoBehaviour
             _position = transform.position;
             _position.y = transform.position.y + 0.5f;
             
-            if (player.GetComponent<PlayerController>().ReturnDirection())
+            if (player.GetComponent<PlayerController>().ReturnDirection())                                              // Spawn direction gegenueber vom Player damit nicht on spawn eingesammelt wird
             {
                 _position.x = transform.position.x - 1.5f;
             }
@@ -84,7 +84,7 @@ public class enemyRatInformation : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void Spawn()
+    public void Spawn()                                                                                                 // Chance auf Spawn von HealItem
     {
         _random = Random.Range(0, 100);
         Debug.Log(_random);

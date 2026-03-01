@@ -29,7 +29,7 @@ public class OpenGameOverFailSafe : MonoBehaviour
 
     private IEnumerator ReallyGameOver()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(4f);                                                                            // force open GameOverScreen nach 4 Sekunden nach 0 health
         MenuManagerInGame.GetComponent<OpenDialogueInGame>().OpenGameOverScreen();
     }
 }

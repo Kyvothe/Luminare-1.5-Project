@@ -53,10 +53,10 @@ public class enemyInformation : MonoBehaviour
 
     public void SetDamage(int dmg)
     {
-        _currentLifePoints -= dmg;
+        _currentLifePoints -= dmg;                                                                                      // Kraehe nimmt Schaden
         AudioManager.instance.PlaySoundFXClip(_hitSound, transform, 1f);
 
-        if (_currentLifePoints < 1)
+        if (_currentLifePoints < 1)                                                                                     // Kraehe tot
         {
             Debug.Log("Dead");
             AudioManager.instance.PlaySoundFXClip(_deathSound, transform, 1f);
@@ -76,7 +76,7 @@ public class enemyInformation : MonoBehaviour
             
             _position = transform.position;
             
-            if (player.GetComponent<PlayerController>().ReturnDirection())
+            if (player.GetComponent<PlayerController>().ReturnDirection())                                              // Spawn Postion abhänging von Richtung Player
             {
                 _position.x = transform.position.x - 1.5f;
             }
@@ -93,7 +93,7 @@ public class enemyInformation : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void Spawn()
+    public void Spawn()                                                                                                 // Chance aud Spawn von HealItem
     {
         _random = Random.Range(0, 100);
 

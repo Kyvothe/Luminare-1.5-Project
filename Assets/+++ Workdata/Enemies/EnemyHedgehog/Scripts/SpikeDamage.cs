@@ -8,9 +8,9 @@ public class SpikeDamage : MonoBehaviour
  private bool _hasHit = false;
  private void OnTriggerEnter2D(Collider2D other)
  {
-  if (_hasHit) return;
+  if (_hasHit) return;                                                                                                  // Nur ein Hit
   
-  if (other.CompareTag("Player"))
+  if (other.CompareTag("Player"))                                                                                       // Damage Player
   {
    other.GetComponent<PlayerInformation>().SetDamage(spikeDamage);
    _hasHit = true;

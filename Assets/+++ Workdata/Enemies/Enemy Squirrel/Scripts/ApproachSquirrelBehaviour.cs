@@ -24,7 +24,7 @@ public class ApproachSquirrelBehaviour : MonoBehaviour
         _spawnPosition.y = transform.position.y - 0.5f;
     }
 
-    private void Update()
+    private void Update()                                                                                               // Toggle Dropping
     {
         if (_dropsStuff && _coroutine == null)
         {
@@ -37,7 +37,7 @@ public class ApproachSquirrelBehaviour : MonoBehaviour
         }
     }
 
-    IEnumerator Loop()
+    IEnumerator Loop()                                                                                                  // Dropping Loop
     {
         while (true)
         {
@@ -47,7 +47,7 @@ public class ApproachSquirrelBehaviour : MonoBehaviour
         }
     }
     
-    private void DropProjectile()
+    private void DropProjectile()                                                                                       // Spawnen der Eicheln
     {
         GameObject newprojectile = Instantiate(newProjectile);
         newprojectile.transform.position = _spawnPosition;
@@ -61,7 +61,7 @@ public class ApproachSquirrelBehaviour : MonoBehaviour
         _dropsStuff = value;
     }
     
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)                                                                     // Player drin, dann droppen
     {
         if (other.CompareTag("Player"))
         {

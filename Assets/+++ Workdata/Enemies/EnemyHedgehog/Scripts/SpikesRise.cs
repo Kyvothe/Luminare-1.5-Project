@@ -52,14 +52,14 @@ public class SpikesRise : MonoBehaviour
         {
             _random = Random.Range(0, 100);
 
-            if (_random > 95)
+            if (_random > 95)                                                                                           // BuffIgel Spawn Wahrscheinlickeit
             {
                 Instantiate(BuffIgel, _spawnPosition, Quaternion.identity);
                 Destroy(gameObject); 
             }
             else
             {
-                transform.position = new Vector2(transform.position.x, transform.position.y + 0.4f);
+                transform.position = new Vector2(transform.position.x, transform.position.y + 0.4f);                 // Igel wird hochgesetzt
                 //gameObject.GetComponent<BoxCollider2D>().enabled = true;
 
                 _animator.SetInteger("ActionId", 1);
@@ -83,7 +83,7 @@ public class SpikesRise : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            transform.position = new Vector2(transform.position.x, transform.position.y - 0.3f);
+            transform.position = new Vector2(transform.position.x, transform.position.y - 0.3f);                     // Igel wird runtergesetzt
             //gameObject.GetComponent<BoxCollider2D>().enabled = false;
             
             _animator.SetBool("Awake", false);

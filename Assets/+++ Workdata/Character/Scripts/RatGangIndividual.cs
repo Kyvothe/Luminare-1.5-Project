@@ -39,7 +39,7 @@ public class RatGangIndividual : MonoBehaviour
         }
     }
 
-    private void CheckForPlayer()
+    private void CheckForPlayer()                                                                                       // Wenn Player drin, dann Dialog und AnimationsStart, wenn nicht dann nicht
     {
         if (_playerIn)
         {

@@ -46,7 +46,7 @@ public class JuergenInteract : MonoBehaviour
         }
     }
     
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D other)                                                                      // Dialogbox aus wenn Player raus
     {
         if (other.CompareTag("Player"))
         {
@@ -57,24 +57,24 @@ public class JuergenInteract : MonoBehaviour
         }
     }
 
-    public void StartDialogue()
+    public void StartDialogue()                                                                                         // Aufgerufen wenn Interacted
     { 
         _anim.SetInteger(Hash_ActionId, 1);
         _anim.SetTrigger(Hash_ActionTrigger);
         
         _dialogue.SetActive(false);
 
-        if (_gotAllItems)
+        if (_gotAllItems)                                                                                               // Dialog wenn Pizza Crumbs eingesammelt mit Upgrade Reward und Animationswechsel
         {
             player.GetComponent<PlayerController>().SetCanDoubleJump(true);
             player.GetComponent<PlayerController>().SetSock(true);
             
             _dialogue = dialogueUpgrade;
             _dialogue.SetActive(true);
-            onUpgrade.Invoke();
+            onUpgrade.Invoke();                                                                                         // Fuer Aktivieren von DoubleJump Explanation
         }
         
-        if (_walkedInFirstTime)
+        if (_walkedInFirstTime)                                                                                         // Ersten Ansprechen
         {
             player.GetComponent<PlayerController>().SetCanBigJump(true);
             
@@ -84,7 +84,7 @@ public class JuergenInteract : MonoBehaviour
             _dialogue.SetActive(true);
 
         }
-        else if (!_walkedInFirstTime)
+        else if (!_walkedInFirstTime)                                                                                   // Zweites Ansprechen
         {
             _dialogue = dialogueSecond;
             _dialogue.SetActive(true);

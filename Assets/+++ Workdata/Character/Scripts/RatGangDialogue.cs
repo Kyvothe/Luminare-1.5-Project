@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class RatGangDialogue : MonoBehaviour
 {
+    // Dialoge nacheinadner uber AnimationsEvents aufgerufen
+    
     public GameObject tedDialogue;
     public GameObject shadowDialogue;
     public GameObject feliciaDialogue;
@@ -9,7 +11,7 @@ public class RatGangDialogue : MonoBehaviour
     public GameObject swaggerDialogue;
 
     private GameObject _currentDialogue;
-
+    
     private void Awake()
     {
         _currentDialogue = tedDialogue;
