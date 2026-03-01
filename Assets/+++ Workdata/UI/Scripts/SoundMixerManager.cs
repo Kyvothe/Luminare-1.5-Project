@@ -5,6 +5,7 @@ public class SoundMixerManager : MonoBehaviour
 {
     [SerializeField] private AudioMixer _audioMixer;
     
+    /*
     public void SetMasterVolume(float level)
     {
         _audioMixer.SetFloat("masterVolume", level);
@@ -24,9 +25,9 @@ public class SoundMixerManager : MonoBehaviour
     {
         _audioMixer.SetFloat("ambienceVolume", level);
     }
+    */
     
-    
-    /*public void SetMasterVolume(float level)
+    public void SetMasterVolume(float level)
     {
         _audioMixer.SetFloat("masterVolume", Mathf.Log10(level) * 20f);
     }
@@ -44,5 +45,5 @@ public class SoundMixerManager : MonoBehaviour
     public void SetAmbienceVolume(float level)
     {
         _audioMixer.SetFloat("ambienceVolume", Mathf.Log10(level) * 20f);
-    }*/
+    }
 }
