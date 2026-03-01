@@ -14,7 +14,7 @@ public class SpawnHealItem : MonoBehaviour
       Debug.Log("Paw");
       _random = Random.Range(0, 100);
 
-      if (_random < 50)                                                                                                 // Spawn Wahrscheinlichkeit
+      if (_random < 40)                                                                                                 // Spawn Wahrscheinlichkeit
       {
          if (_spawned == false)                                                                                         // Kein Stacking von HealItems
          { 
