@@ -1305,7 +1305,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Container Menu
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2313624214048541107, guid: 3bf1daea71fe12b49b8b13f8f4ae4310, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -41658,6 +41659,7 @@ GameObject:
   - component: {fileID: 1619904249}
   - component: {fileID: 1619904251}
   - component: {fileID: 1619904252}
+  - component: {fileID: 1619904253}
   m_Layer: 0
   m_Name: Player Cam
   m_TagString: Untagged
@@ -41762,6 +41764,14 @@ MonoBehaviour:
     MaxWindowSize: 0
     Padding: 0
   m_LegacyMaxWindowSize: -2
+--- !u!81 &1619904253
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619904247}
+  m_Enabled: 1
 --- !u!1 &1641700048
 GameObject:
   m_ObjectHideFlags: 0

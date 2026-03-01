@@ -15,7 +15,7 @@ public class PlayerZoneCheck : MonoBehaviour
 
     private bool _isAttacking;
     
-    private int _maxHealth;
+    public int _maxHealth;
     private int _currentHealth;
     private bool _gotHealthUpgrade;
     
@@ -26,6 +26,7 @@ public class PlayerZoneCheck : MonoBehaviour
     {
         _playerInformation = GetComponent<PlayerInformation>();
         _playerController = GetComponent<PlayerController>();
+        _gotHealthUpgrade = GetComponent<PlayerInformation>().ReturnUpgrade();
         
         if (_gotHealthUpgrade)                                                                                          // Health Upgrade fuer Szenen nach Boss
         {
@@ -73,7 +74,7 @@ public class PlayerZoneCheck : MonoBehaviour
             {                                                                                                           // Hat Pizza Crumb eingesammelt
                 itemCount++;
                 other.gameObject.SetActive(false);
-                AudioManager.instance.PlaySoundFXClip(_crumbSound, transform, 1f);
+                AudioManager.instance.PlaySoundFXClip(_crumbSound, transform, 0.5f);
             
                 if (itemCount >= 10)                                                                                    // Alle Pizza Crumbs eingesammelt
                 { 

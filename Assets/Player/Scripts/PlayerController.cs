@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
     public bool _isGrounded;
     public bool _canJump = true;
-    private bool _isAttacking;
+    public bool _isAttacking;
     public bool _isFlying;
 
     public bool sock;
@@ -337,14 +337,13 @@ public class PlayerController : MonoBehaviour
             _canJump = false;
             _hasLanded = false;
             
-            float t = Mathf.Clamp01(timeInAir / flightDuration);                                                        // Curve auslesen
+            float t = Mathf.Clamp01(timeInAir / flightDuration);                                                        
 
-            _flyVelocity = new Vector2(_rb.linearVelocity.x, t * flyForce);                                             // Werte aus Curve und FLyForce in Velociy verrechenen
+            _flyVelocity = new Vector2(_rb.linearVelocity.x, t * flyForce);                                             // Werte fuerr Velocity setzen
         
             _rb.linearVelocity = _flyVelocity;
 
             playerActionState = PlayerActionState.Fly;
-            AudioManager.instance.PlaySFX(_flySound);
         }
         else
         {                                                                                                               // Flug beendet nach Zeitablauf
@@ -370,6 +369,7 @@ public class PlayerController : MonoBehaviour
             _isAttacking = true; 
             SetActionId(10);
             playerActionState = PlayerActionState.Attack;
+            AudioManager.instance.PlaySoundFXClip(_attackSound, transform, 0.2f);
         }
     }
 
@@ -484,6 +484,11 @@ public class PlayerController : MonoBehaviour
         }
 
         if (playerActionType == PlayerActionType.ActionHurt)
+        {
+            _isAttacking = false;
+        }
+        
+        if (playerActionType == PlayerActionType.ActionFly)
         {
             _isAttacking = false;
         }

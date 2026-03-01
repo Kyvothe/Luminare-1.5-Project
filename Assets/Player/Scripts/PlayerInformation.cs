@@ -64,13 +64,13 @@ public class PlayerInformation : MonoBehaviour
     public void SetDamage(int damage)                                                                                   // Player nimmt Schaden
     {
         _currentHealth -= damage;
-        AudioManager.instance.PlaySoundFXClip(_hurtSound, transform, 1f);
+        AudioManager.instance.PlaySoundFXClip(_hurtSound, transform, 0.3f);
         
         SetActionId(30);
 
         if (_currentHealth < 5)                                                                                         // Player dead
         {
-            AudioManager.instance.PlaySoundFXClip(_deathSound, transform, 1f);
+            AudioManager.instance.PlaySoundFXClip(_deathSound, transform, 0.7f);
             SetActionId(40); 
             _playerDead = true;
             GetComponent<PlayerController>().enabled = false;
@@ -84,7 +84,7 @@ public class PlayerInformation : MonoBehaviour
         if ((_currentHealth + health) <= _maxHealth)                                                                    // Nicht ueberheilen
         {
             _currentHealth += health;
-            AudioManager.instance.PlaySoundFXClip(_healSound, transform, 1f);
+            AudioManager.instance.PlaySoundFXClip(_healSound, transform, 0.7f);
         }
         else
         {
@@ -135,5 +135,10 @@ public class PlayerInformation : MonoBehaviour
     {
         _animator.SetTrigger(_currentTrigger);
         _animator.SetInteger(Hash_ActionId, id);
+    }
+    
+    public bool ReturnUpgrade()
+    {
+        return hasHealthUpgrade;
     }
 }

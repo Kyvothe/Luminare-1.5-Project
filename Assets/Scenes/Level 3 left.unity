@@ -857,6 +857,7 @@ GameObject:
   - component: {fileID: 304299003}
   - component: {fileID: 304299002}
   - component: {fileID: 304299005}
+  - component: {fileID: 304299006}
   m_Layer: 0
   m_Name: Player Cam
   m_TagString: Untagged
@@ -961,6 +962,14 @@ MonoBehaviour:
     MaxWindowSize: 0
     Padding: 0
   m_LegacyMaxWindowSize: -2
+--- !u!81 &304299006
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304299001}
+  m_Enabled: 1
 --- !u!1001 &331428774
 PrefabInstance:
   m_ObjectHideFlags: 0
