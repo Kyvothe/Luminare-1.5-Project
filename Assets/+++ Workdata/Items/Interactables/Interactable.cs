@@ -16,9 +16,9 @@ public class Interactable : MonoBehaviour
  
     public bool Interact()                                                                                              // Aufgerufen über PlayerInteraction
     {
-        if (GetComponent<BerryBush>() != null)
+        if (GetComponent<BerryBush>() != null)                                                                       // Check ob Interactable Berry Bush ist
         {
-            if (!GetComponent<BerryBush>().CheckIfInteractable())
+            if (!GetComponent<BerryBush>().CheckIfInteractable())                                                       // Interactbality abhaenging von Playerhealth
             {
                 return false;
             }

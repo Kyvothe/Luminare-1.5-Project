@@ -63,7 +63,7 @@ public class enemyRatPatrolMovement : MonoBehaviour
         
         if (enemyActionState != EnemyActionState.Default) return;
 
-        if (enemyMovementState == EnemyMovementState.Chase)
+        if (enemyMovementState == EnemyMovementState.Chase)                                                             // Gibt es bei Ratte nicht
         {
             if (_chaseTarget == null)
             {
@@ -96,7 +96,6 @@ public class enemyRatPatrolMovement : MonoBehaviour
     #endregion
     
     #region State
-
     public void CheckMovementState()
     {
         enemyMovementState = Mathf.Abs(_rb.linearVelocityX) > 0 ?
@@ -143,10 +142,10 @@ public class enemyRatPatrolMovement : MonoBehaviour
 
     #region Movement
 
-    public void ChangeDirection()
+    public void ChangeDirection()                                                                                       
     {
         
-        if (Time.time - _lastDirectionChangeTime > changeDirectionTime)
+        if (Time.time - _lastDirectionChangeTime > changeDirectionTime)                                                 // Kein Jitter-Change-Direction
         {
             _lastDirectionChangeTime = Time.time;
             _facingDirection *= -1;

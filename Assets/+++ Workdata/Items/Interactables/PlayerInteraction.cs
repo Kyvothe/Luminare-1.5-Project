@@ -32,7 +32,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             interactableIndicator.SetActive(true);
             
-            currentInteractables.Add(other.GetComponent<Interactable>());                                           // Item wird Liste hinzugefügt
+            currentInteractables.Add(other.GetComponent<Interactable>());                                               // Item wird Liste hinzugefügt
             //other.GetComponent<Interactable>().onSelect?.Invoke();
             currentInteractables[^1].onSelect?.Invoke();                                                                // Zuletzt hingefügtes Items wird markiert
         }
@@ -46,7 +46,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             interactableIndicator.SetActive(false);
             
-            currentInteractables.Remove(other.GetComponent<Interactable>());                                        // Item wird aus Liste entfernt
+            currentInteractables.Remove(other.GetComponent<Interactable>());                                            // Item wird aus Liste entfernt
             other.GetComponent<Interactable>().onDeselect?.Invoke();                                                    // Item nicht mehr markiert
         }
     }

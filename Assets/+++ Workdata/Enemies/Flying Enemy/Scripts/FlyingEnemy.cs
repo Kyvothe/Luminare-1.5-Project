@@ -35,7 +35,7 @@ public class FlyingEnemy : MonoBehaviour
         controlReached = true;
     }
 
-    private void Update()
+    private void Update()                                                                                               // States bestimmem Behaviour
     {
         if (!player)
         {
@@ -63,7 +63,7 @@ public class FlyingEnemy : MonoBehaviour
             }
         }
 
-        if (_lastAttackTime + attackDelayTime < Time.time)
+        if (_lastAttackTime + attackDelayTime < Time.time)                                                              // Kraehe wartet nach Angriff Zeit ab bis zum naechsten Angriff
         {
             if (_canAttack)
             {
@@ -115,7 +115,7 @@ public class FlyingEnemy : MonoBehaviour
         flyState = FlyState.Patrol;
     }
 
-    private IEnumerator AttackDelay()
+    private IEnumerator AttackDelay()                                                                                   // Delay bevor Kraehe angreift zum evtl Ausweichen
     {
         yield return new WaitForSeconds(0.5f);
         flyState = FlyState.Attack;

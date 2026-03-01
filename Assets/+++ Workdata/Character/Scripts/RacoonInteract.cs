@@ -54,7 +54,7 @@ public class RacoonInteract : MonoBehaviour
         }
     }
     
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D other)                                                                      // Dialog wieder aus wenn Player raus
     {
         if (other.CompareTag("Player"))
         {
@@ -64,23 +64,23 @@ public class RacoonInteract : MonoBehaviour
             
             _dialogue.SetActive(false);
             
-            StopCoroutine(RandomSpecial());
+            StopCoroutine(RandomSpecial());                                                                      // Zurueck zur idle
         }
     }
 
-    public void StartDialogue()
+    public void StartDialogue()                                                                                         // Aufgerufen on Interact
     { 
         _anim.SetInteger(Hash_ActionId, 1);
         _anim.SetTrigger(Hash_ActionTrigger);
 
         _isTalking = true;
 
-        StartCoroutine(RandomSpecial());
+        StartCoroutine(RandomSpecial());                                                                         
         
         Debug.Log("Fix Wing"); // Dialog einbauen belohnung
-        player.GetComponent<PlayerController>().SetCanFly(true);
+        player.GetComponent<PlayerController>().SetCanFly(true);                                                        // Instant Upgrade
 
-        if (_walkedInFirstTime)
+        if (_walkedInFirstTime)                                                                                         // Erstes Ansprechen
         {
             _walkedInFirstTime = false;
             
@@ -91,13 +91,13 @@ public class RacoonInteract : MonoBehaviour
         }
         else
         {
-            _dialogue = dialogueSecond;
+            _dialogue = dialogueSecond;                                                                                 // Zweites Ansprechen
         }
         
         _dialogue.SetActive(true);
     }
 
-    private IEnumerator RandomSpecial()
+    private IEnumerator RandomSpecial()                                                                                 // Zufaellige Special Animation wenn angesprochen
     {
         while (_isTalking)
         {

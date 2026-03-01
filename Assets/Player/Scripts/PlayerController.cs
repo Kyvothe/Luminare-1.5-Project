@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour
 
         _currentTrigger = "ActionTrigger";
 
-        if (sock)
+        if (sock)                                                                                                       // Animationswechsel auf Verband bzw geheilt zu Beginn
         {
             _animator.SetBool("Sock", true);
             GetComponent<PlayerInformation>().SetSock2();
@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
     {
         CheckIsGrounded();
         
-        _rb.linearVelocityX = _moveInput.x * _currentSpeed;
+        _rb.linearVelocityX = _moveInput.x * _currentSpeed;                                                             // Playerbewegung
         
         UpdateAnimator();
 
@@ -156,7 +156,7 @@ public class PlayerController : MonoBehaviour
         
         ExecuteFlying();
 
-        if (sock)
+        if (sock)                                                                                                       // Animationswechel zu Verband bzw geheilt während Szene
         {
             _currentTrigger = "ActionTriggerSock";
             GetComponent<PlayerInformation>().SetSock2();
@@ -189,15 +189,15 @@ public class PlayerController : MonoBehaviour
 
     private void CheckIsGrounded()
     {
-        if (_isFlying)
+        if (_isFlying)                                                                                                  // sollte durch OneWayPlatform durhcfliegen ermoeglichen
         {
             _isGrounded = false;
             return;
         }
         
-        _isGrounded = Physics2D.OverlapBox((Vector2)transform.position + groundBoxPos, groundBoxSize, 0, groundLayer);
+        _isGrounded = Physics2D.OverlapBox((Vector2)transform.position + groundBoxPos, groundBoxSize, 0, groundLayer);                              // Checking for Ground
 
-        if (_isGrounded)
+        if (_isGrounded)                                                                                                // bei isGrounded alles zurücksetzen
         {
             timeInAir = 0;
             playerActionState = PlayerActionState.Default;
@@ -223,7 +223,7 @@ public class PlayerController : MonoBehaviour
     
     #region Input
 
-    private void Move(InputAction.CallbackContext ctx)
+    private void Move(InputAction.CallbackContext ctx)                                                                  // Bewegung vom Player mit WASD
     {
        _moveInput = ctx.ReadValue<Vector2>();
        
@@ -247,7 +247,7 @@ public class PlayerController : MonoBehaviour
        }
     }
 
-    private void Sprint(InputAction.CallbackContext ctx)
+    private void Sprint(InputAction.CallbackContext ctx)                                                                // Sprint mit gedrueckter Shifttaste
     {
         if (ctx.performed)
         {
@@ -260,21 +260,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Jump(InputAction.CallbackContext ctx)
+    private void Jump(InputAction.CallbackContext ctx)                                                                  // Jump solange kein Doublejump mit Space
     {
         if (canDoubleJump)
         {
-            DoubleJump();
+            DoubleJump();                                                                                               // Weiterleitung zu DoubleJump
             return;
         }
         
-        if (!(_coyoteTimeCounter > 0f)) return;
+        if (!(_coyoteTimeCounter > 0f)) return;                                                                         // CoyoteTime und Nicht-Spamming beruecksichtigen
         if (!_canJump) return;
         
-        currentJumpForce = canBigJump ? bigJumpForce : hopsForce;
+        currentJumpForce = canBigJump ? bigJumpForce : hopsForce;                                                       // Unterscheidung ob großer oder kleiner Jump
         
         _canJump = false;
-        _rb.AddForce(Vector2.up * currentJumpForce, ForceMode2D.Impulse);
+        _rb.AddForce(Vector2.up * currentJumpForce, ForceMode2D.Impulse);                                               // Jump
         AudioManager.instance.PlaySoundFXClip(_jumpSound, transform, 2f);
         SetActionId(1);
         playerActionState = canBigJump ? PlayerActionState.Jump : PlayerActionState.Hops;  
@@ -282,15 +282,15 @@ public class PlayerController : MonoBehaviour
         _coyoteTimeCounter = 0f;
     }
 
-    private void DoubleJump()
+    private void DoubleJump()                                                                                           // alle Jumps ob Freischalten DoubleJUmp hierueber
     {
         if (!canDoubleJump) return;
-        if (!doubleJump) return;
+        if (!doubleJump) return;                                                                                        // Nur ein zweiter Jump moeglich; wird in CheckIsGrounded zurueckgesetzt
         
         _rb.linearVelocity = Vector2.zero;
         _rb.angularVelocity = 0f;
 
-        if (!_isGrounded)
+        if (!_isGrounded)                                                                                               // zweiter Jump hat geringere Jumpforce
         {
             _rb.AddForce(Vector2.up * 6f, ForceMode2D.Impulse);
             AudioManager.instance.PlaySoundFXClip(_jumpSound, transform, 2f);
@@ -312,11 +312,11 @@ public class PlayerController : MonoBehaviour
 
     
     
-    private void StartFly(InputAction.CallbackContext ctx)
+    private void StartFly(InputAction.CallbackContext ctx)                                                              // Space gedrueckt halten
     {
-        if (canFly)
+        if (canFly)                                                                                                     // Nur, wenn freigeschaltet
         {
-            if (_hasLanded)
+            if (_hasLanded)                                                                                             // Nur, wenn einmal aufgesetzt
             {
                 //_rb.AddForce(Vector2.up * flyForce, ForceMode2D.Impulse);
                 _isFlying = true;    
@@ -324,22 +324,22 @@ public class PlayerController : MonoBehaviour
         }
     }
     
-    private void ExecuteFlying()
+    private void ExecuteFlying()                                                                                        // Aufgerufen ueber FixedUpdate
     {   
         if (!_isFlying) return;
         
-        timeInAir += Time.deltaTime;
+        timeInAir += Time.deltaTime;                                                                                    // Start FlugZeit
 
-        if (timeInAir <= flightDuration)
+        if (timeInAir <= flightDuration)                                                                                // Nur, solange wie FlugZeit
         {
             SetActionId(20);
 
             _canJump = false;
             _hasLanded = false;
             
-            float t = Mathf.Clamp01(timeInAir / flightDuration);
+            float t = Mathf.Clamp01(timeInAir / flightDuration);                                                        // Curve auslesen
 
-            _flyVelocity = new Vector2(_rb.linearVelocity.x, t * flyForce);
+            _flyVelocity = new Vector2(_rb.linearVelocity.x, t * flyForce);                                             // Werte aus Curve und FLyForce in Velociy verrechenen
         
             _rb.linearVelocity = _flyVelocity;
 
@@ -347,45 +347,45 @@ public class PlayerController : MonoBehaviour
             AudioManager.instance.PlaySFX(_flySound);
         }
         else
-        {
+        {                                                                                                               // Flug beendet nach Zeitablauf
             _isFlying = false;
             _canJump = true;
         }
     }
 
-    private void StopFly(InputAction.CallbackContext ctx)
+    private void StopFly(InputAction.CallbackContext ctx)                                                               // FLug beendet wenn Space losgelassen                                        
     {
         _isFlying  = false; 
         playerActionState = PlayerActionState.Default;
         _canJump = true;
     }
     
-    private void Attack(InputAction.CallbackContext ctx)
+    private void Attack(InputAction.CallbackContext ctx)                                                                // Attack mit LMB
     {
-       if (!_canAttack) return;
+       if (!_canAttack) return;                                                                                         // Nur, wenn freigeschaltet
         
-        if (!_isAttacking)
+        if (!_isAttacking)                                                                                              // Kein Spamming
         {   
             Debug.Log("attack");
-            _isAttacking = true;
+            _isAttacking = true; 
             SetActionId(10);
             playerActionState = PlayerActionState.Attack;
         }
     }
 
-    private void Interact(InputAction.CallbackContext ctx)
+    private void Interact(InputAction.CallbackContext ctx)                                                              // Interact mit E
     {
-        if (_isAttacking) return;
+        if (_isAttacking) return;                                                                                       // Nicht durh den AttackCollider ausloesbar
         
         gameObject.GetComponent<PlayerInteraction>().TryInteract();
     }
     
-    public bool ReturnIsAttacking()
+    public bool ReturnIsAttacking()                                                                                     // Ob attacked wird an andere Scripte weitergeben
     {
         return _isAttacking;
     }
 
-    public bool ReturnDirection()
+    public bool ReturnDirection()                                                                                       // In welche Richtung Player steht
     {
         if (playerDirectionState == PlayerDirectionState.Left)
         {
@@ -402,12 +402,12 @@ public class PlayerController : MonoBehaviour
         _paused = value;
     }
 
-    public Vector2 ReturnMovement()
+    public Vector2 ReturnMovement()                                                                                     // Return ob und wir Player sich bewegt
     {
         return _moveInput;
     }
 
-    public bool ReturnIsGrounded()
+    public bool ReturnIsGrounded()                                                                                      // Return IsGrounded
     {
         return _isGrounded;
     }
@@ -415,7 +415,7 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region Upgrade Toggles
-    
+    // Freischalten von sämtlichen Upgrades
     public void SetCanBigJump(bool value)
     {
         canBigJump = value;
@@ -436,13 +436,13 @@ public class PlayerController : MonoBehaviour
         canFly = value;
     }
 
-    public void SetSock(bool value)
+    public void SetSock(bool value)                                                                                     // Animationswechsel zu Verband bzw geheilt
     {
         sock = true;
         _animator.SetBool("Sock", true);
     }
 
-    public void ToggleInput(bool _putOut)
+    public void ToggleInput(bool _putOut)                                                                               // Player freeze
     {
         if (_putOut)
         {
@@ -471,7 +471,7 @@ public class PlayerController : MonoBehaviour
         _animator.SetInteger(Hash_ActionId, id);
     }
 
-    public void AnimationEnd(PlayerActionType playerActionType)
+    public void AnimationEnd(PlayerActionType playerActionType)                                                         // AnimationsEnden von unterschiedlichen Animationen fuers Zuruecksetzen
     {
         if (playerActionType == PlayerActionType.ActionAttack)
         {

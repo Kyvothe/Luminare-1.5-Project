@@ -9,7 +9,7 @@ public class AttackDetector : MonoBehaviour
     {
         if (_hasHit) return;
         
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player"))                                                                                 // Player in AttackRange
         {
             _crow.SetAttackInfos(true);
             _hasHit = true;

@@ -32,7 +32,7 @@ public class EnemyEnviromentChecker : MonoBehaviour
     }
 
 
-    bool CheckForWalls()
+    bool CheckForWalls()                                                                                                // Check for walls
     {
         Vector2 direction = Vector2.right * _enemyRatPatrolMovement.FacingDirection;
 
@@ -46,7 +46,7 @@ public class EnemyEnviromentChecker : MonoBehaviour
     }
     
     
-    bool CheckForGround()
+    bool CheckForGround()                                                                                               // Check for lost ground
     {
         RaycastHit2D hit = Physics2D.Raycast(
         groundCheck.position,

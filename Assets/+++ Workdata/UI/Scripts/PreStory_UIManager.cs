@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class PreStory_UIManager : MonoBehaviour
 {
-    public GameObject[] frames = new GameObject[5]; 
+    public GameObject[] frames = new GameObject[5];                                                                     // Alle Frames in Array 
 
     private GameObject _currentMenu;
 
@@ -25,7 +25,7 @@ public class PreStory_UIManager : MonoBehaviour
     
     private void Update()
     {
-        if (Keyboard.current.anyKey.wasPressedThisFrame && EventSystem.current.currentSelectedGameObject == null)
+        if (Keyboard.current.anyKey.wasPressedThisFrame && EventSystem.current.currentSelectedGameObject == null)       // Setzen der Selected Buttons
         { 
             //EventSystem.current.SetSelectedGameObject(_currentMenu.GetComponent<DefaultButtonSetter>().ReturnButton());
 
@@ -56,7 +56,7 @@ public class PreStory_UIManager : MonoBehaviour
         }
     }
 
-    public void Continue()
+    public void Continue()                                                                                              // Immer nächstes Frame
     {
         _currentMenu.SetActive(false);
         _count++;

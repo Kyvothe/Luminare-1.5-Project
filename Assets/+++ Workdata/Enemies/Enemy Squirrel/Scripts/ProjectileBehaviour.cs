@@ -30,7 +30,7 @@ public class ProjectileBehaviour : MonoBehaviour
     {
         CheckIsGrounded();
 
-        if (_isGrounded)
+        if (_isGrounded)                                                                                                // Shatter Animation on IsGrounded
         {
             _animator.SetTrigger(Hash_ActionTrigger);
             _animator.SetInteger(Hash_ActionId, 1);
@@ -38,13 +38,13 @@ public class ProjectileBehaviour : MonoBehaviour
         }
     }
     
-    public void DestroyProjectile()                                                                                     // aufgerufen über AnimationEndAcorn am Ende von Shatter Animantion
+    public void DestroyProjectile()                                                                                     // Aufgerufen über AnimationEndAcorn am Ende von Shatter Animantion
     {
         _hasHit = false;
         Destroy(gameObject);
     }
 
-    public void DisableDamage()
+    public void DisableDamage()                                                                                         // Damage aus bevor destroyed -> Rauchwolke harmlos
     {
         _coll.enabled = false;
     }
@@ -57,9 +57,9 @@ public class ProjectileBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (_hasHit) return;
+        if (_hasHit) return;                                                                                            // Nur ein Hit
         
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player"))                                                                                 // Damage Player
         {
             other.GetComponent<PlayerInformation>().SetDamage(damage);
             

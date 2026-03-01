@@ -27,7 +27,7 @@ public class PlayerZoneCheck : MonoBehaviour
         _playerInformation = GetComponent<PlayerInformation>();
         _playerController = GetComponent<PlayerController>();
         
-        if (_gotHealthUpgrade)
+        if (_gotHealthUpgrade)                                                                                          // Health Upgrade fuer Szenen nach Boss
         {
             _maxHealth = 50;
         }
@@ -42,8 +42,8 @@ public class PlayerZoneCheck : MonoBehaviour
         _isAttacking = _playerController.ReturnIsAttacking();
         
         _currentHealth = _playerInformation.ReturnHealth();
-
-        if (_gotHealthUpgrade)
+    
+        if (_gotHealthUpgrade)                                                                                          // Health Upgrade on Soggy Pizza
         {
             _maxHealth = 50;
         }
@@ -61,7 +61,7 @@ public class PlayerZoneCheck : MonoBehaviour
         
         if (other.CompareTag("PickupItem"))
         {
-            if (other.GetComponent<HealItem>())
+            if (other.GetComponent<HealItem>())                                                                         // Hat Apfel zum Heilen eingesammelt
             {
                 if (_currentHealth >= _maxHealth) return;
                 other.gameObject.SetActive(false);
@@ -70,12 +70,12 @@ public class PlayerZoneCheck : MonoBehaviour
                 PickedUpItem.Invoke();
             }
             else
-            {
+            {                                                                                                           // Hat Pizza Crumb eingesammelt
                 itemCount++;
                 other.gameObject.SetActive(false);
                 AudioManager.instance.PlaySoundFXClip(_crumbSound, transform, 1f);
             
-                if (itemCount >= 10)
+                if (itemCount >= 10)                                                                                    // Alle Pizza Crumbs eingesammelt
                 { 
                     AudioManager.instance.PlaySoundFXClip(_triumphSound, transform, 1f);
                     gotAllItems = true;
@@ -83,7 +83,7 @@ public class PlayerZoneCheck : MonoBehaviour
             }
         }
 
-        if (other.CompareTag("SunGlasses"))
+        if (other.CompareTag("SunGlasses"))                                                                             // SunGlasses eingesammelt
         {
             other.gameObject.SetActive(false);
             gotSunGlasses = true;
@@ -91,7 +91,7 @@ public class PlayerZoneCheck : MonoBehaviour
 
         }
         
-        if (other.CompareTag("HealthUpgrade"))
+        if (other.CompareTag("HealthUpgrade"))                                                                          // Soggy Pizza eingesammelt
         {
             _playerInformation.UpgradeHealth(); 
             _gotHealthUpgrade = true;
@@ -100,17 +100,17 @@ public class PlayerZoneCheck : MonoBehaviour
         }
     }
 
-    public bool ReturnGotItems()
+    public bool ReturnGotItems()                                                                                        // Fuer andere Scripte
     {
         return gotAllItems;
     }
 
-    public bool ReturnSunGlasses()
+    public bool ReturnSunGlasses()                                                                                      // Fuer andere Scripte
     {
         return gotSunGlasses;
     }
     
-    public int ReturnItemCount()
+    public int ReturnItemCount()                                                                                        // Fuer andere Scripte
     {
         return itemCount;
     }

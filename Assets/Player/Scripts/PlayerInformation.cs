@@ -36,19 +36,19 @@ public class PlayerInformation : MonoBehaviour
 
     private void Awake()
     {
-        if (isFirstLevel)
+        if (isFirstLevel)                                                                                               // PlayerPrefs auf maxHealth wenn FirstLevel, weil keine Weitergabe von health
         {
             _currentHealth = _maxHealth;
             PlayerPrefs.SetInt("Health", _currentHealth);
         }
         else
         {
-            _currentHealth = PlayerPrefs.GetInt("Health");
+            _currentHealth = PlayerPrefs.GetInt("Health");                                                          // Alle anderen Level sollen helath uebernehmen
         }
 
         if (hasHealthUpgrade)
         {
-            UpgradeHealthWithoutHeal();
+            UpgradeHealthWithoutHeal();                                                                                 // Upgrade Health wenn Level nach Boss
         }
         
         _animator = GetComponent<Animator>();
@@ -61,14 +61,14 @@ public class PlayerInformation : MonoBehaviour
         ReturnHealth();
     }
 
-    public void SetDamage(int damage)
+    public void SetDamage(int damage)                                                                                   // Player nimmt Schaden
     {
         _currentHealth -= damage;
         AudioManager.instance.PlaySoundFXClip(_hurtSound, transform, 1f);
         
         SetActionId(30);
 
-        if (_currentHealth < 5)
+        if (_currentHealth < 5)                                                                                         // Player dead
         {
             AudioManager.instance.PlaySoundFXClip(_deathSound, transform, 1f);
             SetActionId(40); 
@@ -79,9 +79,9 @@ public class PlayerInformation : MonoBehaviour
         PlayerPrefs.SetInt("Health", _currentHealth);
     }
 
-    public void SetHealth(int health)
+    public void SetHealth(int health)                                                                                   // Player wird geheilt
     {
-        if ((_currentHealth + health) <= _maxHealth)
+        if ((_currentHealth + health) <= _maxHealth)                                                                    // Nicht ueberheilen
         {
             _currentHealth += health;
             AudioManager.instance.PlaySoundFXClip(_healSound, transform, 1f);
@@ -99,7 +99,7 @@ public class PlayerInformation : MonoBehaviour
         return _currentHealth;
     }
 
-    private void GameOver()                                                                                             // Aufgerufen ueber AnimationsEvent am Ende der death Animation
+    private void GameOver()                                                                                             // Aufgerufen ueber AnimationsEvent am Ende der death Animation; kann abgeborchen werden -> GameOverFailSafe
     {
         if (!_playerDead) return;
         
@@ -108,30 +108,30 @@ public class PlayerInformation : MonoBehaviour
         MenuManagerInGame.GetComponent<OpenDialogueInGame>().OpenGameOverScreen();
     }
 
-    public void UpgradeHealth()
+    public void UpgradeHealth()                                                                                         // Upgrade health auf 5 Herzen mit volle Heilung durch Soggy Pizza
     {
         _maxHealth = 50;
         _currentHealth = _maxHealth;
         
         PlayerPrefs.SetInt("Health", _currentHealth);
         
-        extraHeart1.SetActive(true);
+        extraHeart1.SetActive(true);                                                                                    // graue Herzen anschalten in HUD
         extraHeart2.SetActive(true);
     }
 
-    private void UpgradeHealthWithoutHeal()
+    private void UpgradeHealthWithoutHeal()                                                                             // Upgrade health auf 5 Herzen ohne Heilung fuer neue Szenen nach Boss
     {
         _maxHealth = 50;
         extraHeart1.SetActive(true);
         extraHeart2.SetActive(true);
     }
 
-    public void SetSock2()
+    public void SetSock2()                                                                                              // Animationswechsel fuer hurt and death animation
     {
         _currentTrigger = "ActionTriggerSock";
     }
 
-    private void SetActionId(int id)
+    private void SetActionId(int id)                                                                                    // Animator setzen
     {
         _animator.SetTrigger(_currentTrigger);
         _animator.SetInteger(Hash_ActionId, id);

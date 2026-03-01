@@ -11,7 +11,7 @@ public class MainMenu_UiManager : MonoBehaviour
     
     private GameObject _currentMenu;
     
-    // Methoden werden Ã¼ber entsprechende Methoden von MainMenu_ButtpManager aufgerufen
+    // Methoden werden ueber entsprechende Methoden von MainMenu_ButtpManager aufgerufen
 
     private void Awake()
     {
