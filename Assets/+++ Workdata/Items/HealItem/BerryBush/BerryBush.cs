@@ -22,9 +22,12 @@ public class BerryBush : MonoBehaviour
         {
             return true;
         }
-        else
+        
+        if (_playerHealth >= _maxHealth)
         {
             return false;
         }
+        
+        return true;
     }
 }

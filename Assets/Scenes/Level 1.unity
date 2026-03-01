@@ -334,6 +334,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5165858926535832121, guid: 31531e37c87b5b04fa17082e960554b5, type: 3}
+      propertyPath: playerInformation
+      value: 
+      objectReference: {fileID: 2110592476}
     - target: {fileID: 5381523646069494214, guid: 31531e37c87b5b04fa17082e960554b5, type: 3}
       propertyPath: playerInformation
       value: 
@@ -41652,7 +41656,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1619904250}
   - component: {fileID: 1619904249}
-  - component: {fileID: 1619904248}
   - component: {fileID: 1619904251}
   - component: {fileID: 1619904252}
   m_Layer: 0
@@ -41662,14 +41665,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1619904248
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1619904247}
-  m_Enabled: 1
 --- !u!114 &1619904249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49661,6 +49656,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5165858926535832121, guid: 31531e37c87b5b04fa17082e960554b5, type: 3}
+      propertyPath: playerInformation
+      value: 
+      objectReference: {fileID: 2110592476}
     - target: {fileID: 5381523646069494214, guid: 31531e37c87b5b04fa17082e960554b5, type: 3}
       propertyPath: playerInformation
       value: 

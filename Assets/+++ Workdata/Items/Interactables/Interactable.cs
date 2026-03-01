@@ -22,7 +22,8 @@ public class Interactable : MonoBehaviour
             {
                 return false;
             }
-            else
+            
+            if (GetComponent<BerryBush>().CheckIfInteractable())                                                       // Interactbality abhaenging von Playerhealth
             {
                 reusable = false;
             }

@@ -1546,6 +1546,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5165858926535832121, guid: 31531e37c87b5b04fa17082e960554b5, type: 3}
+      propertyPath: _maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165858926535832121, guid: 31531e37c87b5b04fa17082e960554b5, type: 3}
+      propertyPath: playerInformation
+      value: 
+      objectReference: {fileID: 1904237647}
     - target: {fileID: 5381523646069494214, guid: 31531e37c87b5b04fa17082e960554b5, type: 3}
       propertyPath: _maxHealth
       value: 50
@@ -41560,6 +41568,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5165858926535832121, guid: 31531e37c87b5b04fa17082e960554b5, type: 3}
+      propertyPath: _maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165858926535832121, guid: 31531e37c87b5b04fa17082e960554b5, type: 3}
+      propertyPath: playerInformation
+      value: 
+      objectReference: {fileID: 1904237647}
     - target: {fileID: 5381523646069494214, guid: 31531e37c87b5b04fa17082e960554b5, type: 3}
       propertyPath: _maxHealth
       value: 50
