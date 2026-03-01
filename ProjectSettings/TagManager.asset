@@ -16,6 +16,8 @@ TagManager:
   - Wood
   - Metal
   - Door
+  - BossMusic
+  - RatGangMusic
   layers:
   - Default
   - TransparentFX

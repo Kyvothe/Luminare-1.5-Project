@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections;
+using UnityEngine.Audio;
 
 public class RatGangInteract : MonoBehaviour
 {
@@ -25,6 +27,10 @@ public class RatGangInteract : MonoBehaviour
     private CatInformation _catInformation;
 
     public UnityEvent StartFight;
+    
+    public GameObject bossMusic;
+    public GameObject ratMusic;
+    public GameObject uhOh;
 
     private void Awake()
     { 
@@ -48,6 +54,8 @@ public class RatGangInteract : MonoBehaviour
             
             Light1.SetActive(true);
             Light2.SetActive(true);
+            
+            ratMusic.SetActive(true);
         }
     }
     
@@ -77,5 +85,16 @@ public class RatGangInteract : MonoBehaviour
         
         Destroy(coll.gameObject);
         Destroy(coll2.gameObject);
+        
+        ratMusic.SetActive(false);
+        StartCoroutine(delayBossMusic());
+    }
+    
+    IEnumerator delayBossMusic()
+    {
+        uhOh.SetActive(true);
+        yield return new WaitForSeconds(2.5f);
+        uhOh.SetActive(false);
+        bossMusic.SetActive(true);
     }
 }

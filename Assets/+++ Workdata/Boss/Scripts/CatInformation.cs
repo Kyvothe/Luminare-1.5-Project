@@ -18,6 +18,10 @@ public class CatInformation : MonoBehaviour
     private Vector2 _spawnPosition;
     
     public UnityEvent OnDeath;
+    
+    public AudioClip _catHurt;
+    
+    public AudioClip _catDefeat;
 
     private void Awake()
     {
@@ -45,6 +49,7 @@ public class CatInformation : MonoBehaviour
         Debug.Log("Hurt");
         _animator.SetTrigger(Hash_ActionTrigger);
         _animator.SetInteger(Hash_ActionId, 10);
+        AudioManager.instance.PlaySoundFXClip(_catHurt, transform, 1f);
     }
 
     private void FixedUpdate()
@@ -54,6 +59,7 @@ public class CatInformation : MonoBehaviour
             _catDied = true;
             _animator.SetInteger(Hash_ActionId, 20);
             OnDeath.Invoke();
+            AudioManager.instance.PlaySoundFXClip(_catDefeat, transform, 1f);
         }
     }
 
