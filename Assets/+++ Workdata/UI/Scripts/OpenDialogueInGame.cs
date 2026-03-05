@@ -13,6 +13,7 @@ public class OpenDialogueInGame : MonoBehaviour
     public GameObject GameOverScreen;
     public GameObject EndOfGameMenu;
     public GameObject SureScreen;
+    public GameObject BobTip;
     
     public GameObject Player;
     
@@ -108,6 +109,17 @@ public class OpenDialogueInGame : MonoBehaviour
         _noOtherMenuActive = false;
         _anyMenuActive = true;
         _currentMenu = SureScreen;
+    }
+    
+    public void OpenBobTip()                                                                                            // Aufgerufen wenn Player Bobs Tip oeffnet ueber BobFirstTipSpawn
+    {
+        BobTip.SetActive(true);
+        Time.timeScale = 0; 
+        _isPaused = true;
+        _noOtherMenuActive = false;
+        _anyMenuActive = true;
+        _currentMenu = BobTip;
+        FreezePlayer(true);
     }
 
     private void FreezePlayer(bool value)                                                                               // Freeze Bewegung von Player
