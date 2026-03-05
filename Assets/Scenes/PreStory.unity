@@ -1128,8 +1128,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 945438795697007622}
-        m_TargetAssemblyTypeName: BG_Music_Manager, Assembly-CSharp
-        m_MethodName: Music_Starter
+        m_TargetAssemblyTypeName: Music_Manager, Assembly-CSharp
+        m_MethodName: Music_Unpause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

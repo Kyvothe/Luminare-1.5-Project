@@ -1205,7 +1205,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1424800633}
         m_TargetAssemblyTypeName: Music_Manager, Assembly-CSharp
-        m_MethodName: Music_Stopper
+        m_MethodName: Music_Pause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -42235,7 +42235,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1424800633}
         m_TargetAssemblyTypeName: Music_Manager, Assembly-CSharp
-        m_MethodName: Music_Stopper
+        m_MethodName: Music_Pause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

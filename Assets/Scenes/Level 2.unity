@@ -29201,7 +29201,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1618550794}
         m_TargetAssemblyTypeName: Music_Manager, Assembly-CSharp
-        m_MethodName: Music_Stopper
+        m_MethodName: Music_Pause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -60162,7 +60162,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1618550794}
         m_TargetAssemblyTypeName: Music_Manager, Assembly-CSharp
-        m_MethodName: Music_Stopper
+        m_MethodName: Music_Pause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -60603,6 +60603,7 @@ MonoBehaviour:
   GameOverScreen: {fileID: 358830893}
   EndOfGameMenu: {fileID: 1734992114}
   SureScreen: {fileID: 1212627337}
+  BobTip: {fileID: 0}
   Player: {fileID: 1592715843}
 --- !u!114 &1618550792
 MonoBehaviour:
