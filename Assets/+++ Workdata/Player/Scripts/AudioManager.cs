@@ -32,9 +32,9 @@ public class AudioManager: MonoBehaviour
         audioSource.outputAudioMixerGroup = SoundsFX;
         audioSource.volume = volume;
         audioSource.Play();
-        _stepLength = audioSource.clip.length;
+        //_stepLength = audioSource.clip.length;
 
-        yield return new WaitForSeconds(_stepLength);
+        yield return new WaitForSeconds(0.3f);
         
         
         Destroy(audioSource);
@@ -52,6 +52,7 @@ public class AudioManager: MonoBehaviour
         
         Destroy(audioSource.gameObject, _fxsLength);
     }
+
 
    
     

@@ -41520,63 +41520,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34da6deac59dd4645a2dc02a51c0e803, type: 3}
---- !u!1 &1382515455
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1382515458}
-  - component: {fileID: 1382515457}
-  - component: {fileID: 1382515456}
-  m_Layer: 0
-  m_Name: MusicAfterBoss
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1382515456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382515455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e97ff2aa3419e94eacf894f448d757c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1382515457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382515455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb1442a2d94e636489a377af1b9e6528, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1382515458
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382515455}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50.90318, y: -2.5861957, z: -9.978757}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1408856721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41745,6 +41688,7 @@ MonoBehaviour:
   GameOverScreen: {fileID: 1999873987}
   EndOfGameMenu: {fileID: 81665302}
   SureScreen: {fileID: 1667527235}
+  BobTip: {fileID: 0}
   Player: {fileID: 1904237635}
 --- !u!4 &1424800637
 Transform:
@@ -57957,4 +57901,3 @@ SceneRoots:
   - {fileID: 12898799}
   - {fileID: 676036317}
   - {fileID: 1059069779}
-  - {fileID: 1382515458}

@@ -6,8 +6,8 @@ AudioContainerElement:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Footsteps Wood_{-8913229102603375253}
-  m_AudioClip: {fileID: 8300000, guid: e3bcb6c5c608b4a4ba90f69106965243, type: 3}
+  m_Name: Footsteps Wood Short_{-8913229102603375253}
+  m_AudioClip: {fileID: 8300000, guid: 2bf71bdd2e645e7428efa75e17217076, type: 3}
   m_Volume: -20
   m_Enabled: 1
 --- !u!1307931743 &6418180475301049370
@@ -19,9 +19,9 @@ AudioRandomContainer:
   m_Name: Footsteps Wood
   m_Volume: 0
   m_Pitch: 0
-  m_AutomaticTriggerTime: 0.2
+  m_AutomaticTriggerTime: 0
   m_LoopCount: 1
-  m_VolumeRandomizationRange: {x: -15, y: 15}
+  m_VolumeRandomizationRange: {x: 0, y: 15}
   m_PitchRandomizationRange: {x: -100, y: 100}
   m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
   m_LoopCountRandomizationRange: {x: 0, y: 0}
