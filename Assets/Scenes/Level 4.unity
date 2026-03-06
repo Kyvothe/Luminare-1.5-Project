@@ -56725,6 +56725,10 @@ PrefabInstance:
       value: Flying Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4909542360845951221, guid: f00bd2c56c3c43b40be55cf42ebbce4c, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909542360845951221, guid: f00bd2c56c3c43b40be55cf42ebbce4c, type: 3}
       propertyPath: startPos
       value: 
       objectReference: {fileID: 642626316}

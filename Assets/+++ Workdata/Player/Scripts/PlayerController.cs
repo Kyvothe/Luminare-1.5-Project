@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour
     
     private Rigidbody2D _rb;
     private Animator _animator;
+    private AudioSource _audioSourceFly;
     
     private PlayerOneWay _playerOneWay;
     
@@ -99,6 +100,7 @@ public class PlayerController : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _audioSourceFly = GetComponent<AudioSource>();
         
         _playerOneWay = GetComponent<PlayerOneWay>();
         
@@ -208,7 +210,8 @@ public class PlayerController : MonoBehaviour
             _canJump = true;
             
             _hasLanded = true;
-
+            
+            _audioSourceFly.enabled = false;
         }
         else
         {

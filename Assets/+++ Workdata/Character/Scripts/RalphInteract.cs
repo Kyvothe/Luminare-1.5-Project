@@ -131,7 +131,9 @@ public class RalphInteract : MonoBehaviour
 
         _dialogue = dialogueFirst;
         _dialogue.SetActive(true);
-
+        
+        player.GetComponent<PlayerController>().ToggleInput(true);
+        
         StartCoroutine(RalphsBit());
 
     }
@@ -149,6 +151,7 @@ public class RalphInteract : MonoBehaviour
 
     public void EndOfRalphsBit()
     {
+        player.GetComponent<PlayerController>().ToggleInput(false);
         AfterRalphsBit.Invoke();
         Destroy(ralphTrigger);
     }
