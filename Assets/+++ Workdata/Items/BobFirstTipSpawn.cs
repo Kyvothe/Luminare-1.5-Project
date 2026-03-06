@@ -10,7 +10,7 @@ public class BobFirstTipSpawn : MonoBehaviour
       if (other.CompareTag("Player"))
       {
          gameObject.GetComponent<SpriteRenderer>().enabled = false;
-         gameObject.GetComponent<BoxCollider2D>().enabled = false;
+         gameObject.GetComponent<CircleCollider2D>().enabled = false;
 
          manager.GetComponent<OpenDialogueInGame>().OpenBobTip();
       }

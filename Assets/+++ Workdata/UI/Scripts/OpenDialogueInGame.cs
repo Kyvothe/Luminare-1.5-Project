@@ -22,6 +22,7 @@ public class OpenDialogueInGame : MonoBehaviour
     private bool _isPaused = false;
     private bool _noOtherMenuActive = true;
     private bool _anyMenuActive = false;
+    private bool _bobTipOn = false;
 
     private void Awake()
     {
@@ -64,8 +65,20 @@ public class OpenDialogueInGame : MonoBehaviour
             Player.GetComponent<PlayerController>().SetPaused(false);
             FreezePlayer(false);
         } 
+        
+        if (_bobTipOn)                                                                                                  // BobTip Menu mit Escape wieder aus
+        {
+            _bobTipOn = false;
+            BobTip.SetActive(false);
+            Time.timeScale = 1;                                                                                         // Spiel läuft wieder
+            _isPaused = false;
+            _anyMenuActive = false;
+            _noOtherMenuActive = true;
+            _currentMenu = null;
+            Player.GetComponent<PlayerController>().SetPaused(false);
+            FreezePlayer(false);
+        }
     }
-    
     public void Button_Resume()                                                                                         // Button im Pause Menu als zweiter Weg zum Schließen
     {
         _currentMenu.SetActive(false); 
@@ -118,6 +131,7 @@ public class OpenDialogueInGame : MonoBehaviour
         _isPaused = true;
         _noOtherMenuActive = false;
         _anyMenuActive = true;
+        _bobTipOn = true;
         _currentMenu = BobTip;
         FreezePlayer(true);
     }
