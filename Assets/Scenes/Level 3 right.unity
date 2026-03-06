@@ -19454,6 +19454,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1004921556826213810, guid: 6f7b178335772b34e92aa53447151d99, type: 3}
+      propertyPath: m_Color.b
+      value: 0.69803923
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004921556826213810, guid: 6f7b178335772b34e92aa53447151d99, type: 3}
+      propertyPath: m_Color.g
+      value: 0.69803923
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004921556826213810, guid: 6f7b178335772b34e92aa53447151d99, type: 3}
+      propertyPath: m_Color.r
+      value: 0.69803923
+      objectReference: {fileID: 0}
     - target: {fileID: 1671079144012338814, guid: 6f7b178335772b34e92aa53447151d99, type: 3}
       propertyPath: m_Name
       value: Door Right
