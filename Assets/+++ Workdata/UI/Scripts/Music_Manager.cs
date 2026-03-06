@@ -27,4 +27,14 @@ public class Music_Manager : MonoBehaviour
     {
         BG_Music.GetComponent<AudioSource>().UnPause();
     }
+    
+    public void Music_Stop()
+    {
+        BG_Music.GetComponent<AudioSource>().Stop();
+    }
+    
+    public void Music_Play()
+    {
+        BG_Music.GetComponent<AudioSource>().Play();
+    }
 }
