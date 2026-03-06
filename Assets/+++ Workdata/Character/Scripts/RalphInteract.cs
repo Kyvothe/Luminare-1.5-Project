@@ -134,6 +134,7 @@ public class RalphInteract : MonoBehaviour
         yield return new WaitForSeconds(10f);
         _dialogue.SetActive(false);
         StopCoroutine(RandomSpecial());
+        _anim.SetInteger(Hash_ActionId, 0);
         EndOfRalphsBit();
     }
 

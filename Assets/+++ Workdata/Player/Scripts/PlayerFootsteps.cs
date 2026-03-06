@@ -65,7 +65,7 @@ public class PlayerFootsteps : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         Debug.Log("_currentFloor: " + _currentFloor + "");
         if (other.CompareTag("Leaf")) SetFloor("Leaf");
