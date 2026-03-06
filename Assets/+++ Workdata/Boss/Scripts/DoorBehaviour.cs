@@ -12,8 +12,8 @@ public class DoorBehaviour : MonoBehaviour
 
     private void Awake()
     {
-        _spawnPosition.x = -4.39f;
-        _spawnPosition.y = 6;
+        _spawnPosition.x = 14f;
+        _spawnPosition.y = -2f;
         
         _spriteColorChanger = GetComponent<SpriteColorChanger>();
     }

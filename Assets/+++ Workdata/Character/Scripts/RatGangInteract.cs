@@ -7,6 +7,7 @@ using UnityEngine.Audio;
 public class RatGangInteract : MonoBehaviour
 {
     private bool _playerIn = false;
+    private bool _skippedCutscene= false;
 
     public Collider2D coll;
     public Collider2D coll2;
@@ -19,6 +20,8 @@ public class RatGangInteract : MonoBehaviour
 
     public GameObject Light1;
     public GameObject Light2;
+
+    public GameObject skipButton;
     
     private Animator _animator;
     
@@ -56,6 +59,8 @@ public class RatGangInteract : MonoBehaviour
             Light2.SetActive(true);
             
             ratMusic.SetActive(true);
+            
+            skipButton.SetActive(true);
         }
     }
     
@@ -74,6 +79,8 @@ public class RatGangInteract : MonoBehaviour
 
     public void StartFightAfterAnimation()                                                                              // Start Fight
     {
+        if (_skippedCutscene) return;
+        
         _pawBehaviour1.SetSartFight();
         _pawBehaviour2.SetSartFight();
         _catInformation.StartFight();
@@ -86,15 +93,25 @@ public class RatGangInteract : MonoBehaviour
         Destroy(coll.gameObject);                                                                                       // Blocks und Trigger weg
         Destroy(coll2.gameObject);
         
+        skipButton.SetActive(false);
+        
         ratMusic.SetActive(false);
-        StartCoroutine(delayBossMusic());
+        StartCoroutine(DelayBossMusic());
     }
     
-    IEnumerator delayBossMusic()
+    IEnumerator DelayBossMusic()
     {
         uhOh.SetActive(true);
         yield return new WaitForSeconds(2.5f);
         uhOh.SetActive(false);
         bossMusic.SetActive(true);
+    }
+
+    public void SkipCutscene()
+    {
+        StartFightAfterAnimation();
+        _animator.SetTrigger("ActionTrigger");
+        _animator.SetInteger("ActionId", 100);
+        _skippedCutscene = true;
     }
 }
