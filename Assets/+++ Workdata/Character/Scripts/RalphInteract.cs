@@ -19,6 +19,8 @@ public class RalphInteract : MonoBehaviour
 
     public GameObject ralphTrigger;
     
+    public GameObject MenuManagerInGame;
+    
     public GameObject dialogueFirst;
     public GameObject dialogueSecond;
     public GameObject dialogueUpgrade;
@@ -30,6 +32,9 @@ public class RalphInteract : MonoBehaviour
     private bool _isTalking = false;
 
     private float _random = 0f;
+    
+    private Music_Manager _musicManager;
+    
 
     private void Awake()
     {
@@ -40,6 +45,8 @@ public class RalphInteract : MonoBehaviour
         _walkedInFirstTime = true;
         
         _dialogue = dialogueFirst;
+        
+        _musicManager = MenuManagerInGame.GetComponent<Music_Manager>();
     }
 
     private void FixedUpdate()
@@ -129,12 +136,14 @@ public class RalphInteract : MonoBehaviour
 
     }
 
+    // ReSharper disable Unity.PerformanceAnalysis
     private IEnumerator RalphsBit()                                                                                     // On Pan zu Ralph
     {
         yield return new WaitForSeconds(10f);
         _dialogue.SetActive(false);
         StopCoroutine(RandomSpecial());
         _anim.SetInteger(Hash_ActionId, 0);
+        _musicManager.Music_Play();
         EndOfRalphsBit();
     }
 
