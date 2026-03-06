@@ -24482,7 +24482,7 @@ GameObject:
   - component: {fileID: 999678697}
   m_Layer: 0
   m_Name: BobFirstTipSpawn
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
